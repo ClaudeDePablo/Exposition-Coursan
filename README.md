@@ -1,2 +1,2 @@
 # Exposition-Coursan
-Exposition virtuelle sur des phottos anciennes de Coursan 
+Exposition virtuelle de photos anciennes de Coursan 
