@@ -13,12 +13,19 @@
         <a-assets>
             <!---------------------TEXTURES-------------------->
             <img id="floor" src="assets/textures/floor.png">
+            <!---------------------ICONES-------------------->
+            <img id="loupe" src="assets/icones/loupe.png">
+            <!---------------------PANNEAUX TITRES-------------------->
+            <img id="titre-cafes-coursan" src="assets/panneaux_titres/cafes_de_coursan.png">
+            <!---------------------PHOTOS CAFES DE COURSAN-------------------->
+            <img id="café1" src="assets/images/cafes_de_coursan/cafe_cazals_rue_emile_zola_1900.png">
+
 
         </a-assets>
 
 
         <!---------------------CIEL-------------------->
-        <a-sky color="darkblue"></a-sky>
+        <a-sky color="grey"></a-sky>
 
         
         <!---------------------SOL-------------------->
@@ -26,7 +33,57 @@
              position="0 0 -4" rotation="-90 0 0" 
              width="100" height="100"
              transparent="true"></a-plane>
+
+        
+        <!---------------------CAMERA-------------------->     
+        <a-entity id="cam-rig">
+			
+			<a-camera id="cam" position="0 1.6 0" >
+                <a-cursor id="curseur" color="#FFFFFF"></a-cursor>
+			</a-camera>
+            <!--------------------controlers-------------------->
+            <a-entity>
+                    <a-entity super-hands laser-controls="hand: left" id="left-hand"
+                              raycaster="objects: .clickable, .teleport; far: 10" >
+
+                              <a-entity id="left-hand-screen" position="0.2 0.4 0" rotation="-45 0 0"></a-entity>
+                    </a-entity>
+                    <a-entity super-hands laser-controls="hand: right" id="right-hand"
+                              raycaster="objects: .clickable, .teleport; far: 10">
+                    </a-entity>
+            </a-entity>
+			
+        </a-entity>
+
+        <!---------------------TOURNIQUET PRINCIPALE-------------------->
+        <a-entity id="principal" position="0 0 0">
+
+
+
+            <!---------------------PARTIE CAFES DE COURSAN-------------------->
+            <a-entity id="expo-cafes" position="0 1.6 -5">
+                
+                <!---------------------PANNEAU TITRE-------------------->
+                <!-- <a-image src="#titre-cafes-coursan" position="0 0 0" 
+                    shader="flat" class="clickable titres"
+                    width="1.92" height="0.26" scale="2 2 2"></a-image> -->
+
+                <!---------------------PHOTOS CAFES-------------------->
+                <a-entity position="0 0 -3">
+
+                    <a-image class="photo-expo" src="#café1" width="1.39" height="0.90" 
+                        scale="3 3 3">
+                    </a-image>
+
+                </a-entity>
+
+            </a-entity>
+
+
+        </a-entity>
     </a-scene>
     
+    <script src="js/main.js"></script>
+    <script src="js/accessibility.js"></script>
 </body>
 </html>
