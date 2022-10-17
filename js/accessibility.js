@@ -9,15 +9,10 @@ console.log(toutesLesPhotos);
 toutesLesPhotos.forEach ((element) => {
 
 
-
     element.addEventListener ('mouseenter', ()=> {
-        element.setAttribute('color', 'aqua');
-
-
     });
 
     element.addEventListener ('mouseleave', ()=> {
-        element.setAttribute('color', 'white');
     });
 
     element.addEventListener('click', () => {
