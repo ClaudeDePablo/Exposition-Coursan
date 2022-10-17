@@ -16,7 +16,8 @@
             <!--------------------- icone teleportation-------------------->
             <img id="footstep" src="assets/icones/foot.png">
             <!---------------------PANNEAUX TITRES-------------------->
-            <img id="titre-cafes-coursan" src="assets/panneaux_titres/cafes_de_coursan.png">
+            <img id="panneau-cafes" src="assets/panneaux_titres/cafes_de_coursan.png">
+            <img id="panneau-commerces" src="assets/panneaux_titres/commerces_de_coursan.png">
             <!---------------------PHOTOS CAFES DE COURSAN-------------------->
             <img id="café1" src="assets/images/cafes_de_coursan/cafe_cazals_rue_emile_zola_1900.png">
             <img id="café2" src="assets/images/cafes_de_coursan/cafe_de_l_avenir.png">
@@ -32,6 +33,20 @@
             <img id="café12" src="assets/images/cafes_de_coursan/grand_cafe_glacier_face_mairie.png">
             <img id="café13" src="assets/images/cafes_de_coursan/grand_cafe_siege_asc.png">
             <img id="café14" src="assets/images/cafes_de_coursan/grand_cafe_theron.png">
+            <img id="café15" src="assets/images/cafes_de_coursan/bar-angle-tailhade-nicole.png">
+            <!---------------------PHOTOS COMMERCES DE COURSAN-------------------->
+            <img id="commerce1" src="assets/images/commerces/commerce_albert_pinel.png">
+            <img id="commerce2" src="assets/images/commerces/commerce_atelier_barriere.png">
+            <img id="commerce3" src="assets/images/commerces/commerce_camps_epicerie.png">
+            <img id="commerce4" src="assets/images/commerces/commerce_divers_1.png">
+            <img id="commerce5" src="assets/images/commerces/commerce_divers_2.png">
+            <img id="commerce6" src="assets/images/commerces/commerce_divers_3.png">
+            <img id="commerce7" src="assets/images/commerces/commerce_divers_4.png">
+            <img id="commerce8" src="assets/images/commerces/commerce_divers_5.png">
+            <img id="commerce9" src="assets/images/commerces/commerce_divers_6.png">
+            <img id="commerce10" src="assets/images/commerces/commerce_dock_meridionnaux.png">
+            <img id="commerce11" src="assets/images/commerces/commerce_mr_me_julien.png">
+            <img id="commerce12" src="assets/images/commerces/commerce_taillhander.png">
 
 
         </a-assets>
@@ -75,7 +90,7 @@
             <a-entity id="expo-cafes" position="0 1.6 -5">
                 
                 <!---------------------PANNEAU TITRE-------------------->
-                <a-image src="#titre-cafes-coursan" position="0 0 0" 
+                <a-image src="#panneau-cafes" position="0 0 0" 
                     shader="flat" class="clickable titres"
                     width="1.92" height="0.26" scale="2 2 2"></a-image>
 
@@ -83,46 +98,49 @@
                 <a-entity position="0 0 -3">
 
                     <a-image class="photo-expo clickable" src="#café1" width="1.48" height="1.08" 
-                         position="-1.3 0 0"  rotation="0 15 0" scale="1.5 1.5 1.5">
+                         position="-1.3 0 0" rotation="0 15 0" scale="1.5 1.5 1.5">
                     </a-image>
                     <a-image class="photo-expo clickable" src="#café2" width="1.46" height="1.08" 
-                         position="1.3 0 0"  rotation="0 -15 0" scale="1.5 1.5 1.5">
+                         position="1.3 0 0" rotation="0 -15 0" scale="1.5 1.5 1.5">
                     </a-image>
                     <a-image class="photo-expo clickable" src="#café3" width="1.5" height="1.08" 
-                        position="-1.3 0 -3"  rotation="0 15 0" scale="1.5 1.5 1.5">
+                        position="-1.3 0 -3" rotation="0 15 0" scale="1.5 1.5 1.5">
                     </a-image>
                     <a-image class="photo-expo clickable" src="#café4" width="1.44" height="1.1" 
-                        position="1.3 0 -3"  rotation="0 -15 0" scale="1.5 1.5 1.5">
+                        position="1.3 0 -3" rotation="0 -15 0" scale="1.5 1.5 1.5">
                     </a-image>
                     <a-image class="photo-expo clickable" src="#café5" width="1.25" height="1.08" 
-                         position="-1.3 0 -6"  rotation="0 15 0" scale="1.5 1.5 1.5">
+                         position="-1.3 0 -6" rotation="0 15 0" scale="1.5 1.5 1.5">
                     </a-image>
                     <a-image class="photo-expo clickable" src="#café6" width="1.32" height="1.08" 
-                         position="1.3 0 -6"  rotation="0 -15 0" scale="1.5 1.5 1.5">
+                         position="1.3 0 -6" rotation="0 -15 0" scale="1.5 1.5 1.5">
                     </a-image>
                     <a-image class="photo-expo clickable" src="#café7" width="1.46" height="1.1" 
-                        position="-1.3 0 -9"  rotation="0 15 0" scale="1.5 1.5 1.5">
+                        position="-1.3 0 -9" rotation="0 15 0" scale="1.5 1.5 1.5">
                     </a-image>
                     <a-image class="photo-expo clickable" src="#café8" width="1.49" height="1.08" 
-                        position="1.3 0 -9"  rotation="0 -15 0" scale="1.5 1.5 1.5">
+                        position="1.3 0 -9" rotation="0 -15 0" scale="1.5 1.5 1.5">
                     </a-image>
                     <a-image class="photo-expo clickable" src="#café9" width="1.53" height="1.08" 
-                         position="-1.3 0 -12"  rotation="0 15 0" scale="1.5 1.5 1.5">
+                         position="-1.3 0 -12" rotation="0 15 0" scale="1.5 1.5 1.5">
                     </a-image>
                     <a-image class="photo-expo clickable" src="#café10" width="1.37" height="1.08" 
-                         position="1.3 0 -12"  rotation="0 -15 0" scale="1.5 1.5 1.5">
+                         position="1.3 0 -12" rotation="0 -15 0" scale="1.5 1.5 1.5">
                     </a-image>
                     <a-image class="photo-expo clickable" src="#café11" width="1.52" height="1.1" 
-                        position="-1.3 0 -15"  rotation="0 15 0" scale="1.5 1.5 1.5">
+                        position="-1.3 0 -15" rotation="0 15 0" scale="1.5 1.5 1.5">
                     </a-image>
                     <a-image class="photo-expo clickable" src="#café12" width="1.44" height="1.08" 
-                        position="1.3 0 -15"  rotation="0 -15 0" scale="1.5 1.5 1.5">
+                        position="1.3 0 -15" rotation="0 -15 0" scale="1.5 1.5 1.5">
                     </a-image>
                     <a-image class="photo-expo clickable" src="#café13" width="1.48" height="1.08" 
-                        position="-1.3 0 -18"  rotation="0 15 0" scale="1.5 1.5 1.5">
+                        position="-1.3 0 -18" rotation="0 15 0" scale="1.5 1.5 1.5">
                     </a-image>
-                    <a-image class="photo-expo clickable" src="#café14" width="1.51z" height="1.08" 
-                        position="1.3 0 -18"  rotation="0 -15 0" scale="1.5 1.5 1.5">
+                    <a-image class="photo-expo clickable" src="#café14" width="1.51" height="1.08" 
+                        position="1.3 0 -18" rotation="0 -15 0" scale="1.5 1.5 1.5">
+                    </a-image>
+                    <a-image class="photo-expo clickable" src="#café15" width="1.39" height="1.08" 
+                        position="0 0 -21" scale="1.5 1.5 1.5">
                     </a-image>
 
                 </a-entity>
@@ -135,6 +153,67 @@
                 <a-image src="#footstep" class="teleport" position="0 -1.5 -13" rotation="-90 0 0" teleport></a-image>
                 <a-image src="#footstep" class="teleport" position="0 -1.5 -16" rotation="-90 0 0" teleport></a-image>
                 <a-image src="#footstep" class="teleport" position="0 -1.5 -19" rotation="-90 0 0" teleport></a-image>
+                <a-image src="#footstep" class="teleport" position="0 -1.5 -22" rotation="-90 0 0" teleport></a-image>
+            </a-entity>
+
+
+            <!---------------------PARTIE COMMERCES DE COURSAN-------------------->
+            <a-entity id="expo-ccommerces" position="-5 1.6 0" rotation="0 90 0">
+                
+                <!---------------------PANNEAU TITRE-------------------->
+                <a-image src="#panneau-commerces" position="0 0 0" 
+                    shader="flat" class="clickable titres"
+                    width="1.92" height="0.26" scale="2 2 2"></a-image>
+
+                <!---------------------PHOTOS CAFES-------------------->
+                <a-entity position="0 0 -3">
+
+                    <a-image class="photo-expo clickable" src="#commerce1" width="1.27" height="1.08" 
+                         position="-1.3 0 0" rotation="0 15 0" scale="1.5 1.5 1.5">
+                    </a-image>
+                    <a-image class="photo-expo clickable" src="#commerce2" width="1.34" height="1.08" 
+                         position="1.3 0 0" rotation="0 -15 0" scale="1.5 1.5 1.5">
+                    </a-image>
+                    <a-image class="photo-expo clickable" src="#commerce3" width="1.53" height="1.08" 
+                        position="-1.3 0 -3" rotation="0 15 0" scale="1.5 1.5 1.5">
+                    </a-image>
+                    <a-image class="photo-expo clickable" src="#commerce4" width="1.39" height="1.08" 
+                        position="1.3 0 -3" rotation="0 -15 0" scale="1.5 1.5 1.5">
+                    </a-image>
+                    <a-image class="photo-expo clickable" src="#commerce5" width="1.39" height="1.08" 
+                         position="-1.3 0 -6" rotation="0 15 0" scale="1.5 1.5 1.5">
+                    </a-image>
+                    <a-image class="photo-expo clickable" src="#commerce6" width="1.39" height="1.08" 
+                         position="1.3 0 -6" rotation="0 -15 0" scale="1.5 1.5 1.5">
+                    </a-image>
+                    <a-image class="photo-expo clickable" src="#commerce7" width="1.39" height="1.08" 
+                        position="-1.3 0 -9" rotation="0 15 0" scale="1.5 1.5 1.5">
+                    </a-image>
+                    <a-image class="photo-expo clickable" src="#commerce8" width="1.23" height="1.08" 
+                        position="1.3 0 -9" rotation="0 -15 0" scale="1.5 1.5 1.5">
+                    </a-image>
+                    <a-image class="photo-expo clickable" src="#commerce9" width="1.23" height="1.08" 
+                         position="-1.3 0 -12" rotation="0 15 0" scale="1.5 1.5 1.5">
+                    </a-image>
+                    <a-image class="photo-expo clickable" src="#commerce10" width="1.44" height="1.08" 
+                         position="1.3 0 -12" rotation="0 -15 0" scale="1.5 1.5 1.5">
+                    </a-image>
+                    <a-image class="photo-expo clickable" src="#commerce11" width="1.25" height="1.08" 
+                        position="-1.3 0 -15" rotation="0 15 0" scale="1.5 1.5 1.5">
+                    </a-image>
+                    <a-image class="photo-expo clickable" src="#commerce12" width="1.21" height="1.08" 
+                        position="1.3 0 -15" rotation="0 -15 0" scale="1.5 1.5 1.5">
+                    </a-image>
+
+                </a-entity>
+                
+                <!---------------------TELEPORTATION CAFES-------------------->
+                <a-image src="#footstep" class="teleport" position="0 -1.5 -1" rotation="-90 0 0" teleport></a-image>
+                <a-image src="#footstep" class="teleport" position="0 -1.5 -4" rotation="-90 0 0" teleport></a-image>
+                <a-image src="#footstep" class="teleport" position="0 -1.5 -7" rotation="-90 0 0" teleport></a-image>
+                <a-image src="#footstep" class="teleport" position="0 -1.5 -10" rotation="-90 0 0" teleport></a-image>
+                <a-image src="#footstep" class="teleport" position="0 -1.5 -13" rotation="-90 0 0" teleport></a-image>
+                <a-image src="#footstep" class="teleport" position="0 -1.5 -16" rotation="-90 0 0" teleport></a-image>
             </a-entity>
 
 
