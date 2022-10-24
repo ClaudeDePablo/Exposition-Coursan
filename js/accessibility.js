@@ -1,9 +1,7 @@
 
 
 let toutesLesPhotos = document.querySelectorAll('.photo-expo');
-let leftControllerScreen = document.querySelector('#left-hand-screen');
 
-console.log(toutesLesPhotos);
 
 
 toutesLesPhotos.forEach ((element) => {

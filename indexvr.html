@@ -64,9 +64,9 @@
 
         
         <!---------------------CAMERA-------------------->     
-        <a-entity id="cam-rig">
+        <a-entity id="cam-rig" position="0 1.6 0"  position-cam>
 			
-			<a-camera id="cam" position="0 1.6 0" >
+			<a-camera id="cam">
                 <a-cursor id="curseur" color="#FFFFFF"></a-cursor>
 			</a-camera>
             <!--------------------controlers-------------------->
@@ -145,17 +145,18 @@
 
                 </a-entity>
                 
-                <!---------------------TELEPORTATION CAFES-------------------->
-                <a-image src="#footstep" class="teleport" position="0 -1.5 -1" rotation="-90 0 0" teleport></a-image>
-                <a-image src="#footstep" class="teleport" position="0 -1.5 -4" rotation="-90 0 0" teleport></a-image>
-                <a-image src="#footstep" class="teleport" position="0 -1.5 -7" rotation="-90 0 0" teleport></a-image>
-                <a-image src="#footstep" class="teleport" position="0 -1.5 -10" rotation="-90 0 0" teleport></a-image>
-                <a-image src="#footstep" class="teleport" position="0 -1.5 -13" rotation="-90 0 0" teleport></a-image>
-                <a-image src="#footstep" class="teleport" position="0 -1.5 -16" rotation="-90 0 0" teleport></a-image>
-                <a-image src="#footstep" class="teleport" position="0 -1.5 -19" rotation="-90 0 0" teleport></a-image>
-                <a-image src="#footstep" class="teleport" position="0 -1.5 -22" rotation="-90 0 0" teleport></a-image>
             </a-entity>
-
+            
+            <!---------------------TELEPORTATION CAFES-------------------->
+            <a-image src="#footstep" class="teleport" position="0 0.011 -6" rotation="-90 0 0" teleport></a-image>
+            <a-image src="#footstep" class="teleport" position="0 0.011 -9" rotation="-90 0 0" teleport></a-image>
+            <a-image src="#footstep" class="teleport" position="0 0.011 -12" rotation="-90 0 0" teleport></a-image>
+            <a-image src="#footstep" class="teleport" position="0 0.011 -14" rotation="-90 0 0" teleport></a-image>
+            <a-image src="#footstep" class="teleport" position="0 0.011 -16" rotation="-90 0 0" teleport></a-image>
+            <a-image src="#footstep" class="teleport" position="0 0.011 -18" rotation="-90 0 0" teleport></a-image>
+            <a-image src="#footstep" class="teleport" position="0 0.011 -21" rotation="-90 0 0" teleport></a-image>
+            <a-image src="#footstep" class="teleport" position="0 0.011 -24" rotation="-90 0 0" teleport></a-image>
+            <a-image src="#footstep" class="teleport" position="0 0.011 -27" rotation="-90 0 0" teleport></a-image>
 
             <!---------------------PARTIE COMMERCES DE COURSAN-------------------->
             <a-entity id="expo-ccommerces" position="-5 1.6 0" rotation="0 90 0">
@@ -165,7 +166,7 @@
                     shader="flat" class="clickable titres"
                     width="1.92" height="0.26" scale="2 2 2"></a-image>
 
-                <!---------------------PHOTOS CAFES-------------------->
+                <!---------------------PHOTOS COMMERCES-------------------->
                 <a-entity position="0 0 -3">
 
                     <a-image class="photo-expo clickable" src="#commerce1" width="1.27" height="1.08" 
