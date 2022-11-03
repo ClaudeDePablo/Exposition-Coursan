@@ -18,6 +18,8 @@
             <!---------------------PANNEAUX TITRES-------------------->
             <img id="panneau-cafes" src="assets/panneaux_titres/cafes_de_coursan.png">
             <img id="panneau-commerces" src="assets/panneaux_titres/commerces_de_coursan.png">
+            <img id="panneau-eglise" src="assets/panneaux_titres/eglise_de_coursan.png">
+            <img id="panneau-place" src="assets/panneaux_titres/place_auguste_tailhades.png">
             <!---------------------PHOTOS CAFES DE COURSAN-------------------->
             <img id="café1" src="assets/images/cafes_de_coursan/cafe_cazals_rue_emile_zola_1900.png">
             <img id="café2" src="assets/images/cafes_de_coursan/cafe_de_l_avenir.png">
@@ -47,24 +49,51 @@
             <img id="commerce10" src="assets/images/commerces/commerce_dock_meridionnaux.png">
             <img id="commerce11" src="assets/images/commerces/commerce_mr_me_julien.png">
             <img id="commerce12" src="assets/images/commerces/commerce_taillhander.png">
+            <!---------------------PHOTOS EGLISE DE COURSAN-------------------->
+            <img id="eglise1" src="assets/images/eglise/eglise_avec_charette.png">
+            <img id="eglise2" src="assets/images/eglise/eglise_avec_groupe.png">
+            <img id="eglise3" src="assets/images/eglise/eglise_place_revolution.png">
+            <img id="eglise4" src="assets/images/eglise/eglise_avec_pub.png">
+            <img id="eglise5" src="assets/images/eglise/clocher_rue_republique.png">
+            <img id="eglise6" src="assets/images/eglise/eglise_croix_de_la_passion.png">
+            <!---------------------PHOTOS PLACE TAILHADES-------------------->
+            <img id="place1" src="assets/images/place_a_tailhades/place_neige_avant_siecle.png">
+            <img id="place2" src="assets/images/place_a_tailhades/place_avec_marche_debut_siecle.png">
+            <img id="place3" src="assets/images/place_a_tailhades/premiere_fontaine.png">
+            <img id="place4" src="assets/images/place_a_tailhades/fontaine_colorisee_1912.png">
+            <img id="place5" src="assets/images/place_a_tailhades/fontaine_la_merveilleuse.png">
+            <img id="place6" src="assets/images/place_a_tailhades/fontaine_avec_vache.png">
+            <img id="place7" src="assets/images/place_a_tailhades/trottoir_des_jardinieres.png">
+            <img id="place8" src="assets/images/place_a_tailhades/fontaine_annees_30.png">
+            <img id="place9" src="assets/images/place_a_tailhades/place_filles.png">
+            <img id="place10" src="assets/images/place_a_tailhades/place_neige_1947.png">
+            <img id="place11" src="assets/images/place_a_tailhades/place_fontaine_neige_1947.png">
+            <img id="place12" src="assets/images/place_a_tailhades/place_bascule_fontaine.png">
+            <img id="place13" src="assets/images/place_a_tailhades/fontaine_annees_60.png">
+            <img id="place14" src="assets/images/place_a_tailhades/fontaine_beton_1968.png">
+            <img id="place15" src="assets/images/place_a_tailhades/place_fontaine_beton_70.png">
+            <img id="place16" src="assets/images/place_a_tailhades/fontaine_annees_70.png">
+            <img id="place17" src="assets/images/place_a_tailhades/place_fontaine_beton_75.png">
+            <img id="place18" src="assets/images/place_a_tailhades/fontaine_beton_neige_1987.png">
+            <img id="place19" src="assets/images/place_a_tailhades/fontaine_nouvelle_2017.png">
 
 
         </a-assets>
 
 
         <!---------------------CIEL-------------------->
-        <a-sky color="grey"></a-sky>
+        <!-- <a-sky color="grey"></a-sky> --> 
 
         
         <!---------------------SOL-------------------->
         <a-plane src="#floor" repeat="50 50 "
              position="0 0 -4" rotation="-90 0 0" 
-             width="100" height="100"
+             width="100" height="100" color="black"
              transparent="true"></a-plane>
 
         
         <!---------------------CAMERA-------------------->     
-        <a-entity id="cam-rig" position="0 1.6 0"  position-cam>
+        <a-entity id="cam-rig" position="0 1.6 0" position-cam>
 			
 			<a-camera id="cam">
                 <a-cursor id="curseur" color="#FFFFFF"></a-cursor>
@@ -74,7 +103,7 @@
                     <a-entity super-hands laser-controls="hand: left" id="left-hand"
                               raycaster="objects: .clickable, .teleport; far: 10" >
 
-                              <a-entity id="left-hand-screen" position="0.2 0.4 0" rotation="-45 0 0"></a-entity>
+                              <a-entity id="left-hand-screen" position="0.2 0.2 0" rotation="-45 0 0"></a-entity>
                     </a-entity>
                     <a-entity super-hands laser-controls="hand: right" id="right-hand"
                               raycaster="objects: .clickable, .teleport; far: 10">
@@ -82,6 +111,8 @@
             </a-entity>
 			
         </a-entity>
+
+
 
         <!---------------------TOURNIQUET PRINCIPALE-------------------->
         <a-entity id="principal" position="0 0 0">
@@ -159,7 +190,7 @@
             <a-image src="#footstep" class="teleport" position="0 0.011 -27" rotation="-90 0 0" teleport></a-image>
 
             <!---------------------PARTIE COMMERCES DE COURSAN-------------------->
-            <a-entity id="expo-ccommerces" position="-5 1.6 0" rotation="0 90 0">
+            <a-entity id="expo-commerces" position="-5 1.6 0" rotation="0 90 0">
                 
                 <!---------------------PANNEAU TITRE-------------------->
                 <a-image src="#panneau-commerces" position="0 0 0" 
@@ -215,6 +246,125 @@
                 <a-image src="#footstep" class="teleport" position="0 -1.5 -10" rotation="-90 0 0" teleport></a-image>
                 <a-image src="#footstep" class="teleport" position="0 -1.5 -13" rotation="-90 0 0" teleport></a-image>
                 <a-image src="#footstep" class="teleport" position="0 -1.5 -16" rotation="-90 0 0" teleport></a-image>
+            </a-entity>
+
+            <!---------------------PARTIE EGLISE DE COURSAN-------------------->
+            <a-entity id="expo-eglise" position="5 1.6 0" rotation="0 -90 0">
+                
+                <!---------------------PANNEAU TITRE-------------------->
+                <a-image src="#panneau-eglise" position="0 0 0" 
+                    shader="flat" class="clickable titres"
+                    width="1.92" height="0.26" scale="2 2 2"></a-image>
+
+                <!---------------------PHOTOS EGLISE-------------------->
+                <a-entity position="0 0 -3">
+
+                    <a-image class="photo-expo clickable" src="#eglise1" width="1.69" height="1.08" 
+                         position="-1.3 0 0" rotation="0 15 0" scale="1.5 1.5 1.5">
+                    </a-image>
+                    <a-image class="photo-expo clickable" src="#eglise2" width="1.75" height="1.08" 
+                         position="1.3 0 0" rotation="0 -15 0" scale="1.5 1.5 1.5">
+                    </a-image>
+                    <a-image class="photo-expo clickable" src="#eglise3" width="1.43" height="1.08" 
+                        position="-1.3 0 -3" rotation="0 15 0" scale="1.5 1.5 1.5">
+                    </a-image>
+                    <a-image class="photo-expo clickable" src="#eglise4" width="1.68" height="1.08" 
+                        position="1.3 0 -3" rotation="0 -15 0" scale="1.5 1.5 1.5">
+                    </a-image>
+                    <a-image class="photo-expo clickable" src="#eglise5" width="1.08" height="1.86" 
+                         position="-1.3 0 -6" rotation="0 15 0" scale="1.5 1.5 1.5">
+                    </a-image>
+                    <a-image class="photo-expo clickable" src="#eglise6" width="1.08" height="1.78" 
+                         position="1.3 0 -6" rotation="0 -15 0" scale="1.5 1.5 1.5">
+                    </a-image>
+                </a-entity>
+                
+                <!---------------------TELEPORTATION CAFES-------------------->
+                <!-- <a-image src="#footstep" class="teleport" position="0 -1.5 -1" rotation="-90 0 0" teleport></a-image>
+                <a-image src="#footstep" class="teleport" position="0 -1.5 -4" rotation="-90 0 0" teleport></a-image>
+                <a-image src="#footstep" class="teleport" position="0 -1.5 -7" rotation="-90 0 0" teleport></a-image>
+                <a-image src="#footstep" class="teleport" position="0 -1.5 -10" rotation="-90 0 0" teleport></a-image>
+                <a-image src="#footstep" class="teleport" position="0 -1.5 -13" rotation="-90 0 0" teleport></a-image>
+                <a-image src="#footstep" class="teleport" position="0 -1.5 -16" rotation="-90 0 0" teleport></a-image> -->
+            </a-entity>
+
+            <!---------------------PARTIE PLACE AUGUSTE TAILHADES-------------------->
+            <a-entity id="expo-place" position="0 1.6 5" rotation="0 -180 0">
+                
+                <!---------------------PANNEAU TITRE-------------------->
+                <a-image src="#panneau-place" position="0 0 0" 
+                    shader="flat" class="clickable titres"
+                    width="1.92" height="0.26" scale="2 2 2"></a-image>
+
+                <!---------------------PHOTOS PLACE A. TAILHADES-------------------->
+                <a-entity position="0 0 -3">
+
+                    <a-image class="photo-expo clickable" src="#place1" width="1.28" height="1.08" 
+                         position="-1.3 0 0" rotation="0 15 0" scale="1.5 1.5 1.5">
+                    </a-image>
+                    <a-image class="photo-expo clickable" src="#place2" width="1.49" height="1.08" 
+                         position="1.3 0 0" rotation="0 -15 0" scale="1.5 1.5 1.5">
+                    </a-image>
+                    <a-image class="photo-expo clickable" src="#place3" width="1.24" height="1.08" 
+                         position="-1.3 0 -3" rotation="0 15 0" scale="1.5 1.5 1.5">
+                    </a-image>
+                    <a-image class="photo-expo clickable" src="#place4" width="1.41" height="1.08" 
+                         position="1.3 0 -3" rotation="0 -15 0" scale="1.5 1.5 1.5">
+                    </a-image>
+                    <a-image class="photo-expo clickable" src="#place5" width="1.46" height="1.08" 
+                         position="-1.3 0 -6" rotation="0 15 0" scale="1.5 1.5 1.5">
+                    </a-image>
+                    <a-image class="photo-expo clickable" src="#place6" width="1.57" height="1.08" 
+                         position="1.3 0 -6" rotation="0 -15 0" scale="1.5 1.5 1.5">
+                    </a-image>
+                    <a-image class="photo-expo clickable" src="#place7" width="1.48" height="1.08" 
+                         position="-1.3 0 -9" rotation="0 15 0" scale="1.5 1.5 1.5">
+                    </a-image>
+                    <a-image class="photo-expo clickable" src="#place8" width="1.19" height="1.08" 
+                         position="1.3 0 -9" rotation="0 -15 0" scale="1.5 1.5 1.5">
+                    </a-image>
+                    <a-image class="photo-expo clickable" src="#place9" width="1.44" height="1.08" 
+                         position="-1.3 0 -12" rotation="0 15 0" scale="1.5 1.5 1.5">
+                    </a-image>
+                    <a-image class="photo-expo clickable" src="#place10" width="1.08" height="1.83" 
+                         position="1.3 0 -12" rotation="0 -15 0" scale="1.5 1.5 1.5">
+                    </a-image>
+                    <a-image class="photo-expo clickable" src="#place11" width="1.42" height="1.08" 
+                         position="-1.3 0 -15" rotation="0 15 0" scale="1.5 1.5 1.5">
+                    </a-image>
+                    <a-image class="photo-expo clickable" src="#place12" width="1.08" height="1.62" 
+                         position="1.3 0 -15" rotation="0 -15 0" scale="1.5 1.5 1.5">
+                    </a-image>
+                    <a-image class="photo-expo clickable" src="#place13" width="1.50" height="1.08" 
+                         position="-1.3 0 -18" rotation="0 15 0" scale="1.5 1.5 1.5">
+                    </a-image>
+                    <a-image class="photo-expo clickable" src="#place14" width="1.08" height="1.69" 
+                         position="1.3 0 -18" rotation="0 -15 0" scale="1.5 1.5 1.5">
+                    </a-image>
+                    <a-image class="photo-expo clickable" src="#place15" width="1.33" height="1.08" 
+                         position="-1.3 0 -21" rotation="0 15 0" scale="1.5 1.5 1.5">
+                    </a-image>
+                    <a-image class="photo-expo clickable" src="#place16" width="1.34" height="1.08" 
+                         position="1.3 0 -21" rotation="0 -15 0" scale="1.5 1.5 1.5">
+                    </a-image>
+                    <a-image class="photo-expo clickable" src="#place17" width="1.39" height="1.08" 
+                         position="-1.3 0 -24" rotation="0 15 0" scale="1.5 1.5 1.5">
+                    </a-image>
+                    <a-image class="photo-expo clickable" src="#place18" width="1.39" height="1.08" 
+                         position="1.3 0 -24" rotation="0 -15 0" scale="1.5 1.5 1.5">
+                    </a-image>
+                    <a-image class="photo-expo clickable" src="#place19" width="1.39" height="1.08" 
+                         position="0 0 -27" scale="1.5 1.5 1.5">
+                    </a-image>
+                </a-entity>
+                
+                <!---------------------TELEPORTATION CAFES-------------------->
+                <!-- <a-image src="#footstep" class="teleport" position="0 -1.5 -1" rotation="-90 0 0" teleport></a-image>
+                <a-image src="#footstep" class="teleport" position="0 -1.5 -4" rotation="-90 0 0" teleport></a-image>
+                <a-image src="#footstep" class="teleport" position="0 -1.5 -7" rotation="-90 0 0" teleport></a-image>
+                <a-image src="#footstep" class="teleport" position="0 -1.5 -10" rotation="-90 0 0" teleport></a-image>
+                <a-image src="#footstep" class="teleport" position="0 -1.5 -13" rotation="-90 0 0" teleport></a-image>
+                <a-image src="#footstep" class="teleport" position="0 -1.5 -16" rotation="-90 0 0" teleport></a-image> -->
             </a-entity>
 
 
