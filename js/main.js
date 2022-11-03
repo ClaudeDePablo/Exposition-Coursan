@@ -11,16 +11,9 @@ let textControle = document.createElement('a-text');
 
 screenText.append(textControle);
 
-
-function showCode(val) {
-    console.log('ok')
-    textControle.setAttribute('value', val);
-
-}
-
-
 document.addEventListener('keypress', (e) => {
+    console.log('ok')
     let val = str(e.keyCode);
-    showCode(val)
+    
 
 })
