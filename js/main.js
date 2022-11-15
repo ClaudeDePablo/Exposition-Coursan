@@ -13,7 +13,7 @@ screenText.append(textControle);
 
 document.addEventListener('keypress', (e) => {
     console.log('ok')
-    let val = str(e.keyCode);
+    
     
 
 })

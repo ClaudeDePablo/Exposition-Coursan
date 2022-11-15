@@ -11,8 +11,22 @@
     <a-scene renderer="antialias: true" fog="type: exponential; density: 0.0025;color: #000; near:15; far:500" stats>
 
         <a-assets>
-            <!---------------------TEXTURES-------------------->
-            <img id="floor" src="assets/textures/floor.png">
+            <!---------------------TEXTURE SOL-------------------->
+            <img id="floor" src="assets/textures/dark_baroque_wood_parquet_20_03/dark_baroque_wood_parquet_20_03_diffuse.jpg">
+            <img id="floor-HEIGHT" src="assets/textures/dark_baroque_wood_parquet_20_03/dark_baroque_wood_parquet_20_03_height.jpg">
+            <img id="floor-NRM" src="assets/textures/dark_baroque_wood_parquet_20_03/dark_baroque_wood_parquet_20_03_normal.jpg">
+            <img id="floor-AO" src="assets/textures/dark_baroque_wood_parquet_20_03/dark_baroque_wood_parquet_20_03_ao.jpg">
+            <!---------------------TEXTURE MUR-------------------->
+            <img id="wall" src="assets/textures/white_plaster_wall_with_wooden_frame_21_55/white_plaster_wall_with_wooden_frame_21_55_diffuse.jpg">
+            <img id="wall-HEIGHT" src="assets/textures/white_plaster_wall_with_wooden_frame_21_55/white_plaster_wall_with_wooden_frame_21_55_height.jpg">
+            <img id="wall-NRM" src="assets/textures/white_plaster_wall_with_wooden_frame_21_55/white_plaster_wall_with_wooden_frame_21_55_normal.jpg">
+            <img id="wall-AO" src="assets/textures/white_plaster_wall_with_wooden_frame_21_55/white_plaster_wall_with_wooden_frame_21_55_ao.jpg">
+            <img id="wall-ROUGH" src="assets/textures/white_plaster_wall_with_wooden_frame_21_55/white_plaster_wall_with_wooden_frame_21_55_roughness.jpg">
+            <!---------------------TEXTURE PLAFOND-------------------->
+            <img id="ceiling" src="assets/textures/plaster_decor_wall_21_33/plaster_decor_wall_21_33_diffuse.jpg">
+            <img id="ceiling-HEIGHT" src="assets/textures/plaster_decor_wall_21_33/plaster_decor_wall_21_33_height.jpg">
+            <img id="ceiling-NRM" src="assets/textures/plaster_decor_wall_21_33/plaster_decor_wall_21_33_normal.jpg">
+            <img id="ceiling-AO" src="assets/textures/plaster_decor_wall_21_33/plaster_decor_wall_21_33_ao.jpg">
             <!--------------------- icone teleportation-------------------->
             <img id="footstep" src="assets/icones/foot.png">
             <!---------------------PANNEAUX TITRES-------------------->
@@ -80,29 +94,74 @@
 
         </a-assets>
 
-
         <!---------------------CIEL-------------------->
         <!-- <a-sky color="grey"></a-sky> --> 
-
-        
+        <a-light type="point" position="0 11  0" intensity="1"></a-light>
         <!---------------------SOL-------------------->
-        <a-plane src="#floor" repeat="50 50 "
-             position="0 0 -4" rotation="-90 0 0" 
-             width="100" height="100" color="black"
-             transparent="true"></a-plane>
+        <a-plane src="#floor" repeat="20 20" position="0 0 0" rotation="-90 0 0" 
+          width="60" height="60" 
+          normal-map="#floor-NRM" normal-texture-repeat="12 12" normal-scale="1 -1" 
+          displacement-map="#floor-HEIGHT" displacement-scale="0" displacement-bias="0"
+          displacement-texture-repeat="20 20" displacement-texture-offset="1 1"
+          ambient-occlusion-map="#floor-AO" ambient-occusion-map-intensity="0.2"
+          ambient-occlusion-texture-repeat="20 20" ambient-occlusion-texture-offset="1 -1"
+          roughness="0.4"></a-plane>
+         <!---------------------PLAFOND-------------------->
+         <a-plane src="#ceiling" repeat="20 20" position="0 12 0" rotation="90 0 0" 
+           width="60" height="60" 
+           normal-map="#ceiling-NRM" normal-texture-repeat="12 12" normal-scale="1 -1" 
+           displacement-map="#ceiling-HEIGHT" displacement-scale="0" displacement-bias="0"
+           displacement-texture-repeat="20 20" displacement-texture-offset="1 1"
+           ambient-occlusion-map="#ceiling-AO" ambient-occusion-map-intensity="0.2"
+           ambient-occlusion-texture-repeat="20 20" ambient-occlusion-texture-offset="1 -1"></a-plane>
+     
+          <!---------------------MUR GAUCHE-------------------->        
+          <a-plane src="#wall" repeat="10 2" position="-30 6 0" rotation="0 90 0" 
+          width="60" height="12"
+          normal-map="#wall-NRM" normal-texture-repeat="10 2" normal-scale="1 1" 
+          displacement-map="#wall-HEIGHT" displacement-scale="1" displacement-bias="0" 
+          displacement-texture-repeat="10 2" displacement-texture-offset="1 1"
+          ambient-occlusion-map="#wall-AO" ambient-occusion-map-intensity="0.2"
+          spherical-env-map="#wall-ROUGH" roughness="0.1" metalness="0.1"></a-plane>
+          <!---------------------MUR DROITE-------------------->     
+          <a-plane src="#wall" repeat="10 2" position="30 6 0" rotation="0 -90 0" 
+          width="60" height="12"
+          normal-map="#wall-NRM" normal-texture-repeat="10 2" normal-scale="1 1" 
+          displacement-map="#wall-HEIGHT" displacement-scale="1" displacement-bias="0" 
+          displacement-texture-repeat="10 2" displacement-texture-offset="1 1"
+          ambient-occlusion-map="#wall-AO" ambient-occusion-map-intensity="0.2"
+          ambient-occlusion-texture-repeat="10 2" ambient-occlusion-texture-offset="1 -1"
+          roughness="0.4"></a-plane>      
+          <!---------------------MUR DEVANT-------------------->     
+          <a-plane src="#wall" repeat="10 2" position="0 6 -30"
+          width="60" height="12"
+          normal-map="#wall-NRM" normal-texture-repeat="10 2" normal-scale="1 1" 
+          displacement-map="#wall-HEIGHT" displacement-scale="1" displacement-bias="0" 
+          displacement-texture-repeat="10 2" displacement-texture-offset="1 1"
+          ambient-occlusion-map="#wall-AO" ambient-occusion-map-intensity="0.2"
+          ambient-occlusion-texture-repeat="10 2" ambient-occlusion-texture-offset="1 -1"
+          roughness="0.4"></a-plane>      
+          <!---------------------MUR DERRIERE-------------------->      
+          <a-plane src="#wall" repeat="10 2" position="0 6 30" rotation="0 180 0" 
+          width="60" height="12"
+          normal-map="#wall-NRM" normal-texture-repeat="10 2" normal-scale="1 1" 
+          displacement-map="#wall-HEIGHT" displacement-scale="1" displacement-bias="0" 
+          displacement-texture-repeat="10 2" displacement-texture-offset="1 1"
+          ambient-occlusion-map="#wall-AO" ambient-occusion-map-intensity="0.2"
+          ambient-occlusion-texture-repeat="10 2" ambient-occlusion-texture-offset="1 -1"
+          roughness="0.4"></a-plane>     
 
         
         <!---------------------CAMERA-------------------->     
-        <a-entity id="cam-rig" position="0 1.6 0" position-cam>
+        <a-entity id="cam-rig" position="0 0.6 0" position-cam>
 			
 			<a-camera id="cam">
                 <a-cursor id="curseur" color="#FFFFFF"></a-cursor>
 			</a-camera>
-            <!--------------------controlers-------------------->
+            <!--------------------CONTROLERS-------------------->
             <a-entity>
                     <a-entity super-hands laser-controls="hand: left" id="left-hand"
                               raycaster="objects: .clickable, .teleport; far: 10" >
-
                               <a-entity id="left-hand-screen" position="0.2 0.2 0" rotation="-45 0 0"></a-entity>
                     </a-entity>
                     <a-entity super-hands laser-controls="hand: right" id="right-hand"
