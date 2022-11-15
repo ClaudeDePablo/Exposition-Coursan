@@ -17,16 +17,22 @@
             <img id="floor-NRM" src="assets/textures/dark_baroque_wood_parquet_20_03/dark_baroque_wood_parquet_20_03_normal.jpg">
             <img id="floor-AO" src="assets/textures/dark_baroque_wood_parquet_20_03/dark_baroque_wood_parquet_20_03_ao.jpg">
             <!---------------------TEXTURE MUR-------------------->
-            <img id="wall" src="assets/textures/white_plaster_wall_with_wooden_frame_21_55/white_plaster_wall_with_wooden_frame_21_55_diffuse.jpg">
-            <img id="wall-HEIGHT" src="assets/textures/white_plaster_wall_with_wooden_frame_21_55/white_plaster_wall_with_wooden_frame_21_55_height.jpg">
-            <img id="wall-NRM" src="assets/textures/white_plaster_wall_with_wooden_frame_21_55/white_plaster_wall_with_wooden_frame_21_55_normal.jpg">
-            <img id="wall-AO" src="assets/textures/white_plaster_wall_with_wooden_frame_21_55/white_plaster_wall_with_wooden_frame_21_55_ao.jpg">
-            <img id="wall-ROUGH" src="assets/textures/white_plaster_wall_with_wooden_frame_21_55/white_plaster_wall_with_wooden_frame_21_55_roughness.jpg">
+            <img id="wall" src="assets/textures/plaster_decor_wall_21_28/plaster_decor_wall_21_28_diffuse.jpg">
+            <img id="wall-HEIGHT" src="assets/textures/plaster_decor_wall_21_28/plaster_decor_wall_21_28_height.jpg">
+            <img id="wall-NRM" src="assets/textures/plaster_decor_wall_21_28/plaster_decor_wall_21_28_normal.jpg">
+            <img id="wall-AO" src="assets/textures/plaster_decor_wall_21_28/plaster_decor_wall_21_28_ao.jpg">
+            <img id="wall-ROUGH" src="assets/textures/plaster_decor_wall_21_28/plaster_decor_wall_21_28_roughness.jpg">
             <!---------------------TEXTURE PLAFOND-------------------->
-            <img id="ceiling" src="assets/textures/plaster_decor_wall_21_33/plaster_decor_wall_21_33_diffuse.jpg">
-            <img id="ceiling-HEIGHT" src="assets/textures/plaster_decor_wall_21_33/plaster_decor_wall_21_33_height.jpg">
-            <img id="ceiling-NRM" src="assets/textures/plaster_decor_wall_21_33/plaster_decor_wall_21_33_normal.jpg">
-            <img id="ceiling-AO" src="assets/textures/plaster_decor_wall_21_33/plaster_decor_wall_21_33_ao.jpg">
+            <img id="ceiling" src="assets/textures/plaster_decor_wall_21_82/plaster_decor_wall_21_82_diffuse.jpg">
+            <img id="ceiling-HEIGHT" src="assets/textures/plaster_decor_wall_21_82/plaster_decor_wall_21_82_height.jpg">
+            <img id="ceiling-NRM" src="assets/textures/plaster_decor_wall_21_82/plaster_decor_wall_21_82_normal.jpg">
+            <img id="ceiling-AO" src="assets/textures/plaster_decor_wall_21_82/plaster_decor_wall_21_82_ao.jpg">
+            <!---------------------TEXTURE POUTRES-------------------->
+            <img id="poutre" src="assets/textures/dark_fine_wood_pbr_18_26/dark_fine_wood_pbr_18_26_diffuse.jpg">
+            <img id="poutre-HEIGHT" src="assets/textures/dark_fine_wood_pbr_18_26/dark_fine_wood_pbr_18_26_height.jpg">
+            <img id="poutre-NRM" src="assets/textures/dark_fine_wood_pbr_18_26/dark_fine_wood_pbr_18_26_normal.jpg">
+            <img id="poutre-AO" src="assets/textures/dark_fine_wood_pbr_18_26/dark_fine_wood_pbr_18_26_ao.jpg">
+            <img id="poutre-ROUGH" src="assets/textures/dark_fine_wood_pbr_18_26/dark_fine_wood_pbr_18_26_roughness.jpg">
             <!--------------------- icone teleportation-------------------->
             <img id="footstep" src="assets/icones/foot.png">
             <!---------------------PANNEAUX TITRES-------------------->
@@ -94,9 +100,18 @@
 
         </a-assets>
 
-        <!---------------------CIEL-------------------->
-        <!-- <a-sky color="grey"></a-sky> --> 
-        <a-light type="point" position="0 11  0" intensity="1"></a-light>
+        <!---------------------LUMIERE-------------------->
+        <a-light type="ambient" intensity="0.4"></a-light>
+        <a-light type="spot" position="0 -10 0" rotation="90 0 0" angle="180" intensity="0.1"></a-light>
+        <a-light type="point" position="-15 11 -15" intensity="0.1"></a-light>
+        <a-light type="point" position="-15 11 0" intensity="0.1"></a-light>
+        <a-light type="point" position="-15 11 15" intensity="0.1"></a-light>
+        <a-light type="point" position="15 11 15" intensity="0.1"></a-light>
+        <a-light type="point" position="15 11 -15" intensity="0.1"></a-light>
+        <a-light type="point" position="15 11 0" intensity="0.1"></a-light>
+        <a-light type="point" position="0 11 15" intensity="0.1"></a-light>
+        <a-light type="point" position="0 11 -15" intensity="0.1"></a-light>
+
         <!---------------------SOL-------------------->
         <a-plane src="#floor" repeat="20 20" position="0 0 0" rotation="-90 0 0" 
           width="60" height="60" 
@@ -105,51 +120,151 @@
           displacement-texture-repeat="20 20" displacement-texture-offset="1 1"
           ambient-occlusion-map="#floor-AO" ambient-occusion-map-intensity="0.2"
           ambient-occlusion-texture-repeat="20 20" ambient-occlusion-texture-offset="1 -1"
-          roughness="0.4"></a-plane>
+          roughness="0.2"></a-plane>
+
          <!---------------------PLAFOND-------------------->
-         <a-plane src="#ceiling" repeat="20 20" position="0 12 0" rotation="90 0 0" 
+         <a-plane src="#ceiling" repeat="3 3" position="0 12 0" rotation="90 0 0" 
            width="60" height="60" 
-           normal-map="#ceiling-NRM" normal-texture-repeat="12 12" normal-scale="1 -1" 
+           normal-map="#ceiling-NRM" normal-texture-repeat="3 3" normal-scale="1 -1" 
            displacement-map="#ceiling-HEIGHT" displacement-scale="0" displacement-bias="0"
-           displacement-texture-repeat="20 20" displacement-texture-offset="1 1"
+           displacement-texture-repeat="3 3" displacement-texture-offset="1 1"
            ambient-occlusion-map="#ceiling-AO" ambient-occusion-map-intensity="0.2"
-           ambient-occlusion-texture-repeat="20 20" ambient-occlusion-texture-offset="1 -1"></a-plane>
+           ambient-occlusion-texture-repeat="3 3" ambient-occlusion-texture-offset="1 -1"></a-plane>
+          
+         <!---------------------POUTRES-------------------->
+         <a-entity position="0 6 0" id="poutres">
+               <a-box src="#poutre" width="60" height="0.6" depth="0.6"
+                    position="-22.5 0 0" rotation="0 90 0" repeat="20 1"
+                    normal-map="#poutre-NRM" normal-texture-repeat="20 1" normal-scale="1 -1" 
+                    displacement-map="#poutre-HEIGHT" displacement-scale="0" displacement-bias="0"
+                    displacement-texture-repeat="20 1" displacement-texture-offset="1 1"
+                    ambient-occlusion-map="#poutre-AO" ambient-occusion-map-intensity="0.2"
+                    ambient-occlusion-texture-repeat="20 1" ambient-occlusion-texture-offset="1 -1"></a-box>
+               <a-box src="#poutre" width="60" height="0.6" depth="0.6"
+                    position="-15 0 0" rotation="0 90 0" repeat="20 1"
+                    normal-map="#poutre-NRM" normal-texture-repeat="20 1" normal-scale="1 -1" 
+                    displacement-map="#poutre-HEIGHT" displacement-scale="0" displacement-bias="0"
+                    displacement-texture-repeat="20 1" displacement-texture-offset="1 1"
+                    ambient-occlusion-map="#poutre-AO" ambient-occusion-map-intensity="0.2"
+                    ambient-occlusion-texture-repeat="20 1" ambient-occlusion-texture-offset="1 -1"></a-box>
+               <a-box src="#poutre" width="60" height="0.6" depth="0.6"
+                    position="-7.5 0 0" rotation="0 90 0" repeat="20 1"
+                    normal-map="#poutre-NRM" normal-texture-repeat="20 1" normal-scale="1 -1" 
+                    displacement-map="#poutre-HEIGHT" displacement-scale="0" displacement-bias="0"
+                    displacement-texture-repeat="20 1" displacement-texture-offset="1 1"
+                    ambient-occlusion-map="#poutre-AO" ambient-occusion-map-intensity="0.2"
+                    ambient-occlusion-texture-repeat="20 1" ambient-occlusion-texture-offset="1 -1"></a-box>
+               <a-box src="#poutre" width="60" height="0.6" depth="0.6" 
+                    position="0 0 0" rotation="0 90 0" repeat="20 1"
+                    normal-map="#poutre-NRM" normal-texture-repeat="20 1" normal-scale="1 -1" 
+                    displacement-map="#poutre-HEIGHT" displacement-scale="0" displacement-bias="0"
+                    displacement-texture-repeat="20 1" displacement-texture-offset="1 1"
+                    ambient-occlusion-map="#poutre-AO" ambient-occusion-map-intensity="0.2"
+                    ambient-occlusion-texture-repeat="20 1" ambient-occlusion-texture-offset="1 -1"></a-box>
+               <a-box src="#poutre" width="60" height="0.6" depth="0.6" 
+                    position="7.5 0 0" rotation="0 90 0" repeat="20 1"
+                    normal-map="#poutre-NRM" normal-texture-repeat="20 1" normal-scale="1 -1" 
+                    displacement-map="#poutre-HEIGHT" displacement-scale="0" displacement-bias="0"
+                    displacement-texture-repeat="20 1" displacement-texture-offset="1 1"
+                    ambient-occlusion-map="#poutre-AO" ambient-occusion-map-intensity="0.2"
+                    ambient-occlusion-texture-repeat="20 1" ambient-occlusion-texture-offset="1 -1"></a-box>
+               <a-box src="#poutre" width="60" height="0.6" depth="0.6" 
+                    position="15 0 0" rotation="0 90 0" repeat="20 1"
+                    normal-map="#poutre-NRM" normal-texture-repeat="20 1" normal-scale="1 -1" 
+                    displacement-map="#poutre-HEIGHT" displacement-scale="0" displacement-bias="0"
+                    displacement-texture-repeat="20 1" displacement-texture-offset="1 1"
+                    ambient-occlusion-map="#poutre-AO" ambient-occusion-map-intensity="0.2"
+                    ambient-occlusion-texture-repeat="20 1" ambient-occlusion-texture-offset="1 -1"></a-box>
+               <a-box src="#poutre" width="60" height="0.6" depth="0.6"
+                    position="22.5 0 0" rotation="0 90 0" repeat="20 1"
+                    normal-map="#poutre-NRM" normal-texture-repeat="20 1" normal-scale="1 -1" 
+                    displacement-map="#poutre-HEIGHT" displacement-scale="0" displacement-bias="0"
+                    displacement-texture-repeat="20 1" displacement-texture-offset="1 1"
+                    ambient-occlusion-map="#poutre-AO" ambient-occusion-map-intensity="0.2"
+                    ambient-occlusion-texture-repeat="20 1" ambient-occlusion-texture-offset="1 -1"></a-box>
+
+               <a-box src="#poutre" width="60" height="0.6" depth="0.6"
+                    position="0 0.1 -22.5" repeat="20 1"
+                    normal-map="#poutre-NRM" normal-texture-repeat="20 1" normal-scale="1 -1" 
+                    displacement-map="#poutre-HEIGHT" displacement-scale="0" displacement-bias="0"
+                    displacement-texture-repeat="20 1" displacement-texture-offset="1 1"
+                    ambient-occlusion-map="#poutre-AO" ambient-occusion-map-intensity="0.2"
+                    ambient-occlusion-texture-repeat="20 1" ambient-occlusion-texture-offset="1 -1"></a-box>
+               <a-box src="#poutre" width="60" height="0.6" depth="0.6"
+                    position="0 0.1 -15" repeat="20 1"
+                    normal-map="#poutre-NRM" normal-texture-repeat="20 1" normal-scale="1 -1" 
+                    displacement-map="#poutre-HEIGHT" displacement-scale="0" displacement-bias="0"
+                    displacement-texture-repeat="20 1" displacement-texture-offset="1 1"
+                    ambient-occlusion-map="#poutre-AO" ambient-occusion-map-intensity="0.2"
+                    ambient-occlusion-texture-repeat="20 1" ambient-occlusion-texture-offset="1 -1"></a-box>
+               <a-box src="#poutre" width="60" height="0.6" depth="0.6"
+                    position="0 0.1 -7.5" repeat="20 1"
+                    normal-map="#poutre-NRM" normal-texture-repeat="20 1" normal-scale="1 -1" 
+                    displacement-map="#poutre-HEIGHT" displacement-scale="0" displacement-bias="0"
+                    displacement-texture-repeat="20 1" displacement-texture-offset="1 1"
+                    ambient-occlusion-map="#poutre-AO" ambient-occusion-map-intensity="0.2"
+                    ambient-occlusion-texture-repeat="20 1" ambient-occlusion-texture-offset="1 -1"></a-box>
+               <a-box src="#poutre" width="60" height="0.6" depth="0.6" 
+                    position="0 0.1 0" repeat="20 1"
+                    normal-map="#poutre-NRM" normal-texture-repeat="20 1" normal-scale="1 -1" 
+                    displacement-map="#poutre-HEIGHT" displacement-scale="0" displacement-bias="0"
+                    displacement-texture-repeat="20 1" displacement-texture-offset="1 1"
+                    ambient-occlusion-map="#poutre-AO" ambient-occusion-map-intensity="0.2"
+                    ambient-occlusion-texture-repeat="20 1" ambient-occlusion-texture-offset="1 -1"></a-box>
+               <a-box src="#poutre" width="60" height="0.6" depth="0.6" 
+                    position="0 0.1 7.5" repeat="20 1"
+                    normal-map="#poutre-NRM" normal-texture-repeat="20 1" normal-scale="1 -1" 
+                    displacement-map="#poutre-HEIGHT" displacement-scale="0" displacement-bias="0"
+                    displacement-texture-repeat="20 1" displacement-texture-offset="1 1"
+                    ambient-occlusion-map="#poutre-AO" ambient-occusion-map-intensity="0.2"
+                    ambient-occlusion-texture-repeat="20 1" ambient-occlusion-texture-offset="1 -1"></a-box>
+               <a-box src="#poutre" width="60" height="0.6" depth="0.6" 
+                    position="0 0.1 15" repeat="20 1"
+                    normal-map="#poutre-NRM" normal-texture-repeat="20 1" normal-scale="1 -1" 
+                    displacement-map="#poutre-HEIGHT" displacement-scale="0" displacement-bias="0"
+                    displacement-texture-repeat="20 1" displacement-texture-offset="1 1"
+                    ambient-occlusion-map="#poutre-AO" ambient-occusion-map-intensity="0.2"
+                    ambient-occlusion-texture-repeat="20 1" ambient-occlusion-texture-offset="1 -1"></a-box>
+               <a-box src="#poutre" width="60" height="0.6" depth="0.6"
+                    position="0 0.1 22.5" repeat="20 1"
+                    normal-map="#poutre-NRM" normal-texture-repeat="20 1" normal-scale="1 -1" 
+                    displacement-map="#poutre-HEIGHT" displacement-scale="0" displacement-bias="0"
+                    displacement-texture-repeat="20 1" displacement-texture-offset="1 1"
+                    ambient-occlusion-map="#poutre-AO" ambient-occusion-map-intensity="0.2"
+                    ambient-occlusion-texture-repeat="20 1" ambient-occlusion-texture-offset="1 -1"></a-box>
+         </a-entity>
      
           <!---------------------MUR GAUCHE-------------------->        
-          <a-plane src="#wall" repeat="10 2" position="-30 6 0" rotation="0 90 0" 
+          <a-plane src="#wall" repeat="20 4" position="-30 6 0" rotation="0 90 0" 
           width="60" height="12"
-          normal-map="#wall-NRM" normal-texture-repeat="10 2" normal-scale="1 1" 
+          normal-map="#wall-NRM" normal-texture-repeat="20 4" normal-scale="1 -1" 
           displacement-map="#wall-HEIGHT" displacement-scale="1" displacement-bias="0" 
-          displacement-texture-repeat="10 2" displacement-texture-offset="1 1"
-          ambient-occlusion-map="#wall-AO" ambient-occusion-map-intensity="0.2"
-          spherical-env-map="#wall-ROUGH" roughness="0.1" metalness="0.1"></a-plane>
+          displacement-texture-repeat="20 4" displacement-texture-offset="1 1"
+          ambient-occlusion-map="#wall-AO" ambient-occusion-map-intensity="0.2"></a-plane>
           <!---------------------MUR DROITE-------------------->     
-          <a-plane src="#wall" repeat="10 2" position="30 6 0" rotation="0 -90 0" 
+          <a-plane src="#wall" repeat="20 4" position="30 6 0" rotation="0 -90 0" 
           width="60" height="12"
-          normal-map="#wall-NRM" normal-texture-repeat="10 2" normal-scale="1 1" 
+          normal-map="#wall-NRM" normal-texture-repeat="20 4" normal-scale="1 1" 
           displacement-map="#wall-HEIGHT" displacement-scale="1" displacement-bias="0" 
-          displacement-texture-repeat="10 2" displacement-texture-offset="1 1"
+          displacement-texture-repeat="20 4" displacement-texture-offset="1 1"
           ambient-occlusion-map="#wall-AO" ambient-occusion-map-intensity="0.2"
-          ambient-occlusion-texture-repeat="10 2" ambient-occlusion-texture-offset="1 -1"
-          roughness="0.4"></a-plane>      
+          ambient-occlusion-texture-repeat="20 4" ambient-occlusion-texture-offset="1 -1"></a-plane>      
           <!---------------------MUR DEVANT-------------------->     
-          <a-plane src="#wall" repeat="10 2" position="0 6 -30"
+          <a-plane src="#wall" repeat="20 4" position="0 6 -30"
           width="60" height="12"
-          normal-map="#wall-NRM" normal-texture-repeat="10 2" normal-scale="1 1" 
+          normal-map="#wall-NRM" normal-texture-repeat="20 4" normal-scale="1 1" 
           displacement-map="#wall-HEIGHT" displacement-scale="1" displacement-bias="0" 
-          displacement-texture-repeat="10 2" displacement-texture-offset="1 1"
+          displacement-texture-repeat="20 4" displacement-texture-offset="1 1"
           ambient-occlusion-map="#wall-AO" ambient-occusion-map-intensity="0.2"
-          ambient-occlusion-texture-repeat="10 2" ambient-occlusion-texture-offset="1 -1"
-          roughness="0.4"></a-plane>      
+          ambient-occlusion-texture-repeat="20 4" ambient-occlusion-texture-offset="1 -1"></a-plane>      
           <!---------------------MUR DERRIERE-------------------->      
-          <a-plane src="#wall" repeat="10 2" position="0 6 30" rotation="0 180 0" 
+          <a-plane src="#wall" repeat="20 4" position="0 6 30" rotation="0 180 0" 
           width="60" height="12"
-          normal-map="#wall-NRM" normal-texture-repeat="10 2" normal-scale="1 1" 
+          normal-map="#wall-NRM" normal-texture-repeat="20 4" normal-scale="1 1" 
           displacement-map="#wall-HEIGHT" displacement-scale="1" displacement-bias="0" 
-          displacement-texture-repeat="10 2" displacement-texture-offset="1 1"
+          displacement-texture-repeat="20 4" displacement-texture-offset="1 1"
           ambient-occlusion-map="#wall-AO" ambient-occusion-map-intensity="0.2"
-          ambient-occlusion-texture-repeat="10 2" ambient-occlusion-texture-offset="1 -1"
-          roughness="0.4"></a-plane>     
+          ambient-occlusion-texture-repeat="20 4" ambient-occlusion-texture-offset="1 -1"></a-plane>     
 
         
         <!---------------------CAMERA-------------------->     
