@@ -8,9 +8,9 @@
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
 </head>
 <body>
-    <a-scene renderer="antialias: true" fog="type: exponential; density: 0.0025;color: #000; near:15; far:500" stats>
+     <a-scene renderer="antialias: true" fog="type: exponential; density: 0.0025;color: #000; near:15; far:500" stats>
 
-        <a-assets>
+          <a-assets>
             <!---------------------TEXTURE SOL-------------------->
             <img id="floor" src="assets/textures/dark_baroque_wood_parquet_20_03/dark_baroque_wood_parquet_20_03_diffuse.jpg">
             <img id="floor-HEIGHT" src="assets/textures/dark_baroque_wood_parquet_20_03/dark_baroque_wood_parquet_20_03_height.jpg">
@@ -37,10 +37,14 @@
             <!--------------------- icone teleportation-------------------->
             <img id="footstep" src="assets/icones/foot.png">
             <!---------------------PANNEAUX TITRES-------------------->
+            <img id="panneau-entree" src="assets/panneaux_titres/entree.png">
+            <img id="panneau-lieux" src="assets/panneaux_titres/lieux_coursan.png">
             <img id="panneau-cafes" src="assets/panneaux_titres/cafes_de_coursan.png">
             <img id="panneau-commerces" src="assets/panneaux_titres/commerces_de_coursan.png">
             <img id="panneau-eglise" src="assets/panneaux_titres/eglise_de_coursan.png">
             <img id="panneau-place" src="assets/panneaux_titres/place_auguste_tailhades.png">
+            <!---------------------PHOTO CLAUDE DE PABLO-------------------->
+            <img id="claude" src="assets/images/claude.png">
             <!---------------------PHOTOS CAFES DE COURSAN-------------------->
             <img id="café1" src="assets/images/cafes_de_coursan/cafe_cazals_rue_emile_zola_1900.png">
             <img id="café2" src="assets/images/cafes_de_coursan/cafe_de_l_avenir.png">
@@ -102,21 +106,41 @@
 
 
 
-        </a-assets>
+          </a-assets>
 
-        <!---------------------LUMIERE-------------------->
-        <a-light type="ambient" intensity="0.4"></a-light>
-        <!-- <a-light type="spot" position="0 11.95 0" rotation="90 0 0" angle="90" intensity="0.9"></a-light> -->
-        <a-light type="point" position="-15 10.8 -15" intensity="0.1"></a-light>
-        <a-light type="point" position="-15 10.8 0" intensity="0.1"></a-light>
-        <a-light type="point" position="-15 10.8 15" intensity="0.1"></a-light>
-        <a-light type="point" position="15 10.8 15" intensity="0.1"></a-light>
-        <a-light type="point" position="15 10.8 -15" intensity="0.1"></a-light>
-        <a-light type="point" position="15 10.8 0" intensity="0.1"></a-light>
-        <a-light type="point" position="0 10.8 15" intensity="0.1"></a-light>
-        <a-light type="point" position="0 10.8 -15" intensity="0.1"></a-light>
+          <!---------------------LUMIERE-------------------->
+          <a-light type="ambient" intensity="0.4"></a-light>
+          <!-- <a-light type="spot" position="0 11.95 0" rotation="90 0 0" angle="90" intensity="0.9"></a-light> -->
+          <!---------------------lumière entree expo-------------------->
+          <a-light type="point" position="4.5 1.2 27" intensity="0.1"></a-light>
+          <a-light type="point" position="-4.5 1.2 27" intensity="0.1"></a-light>
+          <a-light type="point" position="-15 10.8 -15" intensity="0.1"></a-light>
+          <a-light type="point" position="-15 10.8 0" intensity="0.1"></a-light>
+          <a-light type="point" position="-15 10.8 15" intensity="0.1"></a-light>
+          <a-light type="point" position="15 10.8 15" intensity="0.1"></a-light>
+          <a-light type="point" position="15 10.8 -15" intensity="0.1"></a-light>
+          <a-light type="point" position="15 10.8 0" intensity="0.1"></a-light>
+          <a-light type="point" position="0 10.8 15" intensity="0.1"></a-light>
+          <a-light type="point" position="0 10.8 -15" intensity="0.1"></a-light>
 
-
+          <!---------------------CAMERA-------------------->     
+        <a-entity id="cam-rig" position="0 0.6 27" position-cam>
+			
+			<a-camera id="cam">
+                <a-cursor id="curseur" color="#FFFFFF"></a-cursor>
+			</a-camera>
+            <!--------------------CONTROLERS-------------------->
+            <a-entity>
+                    <a-entity super-hands laser-controls="hand: left" id="left-hand"
+                              raycaster="objects: .clickable, .teleport; far: 10" >
+                              <a-entity id="left-hand-screen" position="0.2 0.2 0" rotation="-45 0 0"></a-entity>
+                    </a-entity>
+                    <a-entity super-hands laser-controls="hand: right" id="right-hand"
+                              raycaster="objects: .clickable, .teleport; far: 10">
+                    </a-entity>
+            </a-entity>
+			
+        </a-entity>
 
         <!---------------------STRUCTURES-------------------->
         <!---------------------SOL-------------------->
@@ -274,29 +298,72 @@
           ambient-occlusion-map="#wall-AO" ambient-occusion-map-intensity="0.2"
           ambient-occlusion-texture-repeat="20 4" ambient-occlusion-texture-offset="1 -1"></a-plane>     
 
-        
-        <!---------------------CAMERA-------------------->     
-        <a-entity id="cam-rig" position="0 0.6 29" position-cam>
-			
-			<a-camera id="cam">
-                <a-cursor id="curseur" color="#FFFFFF"></a-cursor>
-			</a-camera>
-            <!--------------------CONTROLERS-------------------->
-            <a-entity>
-                    <a-entity super-hands laser-controls="hand: left" id="left-hand"
-                              raycaster="objects: .clickable, .teleport; far: 10" >
-                              <a-entity id="left-hand-screen" position="0.2 0.2 0" rotation="-45 0 0"></a-entity>
-                    </a-entity>
-                    <a-entity super-hands laser-controls="hand: right" id="right-hand"
-                              raycaster="objects: .clickable, .teleport; far: 10">
-                    </a-entity>
-            </a-entity>
-			
-        </a-entity>
+            
+        <!---------------------STRUCTURE ENTREE EXPO--------------------> 
+        <a-entity position="0 0 23">
+          
+          <!---------------------PANNEAU TITRE DE L'EXPO--------------------> 
+          <a-image src="#panneau-entree" position="0 4.4 0"
+               width="10" height="2.5"></a-image>
+          <!---------------------PARTIE GAUCHE--------------------> 
+          <a-entity position="-3.5 0 0">
+               <!---------------------panneau-------------------->
+               <a-box src="#wood" position="0 1.63 0"
+                    width="3" height="3" depth="0.1" repeat="1 2"
+                    normal-map="#wood-NRM" normal-texture-repeat="1 2" normal-scale="1 -1" 
+                    displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
+                    displacement-texture-repeat="1 2" displacement-texture-offset="1 1"
+                    ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
+                    ambient-occlusion-texture-repeat="1 2" ambient-occlusion-texture-offset="1 -1"
+                    spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
+               </a-box>
+               <!---------------------PArtie Claude-------------------->
+               <a-entity>
+                    <a-image src="#claude" position="-0.5 1.63 0.0511"
+                         width="1.04" height="1.85"></a-image>
+               </a-entity>
 
+               <!---------------------pied-------------------->
+               <a-box src="#wood" position="0 0 0"
+                    width="3.5" height="0.3" depth="0.3"
+                    normal-map="#wood-NRM" normal-texture-repeat="1 1" normal-scale="1 -1" 
+                    displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
+                    displacement-texture-repeat="1 1" displacement-texture-offset="1 1"
+                    ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
+                    ambient-occlusion-texture-repeat="1 1" ambient-occlusion-texture-offset="1 -1"
+                    spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
+               </a-box>
+          </a-entity>
+          <!---------------------PARTIE DROITE--------------------> 
+          <a-entity position="3.5 0 0">
+               <!---------------------panneau-------------------->
+               <a-box src="#wood" position="0 1.63 0"
+                    width="3" height="3" depth="0.1" repeat="1 2"
+                    normal-map="#wood-NRM" normal-texture-repeat="1 2" normal-scale="1 -1" 
+                    displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
+                    displacement-texture-repeat="1 2" displacement-texture-offset="1 1"
+                    ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
+                    ambient-occlusion-texture-repeat="1 2" ambient-occlusion-texture-offset="1 -1"
+                    spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
+               </a-box>
+               <!---------------------pied-------------------->
+               <a-box src="#wood" position="0 0 0"
+                    width="3.5" height="0.3" depth="0.3"
+                    normal-map="#wood-NRM" normal-texture-repeat="1 1" normal-scale="1 -1" 
+                    displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
+                    displacement-texture-repeat="1 1" displacement-texture-offset="1 1"
+                    ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
+                    ambient-occlusion-texture-repeat="1 1" ambient-occlusion-texture-offset="1 -1"
+                    spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
+               </a-box>
+          </a-entity>
+        </a-entity>
+        
+
+ 
 
         <!---------------------SUPPORT PHOTOS--------------------> 
-        <a-entity position="0 0 23" rotation="0 -90 0">
+        <a-entity position="0 0 0" rotation="0 -90 0">
           <a-entity position="0 0 0">
               <a-box src="#wood" position="0 0 0"
                width="3.5" height="0.3" depth="0.3"
