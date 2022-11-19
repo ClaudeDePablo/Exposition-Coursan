@@ -8,7 +8,7 @@
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
 </head>
 <body>
-     <a-scene renderer="antialias: true" fog="type: exponential; density: 0.0025;color: #000; near:15; far:500" stats>
+     <a-scene renderer="antialias: true" fog="type: exponential; density: 0.09; color: white; near:15; far:500" stats>
 
           <a-assets>
             <!---------------------TEXTURE SOL-------------------->
@@ -128,7 +128,7 @@
           <a-light type="point" position="0 10.8 -15" intensity="0.1"></a-light>
 
           <!---------------------CAMERA-------------------->     
-          <a-entity id="cam-rig" position="0 0.6 27" position-cam>
+          <a-entity id="cam-rig"  progressive-controls movement-controls=" fly: true" position-cam>
 			
 			<a-camera id="cam">
                 <a-cursor id="curseur" color="#FFFFFF"></a-cursor>
