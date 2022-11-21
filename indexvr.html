@@ -37,19 +37,21 @@
             <img id="wood-ROUGH" src="assets/textures/dark_fine_wood/dark_fine_wood_pbr_18_26_roughness.jpg">
             <!--------------------- icone teleportation-------------------->
             <img id="footstep" src="assets/icones/foot.png">
-            <!---------------------PHOTO CLAUDE DE PABLO-------------------->
-            <img id="claude" src="assets/images/claude.png">
-            <img id="livre" src="assets/images/livre.png">
-            <!---------------------TEXTE MENTIONS LEGALES-------------------->
-            <img id="mentions" src="assets/textes/mentions-legales.png">
             
             <!-------------------------------------------------------->
             <!---------------------PANNEAUX TITRES-------------------->
             <!-------------------------------------------------------->
-            <img id="panneau-entree" src="assets/panneaux_titres/entree.png">
             <img id="panneau-cafes" src="assets/panneaux_titres/cafes_de_coursan.png">
             <img id="panneau-commerces" src="assets/panneaux_titres/commerces_de_coursan.png">
             <img id="panneau-place" src="assets/panneaux_titres/place_auguste_tailhades.png">
+
+            <!---------------------------------------------------------------->
+            <!---------------------PHOTOS ENTREE EXPO-------------------->
+            <!---------------------------------------------------------------->
+            <img id="panneau-entree" src="assets/images/entree_expo/titre.png">
+            <img id="claude" src="assets/images/entree_expo/claude.png">
+            <img id="texte_accueil" src="assets/images/entree_expo/texte.png">
+            <img id="mentions" src="assets/textes/mentions-legales.png">
 
             <!---------------------------------------------------------------->
             <!---------------------PHOTOS LIEUX DE COURSAN-------------------->
@@ -67,15 +69,15 @@
             <!----------------------------------------------------------------->
             <!---------------------PHOTOS EGLISE DE COURSAN-------------------->
             <!----------------------------------------------------------------->
-            <img id="panneau-eglise" src="assets/panneaux_titres/eglise_de_coursan.png">
-            <img id="lieu1" src="assets/images/lieux de coursan/fichier1.jpg">
-            <img id="lieu2" src="assets/images/lieux de coursan/fichier2.jpg">
-            <img id="lieu3" src="assets/images/lieux de coursan/fichier3.jpg">
-            <img id="lieu4" src="assets/images/lieux de coursan/fichier4.jpg">
-            <img id="lieu5" src="assets/images/lieux de coursan/fichier5.jpg">
-            <img id="lieu6" src="assets/images/lieux de coursan/fichier6.jpg">
-            <img id="lieu7" src="assets/images/lieux de coursan/fichier7.jpg">
-            <img id="lieu8" src="assets/images/lieux de coursan/fichier8.jpg">
+            <img id="panneau-eglise" src="assets/images/eglise/eglise_de_coursan.png">
+            <img id="eglise1" src="assets/images/eglise/fichier1.jpg">
+            <img id="eglise2" src="assets/images/eglise/fichier2.jpg">
+            <img id="eglise3" src="assets/images/eglise/fichier3.jpg">
+            <img id="eglise4" src="assets/images/eglise/fichier4.jpg">
+            <img id="eglise5" src="assets/images/eglise/fichier5.jpg">
+            <img id="eglise6" src="assets/images/eglise/fichier6.jpg">
+            <img id="eglise7" src="assets/images/eglise/fichier7.jpg">
+            <img id="eglise" src="assets/images/eglise/fichier8.jpg">
 
             <!---------------------PHOTOS CAFES DE COURSAN-------------------->
             <img id="café1" src="assets/images/cafes_de_coursan/cafe_cazals_rue_emile_zola_1900.png">
@@ -350,12 +352,12 @@
                     ambient-occlusion-texture-repeat="1 2" ambient-occlusion-texture-offset="1 -1"
                     spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
                </a-box>
-               <!---------------------PArtie Claude-------------------->
+               <!---------------------Partie Claude-------------------->
                <a-entity>
-                    <a-image src="#claude" position="-0.5 1.63 0.0511"
-                         width="0.78" height="1.39"></a-image>
-                    <a-image src="#livre" position="0.5 1.63 0.0511"
-                         width="0.675" height="0.88"></a-image>
+                    <a-image src="#claude" position="-1.1 2.6 0.0511"
+                         width="0.78" height="1.39" scale="0.5 0.5 0.5"></a-image>
+                    <a-image src="#texte_accueil" position="0 1.4 0.0511"
+                         width="1.49" height="1.08" scale="2 2 2"></a-image>
                </a-entity>
 
                <!---------------------pied-------------------->
