@@ -8,7 +8,7 @@
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
 </head>
 <body>
-     <a-scene renderer="antialias: true" stats>
+     <a-scene renderer="antialias: true"  fog="type: exponential; density: 0.05; color: white; near:25; far:50" stats>
 
           <a-assets>
             <!---------------------TEXTURE SOL-------------------->
@@ -38,16 +38,9 @@
             <!--------------------- icone teleportation-------------------->
             <img id="footstep" src="assets/icones/foot.png">
             
-            <!-------------------------------------------------------->
-            <!---------------------PANNEAUX TITRES-------------------->
-            <!-------------------------------------------------------->
-            <img id="panneau-cafes" src="assets/panneaux_titres/cafes_de_coursan.png">
-            <img id="panneau-commerces" src="assets/panneaux_titres/commerces_de_coursan.png">
-            <img id="panneau-place" src="assets/panneaux_titres/place_auguste_tailhades.png">
-
-            <!---------------------------------------------------------------->
+            <!----------------------------------------------------------->
             <!---------------------PHOTOS ENTREE EXPO-------------------->
-            <!---------------------------------------------------------------->
+            <!----------------------------------------------------------->
             <img id="panneau-entree" src="assets/images/entree_expo/titre.png">
             <img id="claude" src="assets/images/entree_expo/claude.png">
             <img id="texte_accueil" src="assets/images/entree_expo/texte.png">
@@ -76,12 +69,11 @@
             <img id="eglise4" src="assets/images/eglise/fichier4.jpg">
             <img id="eglise5" src="assets/images/eglise/fichier5.jpg">
             <img id="eglise6" src="assets/images/eglise/fichier6.jpg">
-            <img id="eglise7" src="assets/images/eglise/fichier7.jpg">
-            <img id="eglise" src="assets/images/eglise/fichier8.jpg">
+            <img id="eglise_texte" src="assets/images/eglise/texte.jpg">
             
-            <!----------------------------------------------------------------->
+            <!-------------------------------------------------------------->
             <!---------------------PHOTOS PONT RICHELIEU-------------------->
-            <!----------------------------------------------------------------->
+            <!-------------------------------------------------------------->
             <img id="panneau-p-richelieu" src="assets/images/pont richelieu/titre.png">
             <img id="p_richelieu_1" src="assets/images/pont richelieu/fichier1.jpg">
             <img id="p_richelieu_2" src="assets/images/pont richelieu/fichier2.jpg">
@@ -127,38 +119,38 @@
             <img id="place17" src="assets/images/places/fichier17.jpg">
             <img id="place18" src="assets/images/places/fichier18.jpg">
             <img id="place_texte" src="assets/images/places/texte.jpg">
-            <!-------------------------------------------------------------->
+            <!------------------------------------------------------------->
             <!---------------------PHOTOS CAFES COURSAN-------------------->
-            <!-------------------------------------------------------------->
-            <img id="panneau-cafes" src="assets/images/cafes/cafes_de_coursan.png">
-            <img id="café1" src="assets/images/cafes/fichier1.jpg">
-            <img id="café2" src="assets/images/cafes/fichier2.jpg">
-            <img id="café3" src="assets/images/cafes/fichier3.jpg">
-            <img id="café4" src="assets/images/cafes/fichier4.jpg">
-            <img id="café5" src="assets/images/cafes/fichier5.jpg">
-            <img id="café6" src="assets/images/cafes/fichier6.jpg">
-            <img id="café7" src="assets/images/cafes/fichier7.jpg">
-            <img id="café8" src="assets/images/cafes/fichier8.jpg">
-            <img id="café9" src="assets/images/cafes/fichier9.jpg">
-            <img id="café10" src="assets/images/cafes/fichier10.jpg">
-            <img id="café11" src="assets/images/cafes/fichier11.jpg">
-            <img id="café12" src="assets/images/cafes/fichier12.jpg">
-            <img id="café13" src="assets/images/cafes/fichier13.jpg">
-            <img id="café14" src="assets/images/cafes/fichier14.jpg">
-            <img id="café15" src="assets/images/cafes_de_coursan/bar-angle-tailhade-nicole.png">
-            <img id="cafe_texte" src="assets/images/cafes/texte.jpg">
-            <!-------------------------------------------------------------->
+            <!------------------------------------------------------------->
+            <img id="panneau_cafes" src="assets/images/cafes/titre.png">
+            <img id="cafe1" src="assets/images/cafes/fichier1.jpg">
+            <img id="cafe2" src="assets/images/cafes/fichier2.jpg">
+            <img id="cafe3" src="assets/images/cafes/fichier3.jpg">
+            <img id="cafe4" src="assets/images/cafes/fichier4.jpg">
+            <img id="cafe5" src="assets/images/cafes/fichier5.jpg">
+            <img id="cafe6" src="assets/images/cafes/fichier6.jpg">
+            <img id="cafe7" src="assets/images/cafes/fichier7.jpg">
+            <img id="cafe8" src="assets/images/cafes/fichier8.jpg">
+            <img id="cafe9" src="assets/images/cafes/fichier9.jpg">
+            <img id="cafe10" src="assets/images/cafes/fichier10.jpg">
+            <img id="cafe11" src="assets/images/cafes/fichier11.jpg">
+            <img id="cafe12" src="assets/images/cafes/fichier12.jpg">
+            <img id="cafe13" src="assets/images/cafes/fichier13.jpg">
+            <img id="cafe14" src="assets/images/cafes/fichier14.jpg">
+            <img id="cafe15" src="assets/images/cafes/fichier15.jpg">
+            <img id="cafes_texte" src="assets/images/cafes/texte.jpg">
+            <!----------------------------------------------------------------->
             <!---------------------PHOTOS COMMERCES COURSAN-------------------->
-            <!-------------------------------------------------------------->
-            <img id="panneau-commerces" src="assets/images/cafes/cafes_de_coursan.png">
+            <!----------------------------------------------------------------->
+            <img id="panneau_commerces" src="assets/images/commerces/titre.png">
             <img id="commerce1" src="assets/images/commerces/fichier1.jpg">
             <img id="commerce2" src="assets/images/commerces/fichier2.jpg">
             <img id="commerce3" src="assets/images/commerces/fichier3.jpg">
             <img id="commerce4" src="assets/images/commerces/fichier4.jpg">
             <img id="commerce5" src="assets/images/commerces/fichier5.jpg">
-            <img id="commerce10" src="assets/images/commerces/fichier6.jpg">
-            <img id="commerce11" src="assets/images/commerces/fichier7.jpg">
-            <img id="commerce12" src="assets/images/commerces/fichier8.jpg">
+            <img id="commerce6" src="assets/images/commerces/fichier6.jpg">
+            <img id="commerce7" src="assets/images/commerces/fichier7.jpg">
+            <img id="commerce8" src="assets/images/commerces/fichier8.jpg">
             <!--------------------------------------------------------------->
             <!---------------------PHOTOS EVENEMENTS 1907-------------------->
             <!--------------------------------------------------------------->
@@ -182,18 +174,6 @@
             <img id="camping2" src="assets/images/camping de coursan/fichier2.jpg">
             <img id="camping_texte" src="assets/images/camping de coursan/texte.jpg">
 
-            <!---------------------PHOTOS EGLISE DE COURSAN-------------------->
-            <img id="eglise1" src="assets/images/eglise/eglise_avec_charette.png">
-            <img id="eglise2" src="assets/images/eglise/eglise_avec_groupe.png">
-            <img id="eglise3" src="assets/images/eglise/eglise_place_revolution.png">
-            <img id="eglise4" src="assets/images/eglise/eglise_avec_pub.png">
-            <img id="eglise5" src="assets/images/eglise/clocher_rue_republique.png">
-            <img id="eglise6" src="assets/images/eglise/eglise_croix_de_la_passion.png">
-            <!---------------------SOUNDS-------------------->
-            <audio id="fond-musical" src="assets/sounds/Déodat de Séverac - Salve Regina.mp3"></audio>
-
-
-
           </a-assets>
 
           <!---------------------LUMIERE-------------------->
@@ -212,7 +192,7 @@
           <a-light type="point" position="0 10.8 -15" intensity="0.1"></a-light>
 
           <!---------------------CAMERA-------------------->     
-          <a-entity id="cam-rig"  position="0 0.6 27" progressive-controls position-cam>
+          <a-entity id="cam-rig"  position="10 0.6 -11" rotation="0 -90 0" progressive-controls position-cam>
 			
 			<a-camera id="cam">
                 <a-cursor id="curseur" color="#FFFFFF"></a-cursor>
@@ -230,9 +210,10 @@
 			
           </a-entity>
 
-          <!---------------------STRUCTURES-------------------->
-          <!---------------------SOL-------------------->
-          <a-plane src="#floor" repeat="20 20" position="0 0 0" rotation="-90 0 0" 
+          <!---------------------STRUCTURES BATIMENT-------------------->
+          <a-entity>
+               <!---------------------SOL-------------------->
+               <a-plane src="#floor" repeat="20 20" position="0 0 0" rotation="-90 0 0" 
           width="60" height="60" 
           normal-map="#floor-NRM" normal-texture-repeat="12 12" normal-scale="1 -1" 
           displacement-map="#floor-HEIGHT" displacement-scale="0" displacement-bias="0"
@@ -240,18 +221,18 @@
           ambient-occlusion-map="#floor-AO" ambient-occusion-map-intensity="0.2"
           ambient-occlusion-texture-repeat="20 20" ambient-occlusion-texture-offset="1 -1"
           spherical-env-map="#floor-ROUGH" roughness="0.4" metalness="0.1"
-          ></a-plane>
-          <!---------------------PLAFOND-------------------->
-          <a-plane src="#ceiling" repeat="3 3" position="0 12 0" rotation="90 0 0" 
+               ></a-plane>
+               <!---------------------PLAFOND-------------------->
+               <a-plane src="#ceiling" repeat="3 3" position="0 12 0" rotation="90 0 0" 
            width="60" height="60" 
            normal-map="#ceiling-NRM" normal-texture-repeat="3 3" normal-scale="1 -1" 
            displacement-map="#ceiling-HEIGHT" displacement-scale="0" displacement-bias="0"
            displacement-texture-repeat="3 3" displacement-texture-offset="1 1"
            ambient-occlusion-map="#ceiling-AO" ambient-occusion-map-intensity="0.2"
            ambient-occlusion-texture-repeat="3 3" ambient-occlusion-texture-offset="1 -1">
-          </a-plane>
-          <!---------------------POUTRES-------------------->
-          <a-entity position="0 6 0" id="wood">
+               </a-plane>
+               <!---------------------POUTRES-------------------->
+               <a-entity position="0 6 0" id="wood">
                <a-box src="#wood" width="59.8" height="0.6" depth="0.6"
                     position="-22.5 0 0" rotation="0 90 0" repeat="20 1"
                     normal-map="#wood-NRM" normal-texture-repeat="20 1" normal-scale="1 -1" 
@@ -351,45 +332,45 @@
                     displacement-texture-repeat="20 1" displacement-texture-offset="1 1"
                     ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
                     ambient-occlusion-texture-repeat="20 1" ambient-occlusion-texture-offset="1 -1"></a-box>
-          </a-entity>     
-          <!---------------------MUR GAUCHE-------------------->        
-          <a-plane src="#wall" repeat="20 4" position="-30.472 6 0" rotation="0 90 0" 
+               </a-entity>     
+               <!---------------------MUR GAUCHE-------------------->        
+               <a-plane src="#wall" repeat="20 4" position="-30.472 6 0" rotation="0 90 0" 
                width="60" height="12"
                normal-map="#wall-NRM" normal-texture-repeat="20 4" normal-scale="1 -1" 
                displacement-map="#wall-HEIGHT" displacement-scale="1" displacement-bias="0" 
                displacement-texture-repeat="20 4" displacement-texture-offset="1 1"
                ambient-occlusion-map="#wall-AO" ambient-occusion-map-intensity="0.2">
-          </a-plane>
-          <!---------------------MUR DROITE-------------------->     
-          <a-plane src="#wall" repeat="20 4" position="30.472 6 0" rotation="0 -90 0" 
+               </a-plane>
+               <!---------------------MUR DROITE-------------------->     
+               <a-plane src="#wall" repeat="20 4" position="30.472 6 0" rotation="0 -90 0" 
                width="60" height="12"
                normal-map="#wall-NRM" normal-texture-repeat="20 4" normal-scale="1 1" 
                displacement-map="#wall-HEIGHT" displacement-scale="1" displacement-bias="0" 
                displacement-texture-repeat="20 4" displacement-texture-offset="1 1"
                ambient-occlusion-map="#wall-AO" ambient-occusion-map-intensity="0.2"
                ambient-occlusion-texture-repeat="20 4" ambient-occlusion-texture-offset="1 -1">
-          </a-plane>      
-          <!---------------------MUR DEVANT-------------------->     
-          <a-plane src="#wall" repeat="20 4" position="0 6 -30.472"
+               </a-plane>      
+               <!---------------------MUR DEVANT-------------------->     
+               <a-plane src="#wall" repeat="20 4" position="0 6 -30.472"
                width="60" height="12"
                normal-map="#wall-NRM" normal-texture-repeat="20 4" normal-scale="1 1" 
                displacement-map="#wall-HEIGHT" displacement-scale="1" displacement-bias="0" 
                displacement-texture-repeat="20 4" displacement-texture-offset="1 1"
                ambient-occlusion-map="#wall-AO" ambient-occusion-map-intensity="0.2"
                ambient-occlusion-texture-repeat="20 4" ambient-occlusion-texture-offset="1 -1">
-          </a-plane>      
-          <!---------------------MUR DERRIERE-------------------->      
-          <a-plane src="#wall" repeat="20 4" position="0 6 30.472" rotation="0 180 0" 
+               </a-plane>      
+               <!---------------------MUR DERRIERE-------------------->      
+               <a-plane src="#wall" repeat="20 4" position="0 6 30.472" rotation="0 180 0" 
                width="60" height="12"
                normal-map="#wall-NRM" normal-texture-repeat="20 4" normal-scale="1 1" 
                displacement-map="#wall-HEIGHT" displacement-scale="1" displacement-bias="0" 
                displacement-texture-repeat="20 4" displacement-texture-offset="1 1"
                ambient-occlusion-map="#wall-AO" ambient-occusion-map-intensity="0.2"
                ambient-occlusion-texture-repeat="20 4" ambient-occlusion-texture-offset="1 -1">
-          </a-plane>     
-
+               </a-plane>     
+          </a-entity>
             
-          <!---------------------STRUCTURE ENTREE EXPO--------------------> 
+          <!---------------------ENTREE EXPO--------------------> 
           <a-entity position="0 0 23">          
                <!---------------------PANNEAU TITRE DE L'EXPO--------------------> 
                <a-image src="#panneau-entree" position="0 4.4 0"
@@ -489,7 +470,7 @@
                               position="0 2.8 0" scale="0.75 0.75 0.75">
                          </a-image>
                          <a-image class="photo-expo clickable" src="#lieu6" width="1.72" height="1.08" 
-                              position="-0.6 2.2 0" scale="0.75 0.75 0.75 0.75">
+                              position="-0.6 2.2 0" scale="0.75 0.75 0.75">
                          </a-image>
                          <a-image class="photo-expo clickable" src="#lieu7" width="1.44" height="1.08" 
                               position="0.75 0.8 0" scale="0.75 0.75 0.75">
@@ -537,7 +518,7 @@
                               position="0 2.8 0" scale="0.75 0.75 0.75">
                          </a-image>
                          <a-image class="photo-expo clickable" src="#lieu1" width="1.72" height="1.08" 
-                              position="-0.75 2.1 0" scale="0.75 0.75 0.75 0.75">
+                              position="-0.75 2.1 0" scale="0.75 0.75 0.75">
                          </a-image>
                          <a-image class="photo-expo clickable" src="#lieu2" width="1.74" height="1.08" 
                               position="0.75 2.1 0" scale="0.75 0.75 0.75">
@@ -589,7 +570,7 @@
                               position="0 2.8 0" scale="0.75 0.75 0.75">
                          </a-image>
                          <a-image class="photo-expo clickable" src="#p_richelieu_7" width="1.62" height="1.08" 
-                              position="-0.75 2 0" scale="0.75 0.75 0.75 0.75">
+                              position="-0.75 2 0" scale="0.75 0.75 0.75">
                          </a-image>
                          <a-image class="photo-expo clickable" src="#p_richelieu_8" width="1.55" height="1.08" 
                               position="-0.75 1 0" scale="0.75 0.75 0.75">
@@ -634,7 +615,7 @@
                               position="0 2.8 0" scale="0.75 0.75 0.75">
                          </a-image>
                          <a-image class="photo-expo clickable" src="#p_richelieu_3" width="1.65" height="1.08" 
-                              position="-0.75 2 0" scale="0.75 0.75 0.75 0.75">
+                              position="-0.75 2 0" scale="0.75 0.75 0.75">
                          </a-image>
                          <a-image class="photo-expo clickable" src="#p_richelieu_4" width="1.70" height="1.08" 
                               position="0.75 0.7 0" scale="0.75 0.75 0.75">
@@ -684,7 +665,7 @@
                               position="-0.75 1.5 0" scale="1.25 1.25 1.25">
                          </a-image>
                          <a-image class="photo-expo clickable" src="#p_richelieu_1" width="1.69" height="1.08" 
-                              position="0.75 2 0" scale="0.75 0.75 0.75 0.75">
+                              position="0.75 2 0" scale="0.75 0.75 0.75">
                          </a-image>
                          <a-image class="photo-expo clickable" src="#p_richelieu_2" width="1.62" height="1.08" 
                               position="0.75 1 0" scale="0.75 0.75 0.75">
@@ -723,16 +704,16 @@
                          <a-image class="photo-expo clickable" src="#panneau-eglise" width="1.93" height="0.26" 
                               position="0 2.8 0" scale="0.75 0.75 0.75">
                          </a-image>
-                         <a-image class="photo-expo clickable" src="#eglise4" width="1.66" height="1.08" 
-                              position="-0.75 2 0" scale="0.75 0.75 0.75 0.75">
+                         <a-image class="photo-expo clickable" src="#eglise6" width="1.66" height="1.08" 
+                              position="-0.75 2 0" scale="0.75 0.75 0.75">
                          </a-image>
                          <a-image class="photo-expo clickable" src="#eglise5" width="1.68" height="1.08" 
                               position="0.75 1 0" scale="0.75 0.75 0.75">
                          </a-image>
-                         <a-image class="photo-expo clickable" src="#eglise6" width="1.75" height="1.08" 
+                         <a-image class="photo-expo clickable" src="#eglise4" width="1.75" height="1.08" 
                               position="0.75 2 0" scale="0.75 0.75 0.75">
                          </a-image>
-                         <a-image class="photo-expo clickable" src="#eglise7" width="1.69" height="1.08" 
+                         <a-image class="photo-expo clickable" src="#eglise3" width="1.69" height="1.08" 
                               position="-0.75 1 0" scale="0.75 0.75 0.75">
                          </a-image>
                
@@ -769,14 +750,14 @@
                          <a-image class="photo-expo clickable" src="#panneau-eglise" width="1.93" height="0.26" 
                               position="0 2.8 0" scale="0.75 0.75 0.75">
                          </a-image>
-                         <a-image class="photo-expo clickable" src="#eglise1" width="1.08" height="1.49" 
-                              position="-1 1.85 0" scale="0.75 0.75 0.75 0.75">
+                         <a-image class="photo-expo clickable" src="#eglise_texte" width="1.08" height="1.49" 
+                              position="-1.03 1.85 0" scale="0.75 0.75 0.75">
                          </a-image>
-                         <a-image class="photo-expo clickable" src="#eglise2" width="1.08" height="1.71" 
-                              position="0 1.9 0" scale="0.75 0.75 0.75">
+                         <a-image class="photo-expo clickable" src="#eglise1" width="1.08" height="1.71" 
+                              position="0 1.3 0" scale="1.02 1.02 1.02">
                          </a-image>
-                         <a-image class="photo-expo clickable" src="#eglise3" width="1.08" height="1.62" 
-                              position="1 1.85 0" scale="0.75 0.75 0.75">
+                         <a-image class="photo-expo clickable" src="#eglise2" width="1.08" height="1.62" 
+                              position="1.03 1.85 0" scale="0.75 0.75 0.75">
                          </a-image>
                
                     </a-entity> 
@@ -786,53 +767,102 @@
 
           </a-entity>
 
-
           <!---------------------PANNEAUX 8 9 10 11 / PONT ROUGE - PONT SNCF - PLACES--------------------> 
           <a-entity position="-12.5 0 -13" rotation="0 -90 0">
 
-               <!--------------------panneau 8 / PONT ROUGE-------------------->
-               <a-entity>
+               <!--------------------panneau 8 / PONT ROUGE - PONT SNCF-------------------->
+               <a-entity position="11.1 0 0">
+
                     <!--------------------structure-------------------->
                     <a-entity>
-                              <a-box src="#wood" position="0 0 0"
-                                   width="3.5" height="0.3" depth="0.3"
-                                   normal-map="#wood-NRM" normal-texture-repeat="1 1" normal-scale="1 -1" 
-                                   displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
-                                   displacement-texture-repeat="1 1" displacement-texture-offset="1 1"
-                                   ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
-                                   ambient-occlusion-texture-repeat="1 1" ambient-occlusion-texture-offset="1 -1"
-                                   spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
-                              </a-box>
-                              <a-box src="#wood" position="0 1.655 0"
-                                   width="3" height="3" depth="0.1" repeat="1 2"
-                                   normal-map="#wood-NRM" normal-texture-repeat="1 2" normal-scale="1 -1" 
-                                   displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
-                                   displacement-texture-repeat="1 2" displacement-texture-offset="1 1"
-                                   ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
-                                   ambient-occlusion-texture-repeat="1 2" ambient-occlusion-texture-offset="1 -1"
-                                   spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
-                              </a-box>
+                         <a-box src="#wood" position="0 0 0"
+                              width="3.5" height="0.3" depth="0.3"
+                              normal-map="#wood-NRM" normal-texture-repeat="1 1" normal-scale="1 -1" 
+                              displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
+                              displacement-texture-repeat="1 1" displacement-texture-offset="1 1"
+                              ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
+                              ambient-occlusion-texture-repeat="1 1" ambient-occlusion-texture-offset="1 -1"
+                              spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
+                         </a-box>
+                         <a-box src="#wood" position="0 1.655 0"
+                              width="3" height="3" depth="0.1" repeat="1 2"
+                              normal-map="#wood-NRM" normal-texture-repeat="1 2" normal-scale="1 -1" 
+                              displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
+                              displacement-texture-repeat="1 2" displacement-texture-offset="1 1"
+                              ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
+                              ambient-occlusion-texture-repeat="1 2" ambient-occlusion-texture-offset="1 -1"
+                              spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
+                         </a-box>
                     </a-entity>
                
                     <!--------------------photos-------------------->
                     <a-entity position="0 0 -0.056" rotation="0 180 0">
                
-                         <a-image class="photo-expo clickable" src="#panneau-p-richelieu" width="1.93" height="0.26" 
+                         <a-image class="photo-expo clickable" src="#panneau-p-rouge" width="1.93" height="0.26" 
                               position="0 2.8 0" scale="0.75 0.75 0.75">
                          </a-image>
-                         <a-image class="photo-expo clickable" src="#p_richelieu_7" width="1.62" height="1.08" 
-                              position="-0.75 2 0" scale="0.75 0.75 0.75 0.75">
+                         <a-image class="photo-expo clickable" src="#p_rouge_1" width="1.61" height="1.08" 
+                              position="0 2.2 0" scale="0.75 0.75 0.75">
                          </a-image>
-                         <a-image class="photo-expo clickable" src="#p_richelieu_8" width="1.55" height="1.08" 
+                         <a-image class="photo-expo clickable" src="#panneau-p-sncf" width="1.93" height="0.26" 
+                              position="0 1.6 0" scale="0.75 0.75 0.75">
+                         </a-image>
+                         <a-image class="photo-expo clickable" src="#p_sncf_1" width="1.68" height="1.08" 
                               position="-0.75 1 0" scale="0.75 0.75 0.75">
                          </a-image>
-                         <a-image class="photo-expo clickable" src="#p_richelieu_9" width="1.63" height="1.08" 
-                              position="0.75 1.5 0" scale="0.75 0.75 0.75">
+                         <a-image class="photo-expo clickable" src="#p_sncf_2" width="1.62" height="1.08" 
+                              position="0.75 1 0" scale="0.75 0.75 0.75">
                          </a-image>
+               
                     </a-entity> 
                                      
                </a-entity>
-               <!--------------------panneau 9 / PONT SNCF-------------------->
+
+                <!--------------------panneau 9 / PLACES-------------------->
+                <a-entity position="7.4 0 0">
+                    
+                    <!--------------------structure-------------------->                    
+                    <a-entity>
+                         <a-box src="#wood" position="0 0 0"
+                              width="3.5" height="0.3" depth="0.3"
+                              normal-map="#wood-NRM" normal-texture-repeat="1 1" normal-scale="1 -1" 
+                              displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
+                              displacement-texture-repeat="1 1" displacement-texture-offset="1 1"
+                              ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
+                              ambient-occlusion-texture-repeat="1 1" ambient-occlusion-texture-offset="1 -1"
+                              spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
+                         </a-box>
+                         <a-box src="#wood" position="0 1.655 0"
+                              width="3" height="3" depth="0.1" repeat="1 2"
+                              normal-map="#wood-NRM" normal-texture-repeat="1 2" normal-scale="1 -1" 
+                              displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
+                              displacement-texture-repeat="1 2" displacement-texture-offset="1 1"
+                              ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
+                              ambient-occlusion-texture-repeat="1 2" ambient-occlusion-texture-offset="1 -1"
+                              spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
+                         </a-box>
+                    </a-entity>
+                    
+                    <a-entity position="0 0 -0.056" rotation="0 180 0">
+               
+                         <a-image class="photo-expo clickable" src="#panneau-places" width="1.93" height="0.26" 
+                               position="0 2.8 0" scale="0.75 0.75 0.75">
+                          </a-image>
+                          <a-image class="photo-expo clickable" src="#place_texte" width="1.08" height="1.54" 
+                               position="-0.75 1.5 0" scale="1 1 1">
+                          </a-image>
+                          <a-image class="photo-expo clickable" src="#place1" width="1.50" height="1.08" 
+                               position="0.75 2 0" scale="0.75 0.75 0.75">
+                          </a-image>
+                          <a-image class="photo-expo clickable" src="#place2" width="1.74" height="1.08" 
+                               position="0.75 1 0" scale="0.75 0.75 0.75">
+                          </a-image>                          
+ 
+                     </a-entity>                
+                    
+               </a-entity>  
+
+               <!--------------------panneau 10 / PLACES-------------------->
                <a-entity position="3.7 0 0">
 
                     <!--------------------structure-------------------->
@@ -862,29 +892,30 @@
                     <!--------------------photos-------------------->
                     <a-entity position="0 0 -0.056" rotation="0 180 0">
                
-                         <a-image class="photo-expo clickable" src="#panneau-p-richelieu" width="1.93" height="0.26" 
-                              position="0 2.8 0" scale="0.75 0.75 0.75">
-                         </a-image>
-                         <a-image class="photo-expo clickable" src="#p_richelieu_3" width="1.65" height="1.08" 
-                              position="-0.75 2 0" scale="0.75 0.75 0.75 0.75">
-                         </a-image>
-                         <a-image class="photo-expo clickable" src="#p_richelieu_4" width="1.70" height="1.08" 
-                              position="0.75 0.7 0" scale="0.75 0.75 0.75">
-                         </a-image>
-                         <a-image class="photo-expo clickable" src="#p_richelieu_5" width="1.08" height="1.72" 
-                              position="0.75 1.9 0" scale="0.75 0.75 0.75">
-                         </a-image>
-                         <a-image class="photo-expo clickable" src="#p_richelieu_6" width="1.74" height="1.08" 
-                              position="-0.75 1 0" scale="0.75 0.75 0.75">
-                         </a-image>
-
-                    </a-entity> 
+                         <a-image class="photo-expo clickable" src="#panneau-places" width="1.93" height="0.26" 
+                               position="0 2.8 0" scale="0.75 0.75 0.75">
+                          </a-image>
+                          <a-image class="photo-expo clickable" src="#place3" width="1.44" height="1.08" 
+                               position="-0.75 2 0" scale="0.75 0.75 0.75">
+                          </a-image>
+                          <a-image class="photo-expo clickable" src="#place4" width="1.65" height="1.08" 
+                               position="0.75 2 0" scale="0.75 0.75 0.75">
+                          </a-image>
+                          <a-image class="photo-expo clickable" src="#place5" width="1.71" height="1.08" 
+                               position="-0.75 1 0" scale="0.75 0.75 0.75">
+                          </a-image>
+                          <a-image class="photo-expo clickable" src="#place6" width="1.83" height="1.08" 
+                               position="0.75 1 0" scale="0.75 0.75 0.75">
+                          </a-image>                          
+ 
+                     </a-entity>  
                                      
-               </a-entity>
-               <!--------------------panneau 10 / PLACES-------------------->
-               <a-entity position="7.4 0 0">
-                    
-                    <!--------------------structure-------------------->                    
+               </a-entity>                                                  
+               
+               <!--------------------panneau 11 / PLACES-------------------->
+               <a-entity>
+
+                    <!--------------------structure-------------------->
                     <a-entity>
                          <a-box src="#wood" position="0 0 0"
                               width="3.5" height="0.3" depth="0.3"
@@ -905,97 +936,462 @@
                               spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
                          </a-box>
                     </a-entity>
-               
-                    <!--------------------photos-------------------->
-                    <a-entity position="0 0 -0.056" rotation="0 180 0">
-               
-                         <a-image class="photo-expo clickable" src="#panneau-p-richelieu" width="1.93" height="0.26" 
-                              position="0 2.8 0" scale="0.75 0.75 0.75">
-                         </a-image>
-                         <a-image class="photo-expo clickable" src="#p_richelieu_texte" width="1.08" height="1.49" 
-                              position="-0.75 1.5 0" scale="1.25 1.25 1.25">
-                         </a-image>
-                         <a-image class="photo-expo clickable" src="#p_richelieu_1" width="1.69" height="1.08" 
-                              position="0.75 2 0" scale="0.75 0.75 0.75 0.75">
-                         </a-image>
-                         <a-image class="photo-expo clickable" src="#p_richelieu_2" width="1.62" height="1.08" 
-                              position="0.75 1 0" scale="0.75 0.75 0.75">
-                         </a-image>
 
-                    </a-entity> 
-                                     
-               </a-entity>
-               <!--------------------panneau 11 / PLACES-------------------->
-               <a-entity position="11.1 0 0">
-                    <!--------------------structure-------------------->
-                    <a-entity>
-                                             <a-box src="#wood" position="0 0 0"
-                                                  width="3.5" height="0.3" depth="0.3"
-                                                  normal-map="#wood-NRM" normal-texture-repeat="1 1" normal-scale="1 -1" 
-                                                  displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
-                                                  displacement-texture-repeat="1 1" displacement-texture-offset="1 1"
-                                                  ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
-                                                  ambient-occlusion-texture-repeat="1 1" ambient-occlusion-texture-offset="1 -1"
-                                                  spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
-                                             </a-box>
-                                             <a-box src="#wood" position="0 1.655 0"
-                                                  width="3" height="3" depth="0.1" repeat="1 2"
-                                                  normal-map="#wood-NRM" normal-texture-repeat="1 2" normal-scale="1 -1" 
-                                                  displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
-                                                  displacement-texture-repeat="1 2" displacement-texture-offset="1 1"
-                                                  ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
-                                                  ambient-occlusion-texture-repeat="1 2" ambient-occlusion-texture-offset="1 -1"
-                                                  spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
-                                             </a-box>
-                    </a-entity>
-               
                     <!--------------------photos-------------------->
                     <a-entity position="0 0 -0.056" rotation="0 180 0">
                
-                         <a-image class="photo-expo clickable" src="#panneau-eglise" width="1.93" height="0.26" 
-                              position="0 2.8 0" scale="0.75 0.75 0.75">
-                         </a-image>
-                         <a-image class="photo-expo clickable" src="#eglise4" width="1.66" height="1.08" 
-                              position="-0.75 2 0" scale="0.75 0.75 0.75 0.75">
-                         </a-image>
-                         <a-image class="photo-expo clickable" src="#eglise5" width="1.68" height="1.08" 
-                              position="0.75 1 0" scale="0.75 0.75 0.75">
-                         </a-image>
-                         <a-image class="photo-expo clickable" src="#eglise6" width="1.75" height="1.08" 
-                              position="0.75 2 0" scale="0.75 0.75 0.75">
-                         </a-image>
-                         <a-image class="photo-expo clickable" src="#eglise7" width="1.69" height="1.08" 
-                              position="-0.75 1 0" scale="0.75 0.75 0.75">
-                         </a-image>
-               
-                    </a-entity> 
+                         <a-image class="photo-expo clickable" src="#panneau-places" width="1.93" height="0.26" 
+                               position="0 2.8 0" scale="0.75 0.75 0.75">
+                          </a-image>
+                          <a-image class="photo-expo clickable" src="#place7" width="1.72" height="1.08" 
+                               position="-0.55 2 0" scale="0.75 0.75 0.75">
+                          </a-image>
+                          <a-image class="photo-expo clickable" src="#place8" width="1.39" height="1.08" 
+                               position="-0.65 0.8 0" scale="0.75 0.75 0.75">
+                          </a-image>
+                          <a-image class="photo-expo clickable" src="#place9" width="1.08" height="1.68" 
+                               position="0.75 1.95 0" scale="0.75 0.75 0.75">
+                          </a-image>
+                          <a-image class="photo-expo clickable" src="#place10" width="1.66" height="1.08" 
+                               position="0.65 0.8 0" scale="0.75 0.75 0.75">
+                          </a-image>
+ 
+                     </a-entity>                 
                                      
-               </a-entity>
-              
+               </a-entity>              
 
           </a-entity>
-          <!---------------------SUPPORT PHOTOS EGLISE COURSAN--------------------> 
+          
+          <!---------------------PANNEAUX 12 13 14 15 16 17 / PLACES--------------------> 
+          <a-entity position="-9.7 0 -14.9" rotation="0 0 0">
+
+               <!--------------------panneau 12 / PLACES-------------------->
+               <a-entity position="0 0 0" rotation="0 180 0">
+
+                    <a-entity>
+                         <a-box src="#wood" position="0 0 0"
+                              width="3.5" height="0.3" depth="0.3"
+                              normal-map="#wood-NRM" normal-texture-repeat="1 1" normal-scale="1 -1" 
+                              displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
+                              displacement-texture-repeat="1 1" displacement-texture-offset="1 1"
+                              ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
+                              ambient-occlusion-texture-repeat="1 1" ambient-occlusion-texture-offset="1 -1"
+                              spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
+                         </a-box>
+                         <a-box src="#wood" position="0 1.655 0"
+                              width="3" height="3" depth="0.1" repeat="1 2"
+                              normal-map="#wood-NRM" normal-texture-repeat="1 2" normal-scale="1 -1" 
+                              displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
+                              displacement-texture-repeat="1 2" displacement-texture-offset="1 1"
+                              ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
+                              ambient-occlusion-texture-repeat="1 2" ambient-occlusion-texture-offset="1 -1"
+                              spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
+                         </a-box>
+                    </a-entity>
+
+                     <!--------------------photos-------------------->
+                    <a-entity position="0 0 -0.056" rotation="0 180 0">
+                    
+                         <a-image class="photo-expo clickable" src="#panneau-places" width="1.93" height="0.26" 
+                               position="0 2.8 0" scale="0.75 0.75 0.75">
+                          </a-image>                          
+                          <a-image class="photo-expo clickable" src="#place11" width="1.75" height="1.08" 
+                               position="-0.65 2 0" scale="0.75 0.75 0.75">
+                          </a-image>
+                          <a-image class="photo-expo clickable" src="#place12" width="1.08" height="1.54" 
+                               position="0.75 1.95 0" scale="0.75 0.75 0.75">
+                          </a-image>
+                          <a-image class="photo-expo clickable" src="#place13" width="1.56" height="1.08" 
+                               position="-0.7 0.8 0" scale="0.75 0.75 0.75">
+                          </a-image>
+                          <a-image class="photo-expo clickable" src="#place14" width="1.57" height="1.08" 
+                               position="0.75 0.8 0" scale="0.75 0.75 0.75">
+                          </a-image>
+
+                    </a-entity>  
+
+               </a-entity>
+
+               <!--------------------panneau 13 / PLACES-------------------->
+               <a-entity position="3.9 0 0" rotation="0 180 0">
+
+                    <a-entity>
+                         <a-box src="#wood" position="0 0 0"
+                              width="3.5" height="0.3" depth="0.3"
+                              normal-map="#wood-NRM" normal-texture-repeat="1 1" normal-scale="1 -1" 
+                              displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
+                              displacement-texture-repeat="1 1" displacement-texture-offset="1 1"
+                              ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
+                              ambient-occlusion-texture-repeat="1 1" ambient-occlusion-texture-offset="1 -1"
+                              spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
+                         </a-box>
+                         <a-box src="#wood" position="0 1.655 0"
+                              width="3" height="3" depth="0.1" repeat="1 2"
+                              normal-map="#wood-NRM" normal-texture-repeat="1 2" normal-scale="1 -1" 
+                              displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
+                              displacement-texture-repeat="1 2" displacement-texture-offset="1 1"
+                              ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
+                              ambient-occlusion-texture-repeat="1 2" ambient-occlusion-texture-offset="1 -1"
+                              spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
+                         </a-box>
+                    </a-entity>
+
+                    <a-entity position="0 0 -0.056" rotation="0 180 0">
+                    
+                         <a-image class="photo-expo clickable" src="#panneau-places" width="1.93" height="0.26" 
+                               position="0 2.8 0" scale="0.75 0.75 0.75">
+                          </a-image> 
+                          <a-image class="photo-expo clickable" src="#place15" width="1.62" height="1.08" 
+                               position="-0.75 2.1 0" scale="0.75 0.75 0.75">
+                          </a-image>
+                          <a-image class="photo-expo clickable" src="#place16" width="1.62" height="1.08" 
+                               position="0.75 2.1 0" scale="0.75 0.75 0.75">
+                          </a-image>
+                          <a-image class="photo-expo clickable" src="#place17" width="1.62" height="1.08" 
+                               position="-0.75 1 0" scale="0.75 0.75 0.75">
+                          </a-image>
+                          <a-image class="photo-expo clickable" src="#place18" width="1.08" height="1.44" 
+                               position="0.75 1 0" scale="0.85 0.85 0.85">
+                          </a-image>
+                          
+                    </a-entity>
+               </a-entity>
+
+               <!--------------------panneau 14 / CAFES-------------------->
+               <a-entity position="7.8 0 0" rotation="0 180 0">
+
+                    <a-entity>
+
+                         <!--------------------support-------------------->
+                         <a-box src="#wood" position="0 0 0"
+                              width="3.5" height="0.3" depth="0.3"
+                              normal-map="#wood-NRM" normal-texture-repeat="1 1" normal-scale="1 -1" 
+                              displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
+                              displacement-texture-repeat="1 1" displacement-texture-offset="1 1"
+                              ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
+                              ambient-occlusion-texture-repeat="1 1" ambient-occlusion-texture-offset="1 -1"
+                              spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
+                         </a-box>
+                         <a-box src="#wood" position="0 1.655 0"
+                              width="3" height="3" depth="0.1" repeat="1 2"
+                              normal-map="#wood-NRM" normal-texture-repeat="1 2" normal-scale="1 -1" 
+                              displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
+                              displacement-texture-repeat="1 2" displacement-texture-offset="1 1"
+                              ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
+                              ambient-occlusion-texture-repeat="1 2" ambient-occlusion-texture-offset="1 -1"
+                              spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
+                         </a-box>
+
+                         <!--------------------photos-------------------->
+                         <a-entity position="0 0 -0.056" rotation="0 180 0">
+                    
+                              <a-image class="photo-expo clickable" src="#panneau_cafes" width="1.93" height="0.26" 
+                                    position="0 2.8 0" scale="0.75 0.75 0.75">
+                               </a-image> 
+                               <a-image class="photo-expo clickable" src="#cafes_texte" width="1.08" height="1.49" 
+                                    position="-0.75 1.95 0" scale="0.75 0.75 0.75">
+                               </a-image>
+                               <a-image class="photo-expo clickable" src="#cafe1" width="1.67" height="1.08" 
+                                    position="0.7 2 0" scale="0.85 0.85 0.85">
+                               </a-image>
+                               <a-image class="photo-expo clickable" src="#cafe2" width="1.71" height="1.08" 
+                                    position="-0.75 0.8 0" scale="0.75 0.75 0.75">
+                               </a-image>
+                               <a-image class="photo-expo clickable" src="#cafe3" width="1.75" height="1.44" 
+                                    position="0.75 0.9 0" scale="0.75 0.75 0.75">
+                               </a-image>
+                               
+                         </a-entity>
+
+                    </a-entity>
+               </a-entity>
+
+               <!--------------------panneau 15 / CAFES-------------------->
+               <a-entity position="11.7 0 0" rotation="0 180 0">
+                    
+                    <!--------------------support-------------------->
+                    <a-entity>
+                         <a-box src="#wood" position="0 0 0"
+                              width="3.5" height="0.3" depth="0.3"
+                              normal-map="#wood-NRM" normal-texture-repeat="1 1" normal-scale="1 -1" 
+                              displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
+                              displacement-texture-repeat="1 1" displacement-texture-offset="1 1"
+                              ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
+                              ambient-occlusion-texture-repeat="1 1" ambient-occlusion-texture-offset="1 -1"
+                              spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
+                         </a-box>
+                         <a-box src="#wood" position="0 1.655 0"
+                              width="3" height="3" depth="0.1" repeat="1 2"
+                              normal-map="#wood-NRM" normal-texture-repeat="1 2" normal-scale="1 -1" 
+                              displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
+                              displacement-texture-repeat="1 2" displacement-texture-offset="1 1"
+                              ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
+                              ambient-occlusion-texture-repeat="1 2" ambient-occlusion-texture-offset="1 -1"
+                              spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
+                         </a-box>
+                    </a-entity>
+                    
+                    <!--------------------photos-------------------->
+                    <a-entity position="0 0 -0.056" rotation="0 180 0">
+                    
+                         <a-image class="photo-expo clickable" src="#panneau_cafes" width="1.93" height="0.26" 
+                               position="0 2.8 0" scale="0.75 0.75 0.75">
+                          </a-image> 
+                          <a-image class="photo-expo clickable" src="#cafe4" width="1.69" height="1.08" 
+                               position="-0.75 2 0" scale="0.75 0.75 0.75">
+                          </a-image>
+                          <a-image class="photo-expo clickable" src="#cafe5" width="1.46" height="1.08" 
+                               position="0.75 2 0" scale="0.85 0.85 0.85">
+                          </a-image>
+                          <a-image class="photo-expo clickable" src="#cafe6" width="1.58" height="1.11" 
+                               position="-0.75 0.9 0" scale="0.75 0.75 0.75">
+                          </a-image>
+                          <a-image class="photo-expo clickable" src="#cafe7" width="1.71" height="1.08" 
+                               position="0.75 0.9 0" scale="0.75 0.75 0.75">
+                          </a-image>
+                          
+                    </a-entity>
+               </a-entity>
+
+               <!--------------------panneau 16 / CAFES-------------------->
+               <a-entity position="15.6 0 0" rotation="0 180 0">
+                                        
+                    <!--------------------support-------------------->
+                    <a-entity>
+                         <a-box src="#wood" position="0 0 0"
+                              width="3.5" height="0.3" depth="0.3"
+                              normal-map="#wood-NRM" normal-texture-repeat="1 1" normal-scale="1 -1" 
+                              displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
+                              displacement-texture-repeat="1 1" displacement-texture-offset="1 1"
+                              ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
+                              ambient-occlusion-texture-repeat="1 1" ambient-occlusion-texture-offset="1 -1"
+                              spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
+                         </a-box>
+                         <a-box src="#wood" position="0 1.655 0"
+                              width="3" height="3" depth="0.1" repeat="1 2"
+                              normal-map="#wood-NRM" normal-texture-repeat="1 2" normal-scale="1 -1" 
+                              displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
+                              displacement-texture-repeat="1 2" displacement-texture-offset="1 1"
+                              ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
+                              ambient-occlusion-texture-repeat="1 2" ambient-occlusion-texture-offset="1 -1"
+                              spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
+                         </a-box>
+                    </a-entity>
+
+                    <!--------------------photos-------------------->
+                    <a-entity position="0 0 -0.056" rotation="0 180 0">
+                    
+                         <a-image class="photo-expo clickable" src="#panneau_cafes" width="1.93" height="0.26" 
+                               position="0 2.8 0" scale="0.75 0.75 0.75">
+                          </a-image> 
+                          <a-image class="photo-expo clickable" src="#cafe8" width="1.75" height="1.08" 
+                               position="-0.75 2 0" scale="0.75 0.75 0.75">
+                          </a-image>
+                          <a-image class="photo-expo clickable" src="#cafe9" width="1.79" height="1.08" 
+                               position="0.75 2 0" scale="0.75 0.75 0.75">
+                          </a-image>
+                          <a-image class="photo-expo clickable" src="#cafe10" width="1.60" height="1.11" 
+                               position="-0.75 0.9 0" scale="0.75 0.75 0.75">
+                          </a-image>
+                          <a-image class="photo-expo clickable" src="#cafe11" width="1.77" height="1.08" 
+                               position="0.75 0.9 0" scale="0.75 0.75 0.75">
+                          </a-image>
+                          
+                    </a-entity>
+
+               </a-entity>
+
+               <!--------------------panneau 17 / CAFES-------------------->
+               <a-entity position="19.5 0 0" rotation="0 180 0">
+                   
+                    <!--------------------support-------------------->
+                    <a-entity>
+                         <a-box src="#wood" position="0 0 0"
+                              width="3.5" height="0.3" depth="0.3"
+                              normal-map="#wood-NRM" normal-texture-repeat="1 1" normal-scale="1 -1" 
+                              displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
+                              displacement-texture-repeat="1 1" displacement-texture-offset="1 1"
+                              ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
+                              ambient-occlusion-texture-repeat="1 1" ambient-occlusion-texture-offset="1 -1"
+                              spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
+                         </a-box>
+                         <a-box src="#wood" position="0 1.655 0"
+                              width="3" height="3" depth="0.1" repeat="1 2"
+                              normal-map="#wood-NRM" normal-texture-repeat="1 2" normal-scale="1 -1" 
+                              displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
+                              displacement-texture-repeat="1 2" displacement-texture-offset="1 1"
+                              ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
+                              ambient-occlusion-texture-repeat="1 2" ambient-occlusion-texture-offset="1 -1"
+                              spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
+                         </a-box>
+                    </a-entity>
+
+                    <!--------------------photos-------------------->
+                    <a-entity position="0 0 -0.056" rotation="0 180 0">
+                    
+                         <a-image class="photo-expo clickable" src="#panneau_cafes" width="1.93" height="0.26" 
+                               position="0 2.8 0" scale="0.75 0.75 0.75">
+                          </a-image> 
+                          <a-image class="photo-expo clickable" src="#cafe12" width="1.68" height="1.08" 
+                               position="-0.75 2 0" scale="0.75 0.75 0.75">
+                          </a-image>
+                          <a-image class="photo-expo clickable" src="#cafe13" width="1.73" height="1.08" 
+                               position="0.75 2 0" scale="0.75 0.75 0.75">
+                          </a-image>
+                          <a-image class="photo-expo clickable" src="#cafe14" width="1.77" height="1.11" 
+                               position="-0.75 0.9 0" scale="0.75 0.75 0.75">
+                          </a-image>
+                          <a-image class="photo-expo clickable" src="#cafe15" width="1.68" height="1.08" 
+                               position="0.75 0.9 0" scale="0.75 0.75 0.75">
+                          </a-image>
+                          
+                    </a-entity>
+               </a-entity>
+
+          </a-entity>
+
+          <!---------------------PANNEAUX 18 19 20 21 COMMERCES / EVENEMENTS--------------------> 
+          <a-entity position="12.5 0 -13" rotation="0 -90 0">
+               <!---------------------panneau 18--------------------> 
+               <a-entity position="0 0 0" rotation="0 180 0">
+                    <!--------------------structure-------------------->
+                    <a-entity>
+                         <a-box src="#wood" position="0 0 0"
+                              width="3.5" height="0.3" depth="0.3"
+                              normal-map="#wood-NRM" normal-texture-repeat="1 1" normal-scale="1 -1" 
+                              displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
+                              displacement-texture-repeat="1 1" displacement-texture-offset="1 1"
+                              ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
+                              ambient-occlusion-texture-repeat="1 1" ambient-occlusion-texture-offset="1 -1"
+                              spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
+                         </a-box>
+                         <a-box src="#wood" position="0 1.655 0"
+                              width="3" height="3" depth="0.1" repeat="1 2"
+                              normal-map="#wood-NRM" normal-texture-repeat="1 2" normal-scale="1 -1" 
+                              displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
+                              displacement-texture-repeat="1 2" displacement-texture-offset="1 1"
+                              ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
+                              ambient-occlusion-texture-repeat="1 2" ambient-occlusion-texture-offset="1 -1"
+                              spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
+                         </a-box>
+                    </a-entity> 
+                    <!--------------------photos-------------------->
+                    <a-entity position="0 0 -0.056" rotation="0 180 0">
+                    
+                         <a-image class="photo-expo clickable" src="#panneau_commerces" width="1.93" height="0.26" 
+                               position="0 2.8 0" scale="0.75 0.75 0.75">
+                          </a-image> 
+                          <a-image class="photo-expo clickable" src="#commerce1" width="1.48" height="1.08" 
+                               position="-0.75 2 0" scale="0.75 0.75 0.75">
+                          </a-image>
+                          <a-image class="photo-expo clickable" src="#commerce2" width="1.56" height="1.08" 
+                               position="0.75 2 0" scale="0.75 0.75 0.75">
+                          </a-image>
+                          <a-image class="photo-expo clickable" src="#commerce3" width="1.79" height="1.11" 
+                               position="-0.75 0.9 0" scale="0.75 0.75 0.75">
+                          </a-image>
+                          <a-image class="photo-expo clickable" src="#commerce4" width="1.62" height="1.08" 
+                               position="0.75 0.9 0" scale="0.75 0.75 0.75">
+                          </a-image>
+                          
+                    </a-entity>
+               </a-entity>
+               <!---------------------panneau 19--------------------> 
+               <a-entity position="3.7 0 0" rotation="0 180 0">
+                    <!--------------------structure-------------------->
+                    <a-entity>
+                         <a-box src="#wood" position="0 0 0"
+                              width="3.5" height="0.3" depth="0.3"
+                              normal-map="#wood-NRM" normal-texture-repeat="1 1" normal-scale="1 -1" 
+                              displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
+                              displacement-texture-repeat="1 1" displacement-texture-offset="1 1"
+                              ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
+                              ambient-occlusion-texture-repeat="1 1" ambient-occlusion-texture-offset="1 -1"
+                              spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
+                         </a-box>
+                         <a-box src="#wood" position="0 1.655 0"
+                              width="3" height="3" depth="0.1" repeat="1 2"
+                              normal-map="#wood-NRM" normal-texture-repeat="1 2" normal-scale="1 -1" 
+                              displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
+                              displacement-texture-repeat="1 2" displacement-texture-offset="1 1"
+                              ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
+                              ambient-occlusion-texture-repeat="1 2" ambient-occlusion-texture-offset="1 -1"
+                              spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
+                         </a-box>
+                    </a-entity> 
+                    <!--------------------photos-------------------->
+                    <a-entity position="0 0 -0.056" rotation="0 180 0">
+                    
+                         <a-image class="photo-expo clickable" src="#panneau_commerces" width="1.93" height="0.26" 
+                               position="0 2.8 0" scale="0.75 0.75 0.75">
+                          </a-image> 
+                          <a-image class="photo-expo clickable" src="#commerce5" width="1.08" height="1.62" 
+                               position="-0.75 1.9 0" scale="0.75 0.75 0.75">
+                          </a-image>
+                          <a-image class="photo-expo clickable" src="#commerce6" width="1.68" height="1.08" 
+                               position="0.75 2 0" scale="0.75 0.75 0.75">
+                          </a-image>
+                          <a-image class="photo-expo clickable" src="#commerce7" width="1.46" height="1.11" 
+                               position="-0.75 0.8 0" scale="0.75 0.75 0.75">
+                          </a-image>
+                          <a-image class="photo-expo clickable" src="#commerce8" width="1.42" height="1.08" 
+                               position="0.75 0.8 0" scale="0.75 0.75 0.75">
+                          </a-image>
+                          
+                    </a-entity>
+               </a-entity>
+
+               <a-entity position="7.4 0 0" rotation="0 180 0">
+                    <a-box src="#wood" position="0 0 0"
+                         width="3.5" height="0.3" depth="0.3"
+                         normal-map="#wood-NRM" normal-texture-repeat="1 1" normal-scale="1 -1" 
+                         displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
+                         displacement-texture-repeat="1 1" displacement-texture-offset="1 1"
+                         ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
+                         ambient-occlusion-texture-repeat="1 1" ambient-occlusion-texture-offset="1 -1"
+                         spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
+                    </a-box>
+                    <a-box src="#wood" position="0 1.655 0"
+                         width="3" height="3" depth="0.1" repeat="1 2"
+                         normal-map="#wood-NRM" normal-texture-repeat="1 2" normal-scale="1 -1" 
+                         displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
+                         displacement-texture-repeat="1 2" displacement-texture-offset="1 1"
+                         ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
+                         ambient-occlusion-texture-repeat="1 2" ambient-occlusion-texture-offset="1 -1"
+                         spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
+                    </a-box>
+               </a-entity>
+
+               <a-entity position="11.1 0 0" rotation="0 180 0">
+                    <a-box src="#wood" position="0 0 0"
+                         width="3.5" height="0.3" depth="0.3"
+                         normal-map="#wood-NRM" normal-texture-repeat="1 1" normal-scale="1 -1" 
+                         displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
+                         displacement-texture-repeat="1 1" displacement-texture-offset="1 1"
+                         ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
+                         ambient-occlusion-texture-repeat="1 1" ambient-occlusion-texture-offset="1 -1"
+                         spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
+                    </a-box>
+                    <a-box src="#wood" position="0 1.655 0"
+                         width="3" height="3" depth="0.1" repeat="1 2"
+                         normal-map="#wood-NRM" normal-texture-repeat="1 2" normal-scale="1 -1" 
+                         displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
+                         displacement-texture-repeat="1 2" displacement-texture-offset="1 1"
+                         ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
+                         ambient-occlusion-texture-repeat="1 2" ambient-occlusion-texture-offset="1 -1"
+                         spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
+                    </a-box>
+               </a-entity>
+
+          </a-entity>
+
+          <!---------------------PANNEAUX 18 19 20 21 / COMMERCES--------------------> 
           <a-entity position="2 0 17.2" rotation="0 -90 0">
 
                <a-entity position="0 0 0">
-              <a-box src="#wood" position="0 0 0"
-               width="3.5" height="0.3" depth="0.3"
-               normal-map="#wood-NRM" normal-texture-repeat="1 1" normal-scale="1 -1" 
-               displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
-               displacement-texture-repeat="1 1" displacement-texture-offset="1 1"
-               ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
-               ambient-occlusion-texture-repeat="1 1" ambient-occlusion-texture-offset="1 -1"
-               spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
-               </a-box>
-               <a-box src="#wood" position="0 1.655 0"
-                    width="3" height="3" depth="0.1" repeat="1 2"
-                    normal-map="#wood-NRM" normal-texture-repeat="1 2" normal-scale="1 -1" 
-                    displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
-                    displacement-texture-repeat="1 2" displacement-texture-offset="1 1"
-                    ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
-                    ambient-occlusion-texture-repeat="1 2" ambient-occlusion-texture-offset="1 -1"
-                    spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
-               </a-box>
+
+                    
+
                </a-entity>
 
                <a-entity position="3.7 0 0">
@@ -1133,225 +1529,7 @@
           </a-entity>          
 
 
-          <!---------------------SUPPORT PHOTOS COMMERCES / EVENEMENTS--------------------> 
-          <a-entity position="12.5 0 -13" rotation="0 -90 0">
-
-               <a-entity position="0 0 0">
-                    <a-box src="#wood" position="0 0 0"
-                         width="3.5" height="0.3" depth="0.3"
-                         normal-map="#wood-NRM" normal-texture-repeat="1 1" normal-scale="1 -1" 
-                         displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
-                         displacement-texture-repeat="1 1" displacement-texture-offset="1 1"
-                         ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
-                         ambient-occlusion-texture-repeat="1 1" ambient-occlusion-texture-offset="1 -1"
-                         spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
-                    </a-box>
-                    <a-box src="#wood" position="0 1.655 0"
-                         width="3" height="3" depth="0.1" repeat="1 2"
-                         normal-map="#wood-NRM" normal-texture-repeat="1 2" normal-scale="1 -1" 
-                         displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
-                         displacement-texture-repeat="1 2" displacement-texture-offset="1 1"
-                         ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
-                         ambient-occlusion-texture-repeat="1 2" ambient-occlusion-texture-offset="1 -1"
-                         spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
-                    </a-box>
-               </a-entity>
-
-               <a-entity position="3.7 0 0">
-                    <a-box src="#wood" position="0 0 0"
-                         width="3.5" height="0.3" depth="0.3"
-                         normal-map="#wood-NRM" normal-texture-repeat="1 1" normal-scale="1 -1" 
-                         displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
-                         displacement-texture-repeat="1 1" displacement-texture-offset="1 1"
-                         ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
-                         ambient-occlusion-texture-repeat="1 1" ambient-occlusion-texture-offset="1 -1"
-                         spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
-                    </a-box>
-                    <a-box src="#wood" position="0 1.655 0"
-                         width="3" height="3" depth="0.1" repeat="1 2"
-                         normal-map="#wood-NRM" normal-texture-repeat="1 2" normal-scale="1 -1" 
-                         displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
-                         displacement-texture-repeat="1 2" displacement-texture-offset="1 1"
-                         ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
-                         ambient-occlusion-texture-repeat="1 2" ambient-occlusion-texture-offset="1 -1"
-                         spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
-                    </a-box>
-               </a-entity>
-
-               <a-entity position="7.4 0 0">
-                    <a-box src="#wood" position="0 0 0"
-                         width="3.5" height="0.3" depth="0.3"
-                         normal-map="#wood-NRM" normal-texture-repeat="1 1" normal-scale="1 -1" 
-                         displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
-                         displacement-texture-repeat="1 1" displacement-texture-offset="1 1"
-                         ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
-                         ambient-occlusion-texture-repeat="1 1" ambient-occlusion-texture-offset="1 -1"
-                         spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
-                    </a-box>
-                    <a-box src="#wood" position="0 1.655 0"
-                         width="3" height="3" depth="0.1" repeat="1 2"
-                         normal-map="#wood-NRM" normal-texture-repeat="1 2" normal-scale="1 -1" 
-                         displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
-                         displacement-texture-repeat="1 2" displacement-texture-offset="1 1"
-                         ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
-                         ambient-occlusion-texture-repeat="1 2" ambient-occlusion-texture-offset="1 -1"
-                         spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
-                    </a-box>
-               </a-entity>
-
-               <a-entity position="11.1 0 0">
-                    <a-box src="#wood" position="0 0 0"
-                         width="3.5" height="0.3" depth="0.3"
-                         normal-map="#wood-NRM" normal-texture-repeat="1 1" normal-scale="1 -1" 
-                         displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
-                         displacement-texture-repeat="1 1" displacement-texture-offset="1 1"
-                         ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
-                         ambient-occlusion-texture-repeat="1 1" ambient-occlusion-texture-offset="1 -1"
-                         spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
-                    </a-box>
-                    <a-box src="#wood" position="0 1.655 0"
-                         width="3" height="3" depth="0.1" repeat="1 2"
-                         normal-map="#wood-NRM" normal-texture-repeat="1 2" normal-scale="1 -1" 
-                         displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
-                         displacement-texture-repeat="1 2" displacement-texture-offset="1 1"
-                         ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
-                         ambient-occlusion-texture-repeat="1 2" ambient-occlusion-texture-offset="1 -1"
-                         spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
-                    </a-box>
-               </a-entity>
-
-          </a-entity>
-          <!---------------------SUPPORT PHOTOS CONSIL DE REVISION / GENDARMERIE / CAMPING / FESTIF / VRAC--------------------> 
-          <a-entity position="-9.7 0 -14.5" rotation="0 0 0">
-
-               <a-entity position="0 0 0">
-                    <a-box src="#wood" position="0 0 0"
-                         width="3.5" height="0.3" depth="0.3"
-                         normal-map="#wood-NRM" normal-texture-repeat="1 1" normal-scale="1 -1" 
-                         displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
-                         displacement-texture-repeat="1 1" displacement-texture-offset="1 1"
-                         ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
-                         ambient-occlusion-texture-repeat="1 1" ambient-occlusion-texture-offset="1 -1"
-                         spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
-                    </a-box>
-                    <a-box src="#wood" position="0 1.655 0"
-                         width="3" height="3" depth="0.1" repeat="1 2"
-                         normal-map="#wood-NRM" normal-texture-repeat="1 2" normal-scale="1 -1" 
-                         displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
-                         displacement-texture-repeat="1 2" displacement-texture-offset="1 1"
-                         ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
-                         ambient-occlusion-texture-repeat="1 2" ambient-occlusion-texture-offset="1 -1"
-                         spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
-                    </a-box>
-               </a-entity>
-
-               <a-entity position="3.9 0 0">
-                    <a-box src="#wood" position="0 0 0"
-                         width="3.5" height="0.3" depth="0.3"
-                         normal-map="#wood-NRM" normal-texture-repeat="1 1" normal-scale="1 -1" 
-                         displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
-                         displacement-texture-repeat="1 1" displacement-texture-offset="1 1"
-                         ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
-                         ambient-occlusion-texture-repeat="1 1" ambient-occlusion-texture-offset="1 -1"
-                         spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
-                    </a-box>
-                    <a-box src="#wood" position="0 1.655 0"
-                         width="3" height="3" depth="0.1" repeat="1 2"
-                         normal-map="#wood-NRM" normal-texture-repeat="1 2" normal-scale="1 -1" 
-                         displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
-                         displacement-texture-repeat="1 2" displacement-texture-offset="1 1"
-                         ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
-                         ambient-occlusion-texture-repeat="1 2" ambient-occlusion-texture-offset="1 -1"
-                         spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
-                    </a-box>
-               </a-entity>
-
-               <a-entity position="7.8 0 0">
-                    <a-box src="#wood" position="0 0 0"
-                         width="3.5" height="0.3" depth="0.3"
-                         normal-map="#wood-NRM" normal-texture-repeat="1 1" normal-scale="1 -1" 
-                         displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
-                         displacement-texture-repeat="1 1" displacement-texture-offset="1 1"
-                         ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
-                         ambient-occlusion-texture-repeat="1 1" ambient-occlusion-texture-offset="1 -1"
-                         spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
-                    </a-box>
-                    <a-box src="#wood" position="0 1.655 0"
-                         width="3" height="3" depth="0.1" repeat="1 2"
-                         normal-map="#wood-NRM" normal-texture-repeat="1 2" normal-scale="1 -1" 
-                         displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
-                         displacement-texture-repeat="1 2" displacement-texture-offset="1 1"
-                         ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
-                         ambient-occlusion-texture-repeat="1 2" ambient-occlusion-texture-offset="1 -1"
-                         spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
-                    </a-box>
-               </a-entity>
-
-               <a-entity position="11.7 0 0">
-                    <a-box src="#wood" position="0 0 0"
-                         width="3.5" height="0.3" depth="0.3"
-                         normal-map="#wood-NRM" normal-texture-repeat="1 1" normal-scale="1 -1" 
-                         displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
-                         displacement-texture-repeat="1 1" displacement-texture-offset="1 1"
-                         ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
-                         ambient-occlusion-texture-repeat="1 1" ambient-occlusion-texture-offset="1 -1"
-                         spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
-                    </a-box>
-                    <a-box src="#wood" position="0 1.655 0"
-                         width="3" height="3" depth="0.1" repeat="1 2"
-                         normal-map="#wood-NRM" normal-texture-repeat="1 2" normal-scale="1 -1" 
-                         displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
-                         displacement-texture-repeat="1 2" displacement-texture-offset="1 1"
-                         ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
-                         ambient-occlusion-texture-repeat="1 2" ambient-occlusion-texture-offset="1 -1"
-                         spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
-                    </a-box>
-               </a-entity>
-
-               <a-entity position="15.6 0 0">
-                    <a-box src="#wood" position="0 0 0"
-                         width="3.5" height="0.3" depth="0.3"
-                         normal-map="#wood-NRM" normal-texture-repeat="1 1" normal-scale="1 -1" 
-                         displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
-                         displacement-texture-repeat="1 1" displacement-texture-offset="1 1"
-                         ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
-                         ambient-occlusion-texture-repeat="1 1" ambient-occlusion-texture-offset="1 -1"
-                         spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
-                    </a-box>
-                    <a-box src="#wood" position="0 1.655 0"
-                         width="3" height="3" depth="0.1" repeat="1 2"
-                         normal-map="#wood-NRM" normal-texture-repeat="1 2" normal-scale="1 -1" 
-                         displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
-                         displacement-texture-repeat="1 2" displacement-texture-offset="1 1"
-                         ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
-                         ambient-occlusion-texture-repeat="1 2" ambient-occlusion-texture-offset="1 -1"
-                         spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
-                    </a-box>
-               </a-entity>
-
-               <a-entity position="19.5 0 0">
-                    <a-box src="#wood" position="0 0 0"
-                         width="3.5" height="0.3" depth="0.3"
-                         normal-map="#wood-NRM" normal-texture-repeat="1 1" normal-scale="1 -1" 
-                         displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
-                         displacement-texture-repeat="1 1" displacement-texture-offset="1 1"
-                         ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
-                         ambient-occlusion-texture-repeat="1 1" ambient-occlusion-texture-offset="1 -1"
-                         spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
-                    </a-box>
-                    <a-box src="#wood" position="0 1.655 0"
-                         width="3" height="3" depth="0.1" repeat="1 2"
-                         normal-map="#wood-NRM" normal-texture-repeat="1 2" normal-scale="1 -1" 
-                         displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
-                         displacement-texture-repeat="1 2" displacement-texture-offset="1 1"
-                         ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
-                         ambient-occlusion-texture-repeat="1 2" ambient-occlusion-texture-offset="1 -1"
-                         spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
-                    </a-box>
-               </a-entity>
-
-          </a-entity>
-
+          
          
      <!---------------------TELEPORTATION CAFES-------------------->
      <!-- <a-image src="#footstep" class="teleport" position="0 0.011 -6" rotation="-90 0 0" teleport></a-image>
