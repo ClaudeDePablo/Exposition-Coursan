@@ -29,6 +29,13 @@ AFRAME.registerComponent('teleport', {
             points[i].addEventListener('click', function() {
                 posTargetX = points[i].object3D.position.x;
                 posTargetZ = points[i].object3D.position.z;
+                posTargetY = points[i].object3D.position.y;
+                console.log(posTargetX, posTargetZ);
+                camera.setAttribute('position', {
+                    x:posTargetX,
+                    y:posTargetY,
+                    z:posTargetZ
+                })
 
             })
         };
