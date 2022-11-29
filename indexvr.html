@@ -196,18 +196,30 @@
             <img id="majorette2" src="assets/images/majorettes/fichier2.jpg">
             <img id="majorette3" src="assets/images/majorettes/fichier3.jpg">
             <img id="majorette4" src="assets/images/majorettes/fichier4.jpg">
-            <!---------------------------------------------------------->
+            <!------------------------------------------------------->
             <!---------------------PHOTOS MARIAGE-------------------->
-            <!---------------------------------------------------------->
+            <!------------------------------------------------------->
             <img id="panneau_mariage" src="assets/images/mariage/titre.png">
             <img id="mariage1" src="assets/images/mariage/fichier1.jpg">
             <img id="mariage2" src="assets/images/mariage/fichier2.jpg">
-            <!---------------------------------------------------------->
+            <!---------------------------------------------------->
             <!---------------------PHOTOS VRAC-------------------->
-            <!---------------------------------------------------------->
+            <!---------------------------------------------------->
             <img id="vrac1" src="assets/images/cartes postales/fichier1.jpg">
             <img id="vrac2" src="assets/images/cartes postales/fichier2.jpg">
             <img id="vrac3" src="assets/images/cartes postales/fichier3.jpg">
+            <!------------------------------------------------------------------->
+            <!---------------------PHOTOS VISITE DU PRESIDENT-------------------->
+            <!------------------------------------------------------------------->
+            <img id="panneau_visite" src="assets/images/visite du president/titre.png">
+            <img id="visite1" src="assets/images/visite du president/fichier1.jpg">
+            <img id="visite2" src="assets/images/visite du president/fichier2.jpg">
+            <!------------------------------------------------------------>
+            <!---------------------PHOTOS GUERRE 39 45-------------------->
+            <!------------------------------------------------------------>
+            <img id="panneau_guerre" src="assets/images/guerre/titre.png">
+            <img id="guerre1" src="assets/images/guerre/fichier1.jpg">
+            <img id="guerre2" src="assets/images/guerre/fichier2.jpg">
 
           </a-assets>
 
@@ -1744,6 +1756,85 @@
                           <a-image class="photo-expo clickable" src="#vrac2" width="1.62" height="1.08" 
                                position="0 1 0" scale="1.2 1.2 1.2">
                           </a-image>
+                    </a-entity>
+               </a-entity>
+
+          </a-entity>          
+          
+          <!---------------------PANNEAUX 29 30 / GUERRE / VISITE DU PRESIDENT--------------------> 
+          <a-entity position="0 0 5" rotation="0 0 0">
+
+               <!------------------PANNEAU 29 / VISITE DU PRESIDENT------------------->
+               <a-entity position="-1.9 0 0" rotation="0 180 0">
+                    <!----------------------structure------------------------>
+                    <a-entity>
+                         <a-box src="#wood" position="0 0 0"
+                              width="3.5" height="0.3" depth="0.3"
+                              normal-map="#wood-NRM" normal-texture-repeat="1 1" normal-scale="1 -1" 
+                              displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
+                              displacement-texture-repeat="1 1" displacement-texture-offset="1 1"
+                              ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
+                              ambient-occlusion-texture-repeat="1 1" ambient-occlusion-texture-offset="1 -1"
+                              spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
+                         </a-box>
+                         <a-box src="#wood" position="0 1.655 0"
+                              width="3" height="3" depth="0.1" repeat="1 2"
+                              normal-map="#wood-NRM" normal-texture-repeat="1 2" normal-scale="1 -1" 
+                              displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
+                              displacement-texture-repeat="1 2" displacement-texture-offset="1 1"
+                              ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
+                              ambient-occlusion-texture-repeat="1 2" ambient-occlusion-texture-offset="1 -1"
+                              spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
+                         </a-box>
+                    </a-entity>
+                    <!--------------------photos-------------------->
+                    <a-entity position="0 0 -0.063" rotation="0 180 0">                    
+                         <a-image class="photo-expo clickable" src="#panneau_visite" width="1.93" height="0.26" 
+                              position="0 2.8 0" scale="0.75 0.75 0.75">
+                         </a-image>                    
+                         <a-image class="photo-expo clickable" src="#visite1" width="1.08" height="0.74" 
+                              position="-0.5 2.1 0" scale="1.25 1.25 1.25">
+                         </a-image>                     
+                         <a-image class="photo-expo clickable" src="#visite2" width="1.08" height="0.88" 
+                              position="0.5 1 0" scale="1.25 1.25 1.25">
+                         </a-image>  
+                    </a-entity>
+               </a-entity>
+
+               <!------------------PANNEAU 30 / DUERRE 39 45------------------->
+               <a-entity position="1.9 0 0" rotation="0 180 0">
+                    <!----------------------structure------------------------>
+                    <a-entity>
+                         <a-box src="#wood" position="0 0 0"
+                              width="3.5" height="0.3" depth="0.3"
+                              normal-map="#wood-NRM" normal-texture-repeat="1 1" normal-scale="1 -1" 
+                              displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
+                              displacement-texture-repeat="1 1" displacement-texture-offset="1 1"
+                              ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
+                              ambient-occlusion-texture-repeat="1 1" ambient-occlusion-texture-offset="1 -1"
+                              spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
+                         </a-box>
+                         <a-box src="#wood" position="0 1.655 0"
+                              width="3" height="3" depth="0.1" repeat="1 2"
+                              normal-map="#wood-NRM" normal-texture-repeat="1 2" normal-scale="1 -1" 
+                              displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
+                              displacement-texture-repeat="1 2" displacement-texture-offset="1 1"
+                              ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
+                              ambient-occlusion-texture-repeat="1 2" ambient-occlusion-texture-offset="1 -1"
+                              spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
+                         </a-box>
+                    </a-entity>
+                    <!--------------------photos-------------------->
+                    <a-entity position="0 0 -0.063" rotation="0 180 0">                    
+                         <a-image class="photo-expo clickable" src="#panneau_guerre" width="1.93" height="0.26" 
+                               position="0 2.8 0" scale="0.75 0.75 0.75">
+                          </a-image>                
+                          <a-image class="photo-expo clickable" src="#guerre1" width="1.14" height="0.85" 
+                               position="-0.5 2.1 0" scale="1.15 1.15 1.15">
+                          </a-image>                     
+                          <a-image class="photo-expo clickable" src="#guerre2" width="1.14" height="0.85" 
+                               position="0.5 1 0" scale="1.25 1.25 1.25">
+                          </a-image>  
                     </a-entity>
                </a-entity>
 
