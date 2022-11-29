@@ -88,12 +88,13 @@
             <!---------------------------------------------------------->
             <!---------------------PHOTOS PONT ROUGE-------------------->
             <!---------------------------------------------------------->
-            <img id="panneau-p-rouge" src="assets/images/pont rouge/titre.jpg">
+            <img id="panneau-p-rouge" src="assets/images/pont rouge/titre.png">
             <img id="p_rouge_1" src="assets/images/pont rouge/fichier1.jpg">
+            <img id="p_rouge_texte" src="assets/images/pont rouge/texte.jpg">
             <!--------------------------------------------------------->
             <!---------------------PHOTOS PONT SNCF-------------------->
             <!--------------------------------------------------------->
-            <img id="panneau-p-sncf" src="assets/images/pont sncf/titre.jpg">
+            <img id="panneau-p-sncf" src="assets/images/pont sncf/titre.png">
             <img id="p_sncf_1" src="assets/images/pont sncf/fichier1.jpg">
             <img id="p_sncf_2" src="assets/images/pont sncf/fichier2.jpg">
             <!-------------------------------------------------------------->
@@ -154,17 +155,23 @@
             <!--------------------------------------------------------------->
             <!---------------------PHOTOS EVENEMENTS 1907-------------------->
             <!--------------------------------------------------------------->
-            <img id="panneau-event" src="assets/images/event_1907/titre.png">
+            <img id="panneau_event" src="assets/images/event_1907/titre.png">
             <img id="event1" src="assets/images/event_1907/fichier1.jpg">
             <img id="event2" src="assets/images/event_1907/fichier2.jpg">
             <img id="event3" src="assets/images/event_1907/fichier3.jpg">
-            <img id="event_texte" src="assets/images/event_1907/texte.jpg">
+            <!--------------------------------------------------------------->
+            <!---------------------PHOTOS CONSEIL DE REVISION-------------------->
+            <!--------------------------------------------------------------->
+            <img id="panneau_conseil" src="assets/images/conseil_revision/titre.png">
+            <img id="conseil1" src="assets/images/conseil_revision/fichier1.jpg">
+            <img id="conseil2" src="assets/images/conseil_revision/fichier2.jpg">
+            <img id="conseil3" src="assets/images/conseil_revision/fichier3.jpg">
             <!----------------------------------------------------------->
             <!---------------------PHOTOS GENDARMERIE-------------------->
             <!----------------------------------------------------------->
-            <img id="panneau-gendarmerie" src="assets/images/gendarmerie/titre.png">
+            <img id="panneau_gendarmerie" src="assets/images/gendarmerie/titre.png">
             <img id="gendarmerie1" src="assets/images/gendarmerie/fichier1.jpg">
-            <img id="gendarmerie1" src="assets/images/gendarmerie/fichier2.jpg">
+            <img id="gendarmerie2" src="assets/images/gendarmerie/fichier2.jpg">
             <img id="gendarmerie_texte" src="assets/images/gendarmerie/texte.jpg">
             <!------------------------------------------------------->
             <!---------------------PHOTOS CAMPING-------------------->
@@ -192,7 +199,7 @@
           <a-light type="point" position="0 10.8 -15" intensity="0.1"></a-light>
 
           <!---------------------CAMERA-------------------->     
-          <a-entity id="cam-rig"  position="10 0.6 -11" rotation="0 -90 0" progressive-controls position-cam>
+          <a-entity id="cam-rig"  position="0 0.6 16" rotation="0 0 0" progressive-controls position-cam>
 			
 			<a-camera id="cam">
                 <a-cursor id="curseur" color="#FFFFFF"></a-cursor>
@@ -210,7 +217,7 @@
 			
           </a-entity>
 
-          <!---------------------STRUCTURES BATIMENT-------------------->
+          <!---------------------STRUCTURE BATIMENT-------------------->
           <a-entity>
                <!---------------------SOL-------------------->
                <a-plane src="#floor" repeat="20 20" position="0 0 0" rotation="-90 0 0" 
@@ -464,7 +471,7 @@
                     </a-entity>
 
                     <!--------------------photos-------------------->
-                    <a-entity position="0 0 -0.056" rotation="0 180 0">
+                    <a-entity position="0 0 -0.063" rotation="0 180 0">
 
                          <a-image class="photo-expo clickable" src="#panneau-lieux" width="1.93" height="0.26" 
                               position="0 2.8 0" scale="0.75 0.75 0.75">
@@ -512,7 +519,7 @@
                     </a-entity>
                     
                     <!--------------------photos-------------------->
-                    <a-entity position="0 0 -0.056" rotation="0 180 0">
+                    <a-entity position="0 0 -0.063" rotation="0 180 0">
 
                          <a-image class="photo-expo clickable" src="#panneau-lieux" width="1.93" height="0.26" 
                               position="0 2.8 0" scale="0.75 0.75 0.75">
@@ -537,7 +544,7 @@
           </a-entity>
 
           <!---------------------PANNEAUX 3 4 5 6 7 / EGLISE - PONT RICHELIEU--------------------> 
-          <a-entity position="-11.5 0 1.6" rotation="0 -55 0">
+          <a-entity position="-11.5 0 1.6" rotation="0 -55 0" id="classtest">
 
                <!--------------------panneau 7 / PONT RICHELIEU-------------------->
                <a-entity>
@@ -564,7 +571,7 @@
                     </a-entity>
                
                     <!--------------------photos-------------------->
-                    <a-entity position="0 0 -0.056" rotation="0 180 0">
+                    <a-entity position="0 0 -0.063" rotation="0 180 0">
                
                          <a-image class="photo-expo clickable" src="#panneau-p-richelieu" width="1.93" height="0.26" 
                               position="0 2.8 0" scale="0.75 0.75 0.75">
@@ -609,7 +616,7 @@
                     </a-entity>
                
                     <!--------------------photos-------------------->
-                    <a-entity position="0 0 -0.056" rotation="0 180 0">
+                    <a-entity position="0 0 -0.063" rotation="0 180 0">
                
                          <a-image class="photo-expo clickable" src="#panneau-p-richelieu" width="1.93" height="0.26" 
                               position="0 2.8 0" scale="0.75 0.75 0.75">
@@ -656,7 +663,7 @@
                     </a-entity>
                
                     <!--------------------photos-------------------->
-                    <a-entity position="0 0 -0.056" rotation="0 180 0">
+                    <a-entity position="0 0 -0.063" rotation="0 180 0">
                
                          <a-image class="photo-expo clickable" src="#panneau-p-richelieu" width="1.93" height="0.26" 
                               position="0 2.8 0" scale="0.75 0.75 0.75">
@@ -699,7 +706,7 @@
                     </a-entity>
                
                     <!--------------------photos-------------------->
-                    <a-entity position="0 0 -0.056" rotation="0 180 0">
+                    <a-entity position="0 0 -0.063" rotation="0 180 0">
                
                          <a-image class="photo-expo clickable" src="#panneau-eglise" width="1.93" height="0.26" 
                               position="0 2.8 0" scale="0.75 0.75 0.75">
@@ -745,7 +752,7 @@
                     </a-entity>
                
                     <!--------------------photos-------------------->
-                    <a-entity position="0 0 -0.056" rotation="0 180 0">
+                    <a-entity position="0 0 -0.063" rotation="0 180 0">
                
                          <a-image class="photo-expo clickable" src="#panneau-eglise" width="1.93" height="0.26" 
                               position="0 2.8 0" scale="0.75 0.75 0.75">
@@ -761,6 +768,9 @@
                          </a-image>
                
                     </a-entity> 
+
+                    
+                    <a-image src="#footstep" class="teleport" position="0 0.011 -2"  rotation="90 0 0" teleport></a-image>
                                      
                </a-entitY>
    
@@ -796,7 +806,7 @@
                     </a-entity>
                
                     <!--------------------photos-------------------->
-                    <a-entity position="0 0 -0.056" rotation="0 180 0">
+                    <a-entity position="0 0 -0.063" rotation="0 180 0">
                
                          <a-image class="photo-expo clickable" src="#panneau-p-rouge" width="1.93" height="0.26" 
                               position="0 2.8 0" scale="0.75 0.75 0.75">
@@ -843,7 +853,7 @@
                          </a-box>
                     </a-entity>
                     
-                    <a-entity position="0 0 -0.056" rotation="0 180 0">
+                    <a-entity position="0 0 -0.063" rotation="0 180 0">
                
                          <a-image class="photo-expo clickable" src="#panneau-places" width="1.93" height="0.26" 
                                position="0 2.8 0" scale="0.75 0.75 0.75">
@@ -890,7 +900,7 @@
                     </a-entity>
                
                     <!--------------------photos-------------------->
-                    <a-entity position="0 0 -0.056" rotation="0 180 0">
+                    <a-entity position="0 0 -0.063" rotation="0 180 0">
                
                          <a-image class="photo-expo clickable" src="#panneau-places" width="1.93" height="0.26" 
                                position="0 2.8 0" scale="0.75 0.75 0.75">
@@ -938,7 +948,7 @@
                     </a-entity>
 
                     <!--------------------photos-------------------->
-                    <a-entity position="0 0 -0.056" rotation="0 180 0">
+                    <a-entity position="0 0 -0.063" rotation="0 180 0">
                
                          <a-image class="photo-expo clickable" src="#panneau-places" width="1.93" height="0.26" 
                                position="0 2.8 0" scale="0.75 0.75 0.75">
@@ -990,7 +1000,7 @@
                     </a-entity>
 
                      <!--------------------photos-------------------->
-                    <a-entity position="0 0 -0.056" rotation="0 180 0">
+                    <a-entity position="0 0 -0.063" rotation="0 180 0">
                     
                          <a-image class="photo-expo clickable" src="#panneau-places" width="1.93" height="0.26" 
                                position="0 2.8 0" scale="0.75 0.75 0.75">
@@ -1036,7 +1046,7 @@
                          </a-box>
                     </a-entity>
 
-                    <a-entity position="0 0 -0.056" rotation="0 180 0">
+                    <a-entity position="0 0 -0.063" rotation="0 180 0">
                     
                          <a-image class="photo-expo clickable" src="#panneau-places" width="1.93" height="0.26" 
                                position="0 2.8 0" scale="0.75 0.75 0.75">
@@ -1083,7 +1093,7 @@
                          </a-box>
 
                          <!--------------------photos-------------------->
-                         <a-entity position="0 0 -0.056" rotation="0 180 0">
+                         <a-entity position="0 0 -0.063" rotation="0 180 0">
                     
                               <a-image class="photo-expo clickable" src="#panneau_cafes" width="1.93" height="0.26" 
                                     position="0 2.8 0" scale="0.75 0.75 0.75">
@@ -1132,7 +1142,7 @@
                     </a-entity>
                     
                     <!--------------------photos-------------------->
-                    <a-entity position="0 0 -0.056" rotation="0 180 0">
+                    <a-entity position="0 0 -0.063" rotation="0 180 0">
                     
                          <a-image class="photo-expo clickable" src="#panneau_cafes" width="1.93" height="0.26" 
                                position="0 2.8 0" scale="0.75 0.75 0.75">
@@ -1179,7 +1189,7 @@
                     </a-entity>
 
                     <!--------------------photos-------------------->
-                    <a-entity position="0 0 -0.056" rotation="0 180 0">
+                    <a-entity position="0 0 -0.063" rotation="0 180 0">
                     
                          <a-image class="photo-expo clickable" src="#panneau_cafes" width="1.93" height="0.26" 
                                position="0 2.8 0" scale="0.75 0.75 0.75">
@@ -1227,7 +1237,7 @@
                     </a-entity>
 
                     <!--------------------photos-------------------->
-                    <a-entity position="0 0 -0.056" rotation="0 180 0">
+                    <a-entity position="0 0 -0.063" rotation="0 180 0">
                     
                          <a-image class="photo-expo clickable" src="#panneau_cafes" width="1.93" height="0.26" 
                                position="0 2.8 0" scale="0.75 0.75 0.75">
@@ -1252,7 +1262,7 @@
 
           <!---------------------PANNEAUX 18 19 20 21 COMMERCES / EVENEMENTS--------------------> 
           <a-entity position="12.5 0 -13" rotation="0 -90 0">
-               <!---------------------panneau 18--------------------> 
+               <!---------------------panneau 18 commerces--------------------> 
                <a-entity position="0 0 0" rotation="0 180 0">
                     <!--------------------structure-------------------->
                     <a-entity>
@@ -1276,7 +1286,7 @@
                          </a-box>
                     </a-entity> 
                     <!--------------------photos-------------------->
-                    <a-entity position="0 0 -0.056" rotation="0 180 0">
+                    <a-entity position="0 0 -0.063" rotation="0 180 0">
                     
                          <a-image class="photo-expo clickable" src="#panneau_commerces" width="1.93" height="0.26" 
                                position="0 2.8 0" scale="0.75 0.75 0.75">
@@ -1296,7 +1306,7 @@
                           
                     </a-entity>
                </a-entity>
-               <!---------------------panneau 19--------------------> 
+               <!---------------------panneau 19 commerces--------------------> 
                <a-entity position="3.7 0 0" rotation="0 180 0">
                     <!--------------------structure-------------------->
                     <a-entity>
@@ -1320,7 +1330,7 @@
                          </a-box>
                     </a-entity> 
                     <!--------------------photos-------------------->
-                    <a-entity position="0 0 -0.056" rotation="0 180 0">
+                    <a-entity position="0 0 -0.063" rotation="0 180 0">
                     
                          <a-image class="photo-expo clickable" src="#panneau_commerces" width="1.93" height="0.26" 
                                position="0 2.8 0" scale="0.75 0.75 0.75">
@@ -1341,85 +1351,93 @@
                     </a-entity>
                </a-entity>
 
+               <!---------------------panneau 20 évènements--------------------> 
                <a-entity position="7.4 0 0" rotation="0 180 0">
-                    <a-box src="#wood" position="0 0 0"
-                         width="3.5" height="0.3" depth="0.3"
-                         normal-map="#wood-NRM" normal-texture-repeat="1 1" normal-scale="1 -1" 
-                         displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
-                         displacement-texture-repeat="1 1" displacement-texture-offset="1 1"
-                         ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
-                         ambient-occlusion-texture-repeat="1 1" ambient-occlusion-texture-offset="1 -1"
-                         spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
-                    </a-box>
-                    <a-box src="#wood" position="0 1.655 0"
-                         width="3" height="3" depth="0.1" repeat="1 2"
-                         normal-map="#wood-NRM" normal-texture-repeat="1 2" normal-scale="1 -1" 
-                         displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
-                         displacement-texture-repeat="1 2" displacement-texture-offset="1 1"
-                         ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
-                         ambient-occlusion-texture-repeat="1 2" ambient-occlusion-texture-offset="1 -1"
-                         spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
-                    </a-box>
-               </a-entity>
 
-               <a-entity position="11.1 0 0" rotation="0 180 0">
-                    <a-box src="#wood" position="0 0 0"
-                         width="3.5" height="0.3" depth="0.3"
-                         normal-map="#wood-NRM" normal-texture-repeat="1 1" normal-scale="1 -1" 
-                         displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
-                         displacement-texture-repeat="1 1" displacement-texture-offset="1 1"
-                         ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
-                         ambient-occlusion-texture-repeat="1 1" ambient-occlusion-texture-offset="1 -1"
-                         spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
-                    </a-box>
-                    <a-box src="#wood" position="0 1.655 0"
-                         width="3" height="3" depth="0.1" repeat="1 2"
-                         normal-map="#wood-NRM" normal-texture-repeat="1 2" normal-scale="1 -1" 
-                         displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
-                         displacement-texture-repeat="1 2" displacement-texture-offset="1 1"
-                         ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
-                         ambient-occlusion-texture-repeat="1 2" ambient-occlusion-texture-offset="1 -1"
-                         spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
-                    </a-box>
-               </a-entity>
-
-          </a-entity>
-
-          <!---------------------PANNEAUX 18 19 20 21 / COMMERCES--------------------> 
-          <a-entity position="2 0 17.2" rotation="0 -90 0">
-
-               <a-entity position="0 0 0">
-
+                    <!--------------------structure-------------------->
+                    <a-entity>
+                         <a-box src="#wood" position="0 0 0"
+                              width="3.5" height="0.3" depth="0.3"
+                              normal-map="#wood-NRM" normal-texture-repeat="1 1" normal-scale="1 -1" 
+                              displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
+                              displacement-texture-repeat="1 1" displacement-texture-offset="1 1"
+                              ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
+                              ambient-occlusion-texture-repeat="1 1" ambient-occlusion-texture-offset="1 -1"
+                              spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
+                         </a-box>
+                         <a-box src="#wood" position="0 1.655 0"
+                              width="3" height="3" depth="0.1" repeat="1 2"
+                              normal-map="#wood-NRM" normal-texture-repeat="1 2" normal-scale="1 -1" 
+                              displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
+                              displacement-texture-repeat="1 2" displacement-texture-offset="1 1"
+                              ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
+                              ambient-occlusion-texture-repeat="1 2" ambient-occlusion-texture-offset="1 -1"
+                              spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
+                         </a-box>
+                    </a-entity>
                     
+                    <!--------------------photos-------------------->
+                    <a-entity position="0 0 -0.063" rotation="0 180 0">                    
+                         <a-image class="photo-expo clickable" src="#panneau_event" width="1.93" height="0.26" 
+                               position="0 2.8 0" scale="0.75 0.75 0.75">
+                          </a-image> 
+                          <a-image class="photo-expo clickable" src="#event1" width="1.62" height="1.08" 
+                               position="-0.6 2 0" scale="0.75 0.75 0.75">
+                          </a-image>
+                          <a-image class="photo-expo clickable" src="#event2" width="1.50" height="1.08" 
+                               position="-0.6 1 0" scale="0.75 0.75 0.75">
+                          </a-image>
+                          <a-image class="photo-expo clickable" src="#event3" width="1.08" height="1.62" 
+                               position="0.75 1.5 0" scale="1 1 1">
+                          </a-image>                          
+                    </a-entity>
 
                </a-entity>
 
-               <a-entity position="3.7 0 0">
-              <a-box src="#wood" position="0 0 0"
-               width="3.5" height="0.3" depth="0.3"
-               normal-map="#wood-NRM" normal-texture-repeat="1 1" normal-scale="1 -1" 
-               displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
-               displacement-texture-repeat="1 1" displacement-texture-offset="1 1"
-               ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
-               ambient-occlusion-texture-repeat="1 1" ambient-occlusion-texture-offset="1 -1"
-               spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
-               </a-box>
-               <a-box src="#wood" position="0 1.655 0"
-                    width="3" height="3" depth="0.1" repeat="1 2"
-                    normal-map="#wood-NRM" normal-texture-repeat="1 2" normal-scale="1 -1" 
-                    displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
-                    displacement-texture-repeat="1 2" displacement-texture-offset="1 1"
-                    ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
-                    ambient-occlusion-texture-repeat="1 2" ambient-occlusion-texture-offset="1 -1"
-                    spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
-               </a-box>
+               <!---------------------panneau 21 gendarmerie--------------------> 
+               <a-entity position="11.1 0 0" rotation="0 180 0">
+
+                    <!---------------------structure----------------------->
+                    <a-entity>
+                         <a-box src="#wood" position="0 0 0"
+                              width="3.5" height="0.3" depth="0.3"
+                              normal-map="#wood-NRM" normal-texture-repeat="1 1" normal-scale="1 -1" 
+                              displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
+                              displacement-texture-repeat="1 1" displacement-texture-offset="1 1"
+                              ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
+                              ambient-occlusion-texture-repeat="1 1" ambient-occlusion-texture-offset="1 -1"
+                              spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
+                         </a-box>
+                         <a-box src="#wood" position="0 1.655 0"
+                              width="3" height="3" depth="0.1" repeat="1 2"
+                              normal-map="#wood-NRM" normal-texture-repeat="1 2" normal-scale="1 -1" 
+                              displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
+                              displacement-texture-repeat="1 2" displacement-texture-offset="1 1"
+                              ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
+                              ambient-occlusion-texture-repeat="1 2" ambient-occlusion-texture-offset="1 -1"
+                              spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
+                         </a-box>
+                    </a-entity>
+                    <!--------------------photos-------------------->
+                    <a-entity position="0 0 -0.063" rotation="0 180 0">                    
+                         <a-image class="photo-expo clickable" src="#panneau_gendarmerie" width="1.93" height="0.26" 
+                               position="0 2.8 0" scale="0.75 0.75 0.75">
+                          </a-image> 
+                          <a-image class="photo-expo clickable" src="#gendarmerie_texte" width="1.08" height="1.49" 
+                               position="-0.75 1.5 0">
+                          </a-image>
+                          <a-image class="photo-expo clickable" src="#gendarmerie1" width="1.70" height="1.08" 
+                               position="0.75 2 0" scale="0.75 0.75 0.75">
+                          </a-image>
+                          <a-image class="photo-expo clickable" src="#gendarmerie2" width="1.60" height="1.08" 
+                               position="0.75 1 0" scale="0.75 0.75 0.75">
+                          </a-image>                          
+                    </a-entity>
                </a-entity>
 
           </a-entity>
 
-
-
-          <!---------------------SUPPORT PHOTOS PLACE-------------------->
+          <!---------------------PANNEAUX 22 23 24 25 26-------------------->
           <a-entity position="11.5 0 1.6" rotation="0 -125 0">
 
                <a-entity position="0 0 0">
@@ -1526,271 +1544,76 @@
                          spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
                     </a-box>
                </a-entity>
-          </a-entity>          
+          </a-entity>    
 
+          <!---------------------PANNEAUX 27 28--------------------> 
+          <a-entity position="2 0 17.2" rotation="0 -90 0">
 
-          
-         
-     <!---------------------TELEPORTATION CAFES-------------------->
-     <!-- <a-image src="#footstep" class="teleport" position="0 0.011 -6" rotation="-90 0 0" teleport></a-image>
-     <a-image src="#footstep" class="teleport" position="0 0.011 -9" rotation="-90 0 0" teleport></a-image>
-     <a-image src="#footstep" class="teleport" position="0 0.011 -12" rotation="-90 0 0" teleport></a-image>
-     <a-image src="#footstep" class="teleport" position="0 0.011 -14" rotation="-90 0 0" teleport></a-image>
-     <a-image src="#footstep" class="teleport" position="0 0.011 -16" rotation="-90 0 0" teleport></a-image>
-     <a-image src="#footstep" class="teleport" position="0 0.011 -18" rotation="-90 0 0" teleport></a-image>
-     <a-image src="#footstep" class="teleport" position="0 0.011 -21" rotation="-90 0 0" teleport></a-image>
-     <a-image src="#footstep" class="teleport" position="0 0.011 -24" rotation="-90 0 0" teleport></a-image>
-     <a-image src="#footstep" class="teleport" position="0 0.011 -27" rotation="-90 0 0" teleport></a-image> -->
+               <a-entity position="0 0 0">
+                    <a-entity>
+                         <a-box src="#wood" position="0 0 0"
+                              width="3.5" height="0.3" depth="0.3"
+                              normal-map="#wood-NRM" normal-texture-repeat="1 1" normal-scale="1 -1" 
+                              displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
+                              displacement-texture-repeat="1 1" displacement-texture-offset="1 1"
+                              ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
+                              ambient-occlusion-texture-repeat="1 1" ambient-occlusion-texture-offset="1 -1"
+                              spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
+                         </a-box>
+                         <a-box src="#wood" position="0 1.655 0"
+                              width="3" height="3" depth="0.1" repeat="1 2"
+                              normal-map="#wood-NRM" normal-texture-repeat="1 2" normal-scale="1 -1" 
+                              displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
+                              displacement-texture-repeat="1 2" displacement-texture-offset="1 1"
+                              ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
+                              ambient-occlusion-texture-repeat="1 2" ambient-occlusion-texture-offset="1 -1"
+                              spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
+                         </a-box>
+                    </a-entity>
+               </a-entity>
 
-        <!---------------------TOURNIQUET PRINCIPALE-------------------->
-        <a-entity id="principal" position="0 0 0">
+               <a-entity position="3.7 0 0">
+                    <a-entity>
+                         <a-box src="#wood" position="0 0 0"
+                              width="3.5" height="0.3" depth="0.3"
+                              normal-map="#wood-NRM" normal-texture-repeat="1 1" normal-scale="1 -1" 
+                              displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
+                              displacement-texture-repeat="1 1" displacement-texture-offset="1 1"
+                              ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
+                              ambient-occlusion-texture-repeat="1 1" ambient-occlusion-texture-offset="1 -1"
+                              spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
+                         </a-box>
+                         <a-box src="#wood" position="0 1.655 0"
+                              width="3" height="3" depth="0.1" repeat="1 2"
+                              normal-map="#wood-NRM" normal-texture-repeat="1 2" normal-scale="1 -1" 
+                              displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
+                              displacement-texture-repeat="1 2" displacement-texture-offset="1 1"
+                              ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
+                              ambient-occlusion-texture-repeat="1 2" ambient-occlusion-texture-offset="1 -1"
+                              spherical-env-map="#wood-ROUGH" roughness="0.4" metalness="0.5">
+                         </a-box>
+                    </a-entity>
+               </a-entity>
 
-            <!---------------------PARTIE CAFES DE COURSAN-------------------->
-            <a-entity id="expo-cafes" position="0 1.6 -5">
-                
-                <!---------------------PANNEAU TITRE-------------------->
-                <!-- <a-image src="#panneau-cafes" position="0 0 0" 
-                    shader="flat" class="clickable titres"
-                    width="1.92" height="0.26" scale="2 2 2"></a-image> -->
+          </a-entity>
 
-                <!---------------------PHOTOS CAFES-------------------->
-                <!-- <a-entity position="0 0 -3">
+          <!---------------------TELEPORTATION -------------------->
+          <a-entity>
+               <a-image src="#footstep" class="teleport" position="0 0.011 21" rotation="-90 90 0" teleport></a-image>
+               <a-image src="#footstep" class="teleport" position="0 0.011 17" rotation="-90 90 0" teleport></a-image>
+               <!-- <a-image src="#footstep" class="teleport" position="-1 0.011 12.5" rotation="-90 125 0" teleport></a-image>
+               <a-image src="#footstep" class="teleport" position="-2.5 0.011 9" rotation="-90 125 0" teleport></a-image>
+               <a-image src="#footstep" class="teleport" position="0 0.011 -16" rotation="-90 125 0" teleport></a-image>
+               <a-image src="#footstep" class="teleport" position="0 0.011 -18" rotation="-90 125 0" teleport></a-image>
+               <a-image src="#footstep" class="teleport" position="0 0.011 -21" rotation="-90 125 0" teleport></a-image>
+               <a-image src="#footstep" class="teleport" position="0 0.011 -24" rotation="-90 0 0" teleport></a-image>
+               <a-image src="#footstep" class="teleport" position="0 0.011 -27" rotation="-90 0 0" teleport></a-image>     -->
+          </a-entity>
 
-                    <a-image class="photo-expo clickable" src="#café1" width="1.48" height="1.08" 
-                         position="-1.3 0 0" rotation="0 15 0" scale="1.5 1.5 1.5">
-                    </a-image>
-                    <a-image class="photo-expo clickable" src="#café2" width="1.46" height="1.08" 
-                         position="1.3 0 0" rotation="0 -15 0" scale="1.5 1.5 1.5">
-                    </a-image>
-                    <a-image class="photo-expo clickable" src="#café3" width="1.5" height="1.08" 
-                        position="-1.3 0 -3" rotation="0 15 0" scale="1.5 1.5 1.5">
-                    </a-image>
-                    <a-image class="photo-expo clickable" src="#café4" width="1.44" height="1.1" 
-                        position="1.3 0 -3" rotation="0 -15 0" scale="1.5 1.5 1.5">
-                    </a-image>
-                    <a-image class="photo-expo clickable" src="#café5" width="1.25" height="1.08" 
-                         position="-1.3 0 -6" rotation="0 15 0" scale="1.5 1.5 1.5">
-                    </a-image>
-                    <a-image class="photo-expo clickable" src="#café6" width="1.32" height="1.08" 
-                         position="1.3 0 -6" rotation="0 -15 0" scale="1.5 1.5 1.5">
-                    </a-image>
-                    <a-image class="photo-expo clickable" src="#café7" width="1.46" height="1.1" 
-                        position="-1.3 0 -9" rotation="0 15 0" scale="1.5 1.5 1.5">
-                    </a-image>
-                    <a-image class="photo-expo clickable" src="#café8" width="1.49" height="1.08" 
-                        position="1.3 0 -9" rotation="0 -15 0" scale="1.5 1.5 1.5">
-                    </a-image>
-                    <a-image class="photo-expo clickable" src="#café9" width="1.53" height="1.08" 
-                         position="-1.3 0 -12" rotation="0 15 0" scale="1.5 1.5 1.5">
-                    </a-image>
-                    <a-image class="photo-expo clickable" src="#café10" width="1.37" height="1.08" 
-                         position="1.3 0 -12" rotation="0 -15 0" scale="1.5 1.5 1.5">
-                    </a-image>
-                    <a-image class="photo-expo clickable" src="#café11" width="1.52" height="1.1" 
-                        position="-1.3 0 -15" rotation="0 15 0" scale="1.5 1.5 1.5">
-                    </a-image>
-                    <a-image class="photo-expo clickable" src="#café12" width="1.44" height="1.08" 
-                        position="1.3 0 -15" rotation="0 -15 0" scale="1.5 1.5 1.5">
-                    </a-image>
-                    <a-image class="photo-expo clickable" src="#café13" width="1.48" height="1.08" 
-                        position="-1.3 0 -18" rotation="0 15 0" scale="1.5 1.5 1.5">
-                    </a-image>
-                    <a-image class="photo-expo clickable" src="#café14" width="1.51" height="1.08" 
-                        position="1.3 0 -18" rotation="0 -15 0" scale="1.5 1.5 1.5">
-                    </a-image>
-                    <a-image class="photo-expo clickable" src="#café15" width="1.39" height="1.08" 
-                        position="0 0 -21" scale="1.5 1.5 1.5">
-                    </a-image>
-
-                </a-entity> -->
-                
-            </a-entity>
-            
-
-            <!---------------------PARTIE COMMERCES DE COURSAN-------------------->
-            <a-entity id="expo-commerces" position="0d 1.6 0" rotation="0 90 0">
-                
-                <!---------------------PANNEAU TITRE-------------------->
-                <!-- <a-image src="#panneau-commerces" position="0 0 0" 
-                    shader="flat" class="clickable titres"
-                    width="1.92" height="0.26" scale="2 2 2"></a-image> -->
-
-                <!---------------------PHOTOS COMMERCES-------------------->
-                <!-- <a-entity position="0 0 -3">
-
-                    <a-image class="photo-expo clickable" src="#commerce1" width="1.27" height="1.08" 
-                         position="-1.3 0 0" rotation="0 15 0" scale="1.5 1.5 1.5">
-                    </a-image>
-                    <a-image class="photo-expo clickable" src="#commerce2" width="1.34" height="1.08" 
-                         position="1.3 0 0" rotation="0 -15 0" scale="1.5 1.5 1.5">
-                    </a-image>
-                    <a-image class="photo-expo clickable" src="#commerce3" width="1.53" height="1.08" 
-                        position="-1.3 0 -3" rotation="0 15 0" scale="1.5 1.5 1.5">
-                    </a-image>
-                    <a-image class="photo-expo clickable" src="#commerce4" width="1.39" height="1.08" 
-                        position="1.3 0 -3" rotation="0 -15 0" scale="1.5 1.5 1.5">
-                    </a-image>
-                    <a-image class="photo-expo clickable" src="#commerce5" width="1.39" height="1.08" 
-                         position="-1.3 0 -6" rotation="0 15 0" scale="1.5 1.5 1.5">
-                    </a-image>
-                    <a-image class="photo-expo clickable" src="#commerce6" width="1.39" height="1.08" 
-                         position="1.3 0 -6" rotation="0 -15 0" scale="1.5 1.5 1.5">
-                    </a-image>
-                    <a-image class="photo-expo clickable" src="#commerce7" width="1.39" height="1.08" 
-                        position="-1.3 0 -9" rotation="0 15 0" scale="1.5 1.5 1.5">
-                    </a-image>
-                    <a-image class="photo-expo clickable" src="#commerce8" width="1.23" height="1.08" 
-                        position="1.3 0 -9" rotation="0 -15 0" scale="1.5 1.5 1.5">
-                    </a-image>
-                    <a-image class="photo-expo clickable" src="#commerce9" width="1.23" height="1.08" 
-                         position="-1.3 0 -12" rotation="0 15 0" scale="1.5 1.5 1.5">
-                    </a-image>
-                    <a-image class="photo-expo clickable" src="#commerce10" width="1.44" height="1.08" 
-                         position="1.3 0 -12" rotation="0 -15 0" scale="1.5 1.5 1.5">
-                    </a-image>
-                    <a-image class="photo-expo clickable" src="#commerce11" width="1.25" height="1.08" 
-                        position="-1.3 0 -15" rotation="0 15 0" scale="1.5 1.5 1.5">
-                    </a-image>
-                    <a-image class="photo-expo clickable" src="#commerce12" width="1.21" height="1.08" 
-                        position="1.3 0 -15" rotation="0 -15 0" scale="1.5 1.5 1.5">
-                    </a-image>
-
-                </a-entity> -->
-                
-                <!---------------------TELEPORTATION CAFES-------------------->
-                <!-- <a-image src="#footstep" class="teleport" position="0 -1.5 -1" rotation="-90 0 0" teleport></a-image>
-                <a-image src="#footstep" class="teleport" position="0 -1.5 -4" rotation="-90 0 0" teleport></a-image>
-                <a-image src="#footstep" class="teleport" position="0 -1.5 -7" rotation="-90 0 0" teleport></a-image>
-                <a-image src="#footstep" class="teleport" position="0 -1.5 -10" rotation="-90 0 0" teleport></a-image>
-                <a-image src="#footstep" class="teleport" position="0 -1.5 -13" rotation="-90 0 0" teleport></a-image>
-                <a-image src="#footstep" class="teleport" position="0 -1.5 -16" rotation="-90 0 0" teleport></a-image> -->
-            </a-entity>
-
-            <!---------------------PARTIE EGLISE DE COURSAN-------------------->
-            <a-entity id="expo-eglise" position="0 1.6 0" rotation="0 -90 0">
-                
-                <!---------------------PANNEAU TITRE-------------------->
-                <!-- <a-image src="#panneau-eglise" position="0 0 0" 
-                    shader="flat" class="clickable titres"
-                    width="1.92" height="0.26" scale="2 2 2"></a-image> -->
-
-                <!---------------------PHOTOS EGLISE-------------------->
-                <!-- <a-entity position="0 0 -3">
-
-                    <a-image class="photo-expo clickable" src="#eglise1" width="1.69" height="1.08" 
-                         position="-1.3 0 0" rotation="0 15 0" scale="1.5 1.5 1.5">
-                    </a-image>
-                    <a-image class="photo-expo clickable" src="#eglise2" width="1.75" height="1.08" 
-                         position="1.3 0 0" rotation="0 -15 0" scale="1.5 1.5 1.5">
-                    </a-image>
-                    <a-image class="photo-expo clickable" src="#eglise3" width="1.43" height="1.08" 
-                        position="-1.3 0 -3" rotation="0 15 0" scale="1.5 1.5 1.5">
-                    </a-image>
-                    <a-image class="photo-expo clickable" src="#eglise4" width="1.68" height="1.08" 
-                        position="1.3 0 -3" rotation="0 -15 0" scale="1.5 1.5 1.5">
-                    </a-image>
-                    <a-image class="photo-expo clickable" src="#eglise5" width="1.08" height="1.86" 
-                         position="-1.3 0 -6" rotation="0 15 0" scale="1.5 1.5 1.5">
-                    </a-image>
-                    <a-image class="photo-expo clickable" src="#eglise6" width="1.08" height="1.78" 
-                         position="1.3 0 -6" rotation="0 -15 0" scale="1.5 1.5 1.5">
-                    </a-image>
-                </a-entity> -->
-                
-                <!---------------------TELEPORTATION CAFES-------------------->
-                <!-- <a-image src="#footstep" class="teleport" position="0 -1.5 -1" rotation="-90 0 0" teleport></a-image>
-                <a-image src="#footstep" class="teleport" position="0 -1.5 -4" rotation="-90 0 0" teleport></a-image>
-                <a-image src="#footstep" class="teleport" position="0 -1.5 -7" rotation="-90 0 0" teleport></a-image>
-                <a-image src="#footstep" class="teleport" position="0 -1.5 -10" rotation="-90 0 0" teleport></a-image>
-                <a-image src="#footstep" class="teleport" position="0 -1.5 -13" rotation="-90 0 0" teleport></a-image>
-                <a-image src="#footstep" class="teleport" position="0 -1.5 -16" rotation="-90 0 0" teleport></a-image> -->
-            </a-entity>
-
-            <!---------------------PARTIE PLACE AUGUSTE TAILHADES-------------------->
-            <a-entity id="expo-place" position="0 1.6 5" rotation="0 0 0">
-                
-                <!---------------------PANNEAU TITRE-------------------->
-                <!-- <a-image src="#panneau-place" position="0 0 0" 
-                    shader="flat" class="clickable titres"
-                    width="1.92" height="0.26" scale="2 2 2"></a-image> -->
-
-                <!---------------------PHOTOS PLACE A. TAILHADES-------------------->
-                <!-- <a-entity position="0 0 -3">
-
-                    <a-image class="photo-expo clickable" src="#place1" width="1.28" height="1.08" 
-                         position="-1.3 0 0" rotation="0 15 0" scale="1.5 1.5 1.5">
-                    </a-image>
-                    <a-image class="photo-expo clickable" src="#place2" width="1.49" height="1.08" 
-                         position="1.3 0 0" rotation="0 -15 0" scale="1.5 1.5 1.5">
-                    </a-image>
-                    <a-image class="photo-expo clickable" src="#place3" width="1.24" height="1.08" 
-                         position="-1.3 0 -3" rotation="0 15 0" scale="1.5 1.5 1.5">
-                    </a-image>
-                    <a-image class="photo-expo clickable" src="#place4" width="1.41" height="1.08" 
-                         position="1.3 0 -3" rotation="0 -15 0" scale="1.5 1.5 1.5">
-                    </a-image>
-                    <a-image class="photo-expo clickable" src="#place5" width="1.46" height="1.08" 
-                         position="-1.3 0 -6" rotation="0 15 0" scale="1.5 1.5 1.5">
-                    </a-image>
-                    <a-image class="photo-expo clickable" src="#place6" width="1.57" height="1.08" 
-                         position="1.3 0 -6" rotation="0 -15 0" scale="1.5 1.5 1.5">
-                    </a-image>
-                    <a-image class="photo-expo clickable" src="#place7" width="1.48" height="1.08" 
-                         position="-1.3 0 -9" rotation="0 15 0" scale="1.5 1.5 1.5">
-                    </a-image>
-                    <a-image class="photo-expo clickable" src="#place8" width="1.19" height="1.08" 
-                         position="1.3 0 -9" rotation="0 -15 0" scale="1.5 1.5 1.5">
-                    </a-image>
-                    <a-image class="photo-expo clickable" src="#place9" width="1.44" height="1.08" 
-                         position="-1.3 0 -12" rotation="0 15 0" scale="1.5 1.5 1.5">
-                    </a-image>
-                    <a-image class="photo-expo clickable" src="#place10" width="1.08" height="1.83" 
-                         position="1.3 0 -12" rotation="0 -15 0" scale="1.5 1.5 1.5">
-                    </a-image>
-                    <a-image class="photo-expo clickable" src="#place11" width="1.42" height="1.08" 
-                         position="-1.3 0 -15" rotation="0 15 0" scale="1.5 1.5 1.5">
-                    </a-image>
-                    <a-image class="photo-expo clickable" src="#place12" width="1.08" height="1.62" 
-                         position="1.3 0 -15" rotation="0 -15 0" scale="1.5 1.5 1.5">
-                    </a-image>
-                    <a-image class="photo-expo clickable" src="#place13" width="1.50" height="1.08" 
-                         position="-1.3 0 -18" rotation="0 15 0" scale="1.5 1.5 1.5">
-                    </a-image>
-                    <a-image class="photo-expo clickable" src="#place14" width="1.08" height="1.69" 
-                         position="1.3 0 -18" rotation="0 -15 0" scale="1.5 1.5 1.5">
-                    </a-image>
-                    <a-image class="photo-expo clickable" src="#place15" width="1.33" height="1.08" 
-                         position="-1.3 0 -21" rotation="0 15 0" scale="1.5 1.5 1.5">
-                    </a-image>
-                    <a-image class="photo-expo clickable" src="#place16" width="1.34" height="1.08" 
-                         position="1.3 0 -21" rotation="0 -15 0" scale="1.5 1.5 1.5">
-                    </a-image>
-                    <a-image class="photo-expo clickable" src="#place17" width="1.39" height="1.08" 
-                         position="-1.3 0 -24" rotation="0 15 0" scale="1.5 1.5 1.5">
-                    </a-image>
-                    <a-image class="photo-expo clickable" src="#place18" width="1.39" height="1.08" 
-                         position="1.3 0 -24" rotation="0 -15 0" scale="1.5 1.5 1.5">
-                    </a-image>
-                    <a-image class="photo-expo clickable" src="#place19" width="1.39" height="1.08" 
-                         position="0 0 -27" scale="1.5 1.5 1.5">
-                    </a-image>
-                </a-entity> -->
-                
-                <!---------------------TELEPORTATION CAFES-------------------->
-                <!-- <a-image src="#footstep" class="teleport" position="0 -1.5 -1" rotation="-90 0 0" teleport></a-image>
-                <a-image src="#footstep" class="teleport" position="0 -1.5 -4" rotation="-90 0 0" teleport></a-image>
-                <a-image src="#footstep" class="teleport" position="0 -1.5 -7" rotation="-90 0 0" teleport></a-image>
-                <a-image src="#footstep" class="teleport" position="0 -1.5 -10" rotation="-90 0 0" teleport></a-image>
-                <a-image src="#footstep" class="teleport" position="0 -1.5 -13" rotation="-90 0 0" teleport></a-image>
-                <a-image src="#footstep" class="teleport" position="0 -1.5 -16" rotation="-90 0 0" teleport></a-image> -->
-            </a-entity>
-
-
-        </a-entity>
-    </a-scene>
+     </a-scene>
     
-    <script src="js/main.js"></script>
+    <!-- <script src="js/main.js"></script>
     <script src="js/accessibility.js"></script>
-    <script src="js/teleport.js"></script>
+    <script src="js/teleport.js"></script> -->
 </body>
 </html>
