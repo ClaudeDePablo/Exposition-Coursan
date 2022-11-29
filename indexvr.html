@@ -220,6 +220,10 @@
             <img id="panneau_guerre" src="assets/images/guerre/titre.png">
             <img id="guerre1" src="assets/images/guerre/fichier1.jpg">
             <img id="guerre2" src="assets/images/guerre/fichier2.jpg">
+            <!------------------------------------------------------------------>
+            <!---------------------PANNEAU SENS DE LA VISITE-------------------->
+            <!------------------------------------------------------------------>
+            <img id="panneau_visite" src="assets/images/entree_expo/titre_visite.png">
 
           </a-assets>
 
@@ -227,7 +231,7 @@
           <a-light type="ambient" intensity="0.4"></a-light>
           <!-- <a-light type="spot" position="0 11.95 0" rotation="90 0 0" angle="90" intensity="0.9"></a-light> -->
           <!---------------------lumière entree expo-------------------->
-          <a-light type="point" position="4.5 1.2 27" intensity="0.1"></a-light>
+          <!-- <a-light type="point" position="4.5 1.2 27" intensity="0.1"></a-light>
           <a-light type="point" position="-4.5 1.2 27" intensity="0.1"></a-light>
           <a-light type="point" position="-15 10.8 -15" intensity="0.1"></a-light>
           <a-light type="point" position="-15 10.8 0" intensity="0.1"></a-light>
@@ -236,7 +240,7 @@
           <a-light type="point" position="15 10.8 -15" intensity="0.1"></a-light>
           <a-light type="point" position="15 10.8 0" intensity="0.1"></a-light>
           <a-light type="point" position="0 10.8 15" intensity="0.1"></a-light>
-          <a-light type="point" position="0 10.8 -15" intensity="0.1"></a-light>
+          <a-light type="point" position="0 10.8 -15" intensity="0.1"></a-light> -->
 
           <!---------------------CAMERA-------------------->     
           <a-entity id="cam-rig"  position="0 0.6 16" rotation="0 0 0" progressive-controls position-cam>
@@ -1763,6 +1767,11 @@
           
           <!---------------------PANNEAUX 29 30 / GUERRE / VISITE DU PRESIDENT--------------------> 
           <a-entity position="0 0 5" rotation="0 0 0">
+
+               <a-img src="#panneau_visite" width="2.70" height="0.33"
+                    position="0 -2 0" rotation="0 0 0" scale="1 1 1">
+
+               </a-img>
 
                <!------------------PANNEAU 29 / VISITE DU PRESIDENT------------------->
                <a-entity position="-1.9 0 0" rotation="0 180 0">
