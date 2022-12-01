@@ -228,19 +228,7 @@
           </a-assets>
 
           <!---------------------LUMIERE-------------------->
-          <a-light type="ambient" intensity="0.4"></a-light>
-          <!-- <a-light type="spot" position="0 11.95 0" rotation="90 0 0" angle="90" intensity="0.9"></a-light> -->
-          <!---------------------lumière entree expo-------------------->
-          <!-- <a-light type="point" position="4.5 1.2 27" intensity="0.1"></a-light>
-          <a-light type="point" position="-4.5 1.2 27" intensity="0.1"></a-light>
-          <a-light type="point" position="-15 10.8 -15" intensity="0.1"></a-light>
-          <a-light type="point" position="-15 10.8 0" intensity="0.1"></a-light>
-          <a-light type="point" position="-15 10.8 15" intensity="0.1"></a-light>
-          <a-light type="point" position="15 10.8 15" intensity="0.1"></a-light>
-          <a-light type="point" position="15 10.8 -15" intensity="0.1"></a-light>
-          <a-light type="point" position="15 10.8 0" intensity="0.1"></a-light>
-          <a-light type="point" position="0 10.8 15" intensity="0.1"></a-light>
-          <a-light type="point" position="0 10.8 -15" intensity="0.1"></a-light> -->
+          <a-light type="ambient" intensity="0.5"></a-light>
           <a-light type="point" position="0 10.8 0" intensity="0.3"></a-light>
 
           <!---------------------CAMERA-------------------->     
@@ -249,8 +237,8 @@
 			<a-camera id="cam">
                 <a-cursor id="curseur" color="#FFFFFF"></a-cursor>
 			</a-camera>
-            <!--------------------CONTROLERS-------------------->
-            <a-entity>
+               <!--------------------CONTROLERS-------------------->
+               <a-entity>
                     <a-entity super-hands laser-controls="hand: left" id="left-hand"
                               raycaster="objects: .clickable, .teleport; far: 10" >
                               <a-entity id="left-hand-screen" position="0.3 -0.1 0" rotation="-45 0 0"></a-entity>
@@ -258,12 +246,9 @@
                     <a-entity super-hands laser-controls="hand: right" id="right-hand"
                               raycaster="objects: .clickable, .teleport; far: 10">
                     </a-entity>
-            </a-entity>
+               </a-entity>
 			
           </a-entity>
-
-          <!-- <a-entity scale="10 10 10" fbx-model="src: url(assets/obj/Monsterra_Deliciosa_FBX/Monsterra_Deliciosa_FBX/monsterra.fbx);">
-          </a-entity> -->
 
           <!---------------------STRUCTURE BATIMENT-------------------->
           <a-entity>
@@ -816,9 +801,6 @@
                          </a-image>
                
                     </a-entity> 
-
-                    
-                    <a-image src="#footstep" class="teleport" position="0 0.011 -2"  rotation="90 0 0" teleport></a-image>
                                      
                </a-entitY>
    
@@ -1853,15 +1835,60 @@
 
           <!---------------------TELEPORTATION -------------------->
           <a-entity>
-               <a-image src="#footstep" class="teleport" position="0 0.011 21" rotation="-90 90 0" teleport></a-image>
-               <a-image src="#footstep" class="teleport" position="0 0.011 17" rotation="-90 90 0" teleport></a-image>
-               <!-- <a-image src="#footstep" class="teleport" position="-1 0.011 12.5" rotation="-90 125 0" teleport></a-image>
-               <a-image src="#footstep" class="teleport" position="-2.5 0.011 9" rotation="-90 125 0" teleport></a-image>
-               <a-image src="#footstep" class="teleport" position="0 0.011 -16" rotation="-90 125 0" teleport></a-image>
-               <a-image src="#footstep" class="teleport" position="0 0.011 -18" rotation="-90 125 0" teleport></a-image>
-               <a-image src="#footstep" class="teleport" position="0 0.011 -21" rotation="-90 125 0" teleport></a-image>
-               <a-image src="#footstep" class="teleport" position="0 0.011 -24" rotation="-90 0 0" teleport></a-image>
-               <a-image src="#footstep" class="teleport" position="0 0.011 -27" rotation="-90 0 0" teleport></a-image>     -->
+               <!---------------- 1 ----------------->
+               <a-image src="#footstep" class="teleport" position="0 0.011 21" rotation="-90 0 0" teleport></a-image>
+               <!---------------- 2 ----------------->
+               <a-image src="#footstep" class="teleport" position="0 0.011 17" rotation="-90 0 0" teleport></a-image>
+               <!---------------- 3 ----------------->
+               <a-image src="#footstep" class="teleport" position="-1.7 0.011 12.6" rotation="-90 0 0" teleport></a-image>
+               <!---------------- 4 ----------------->
+               <a-image src="#footstep" class="teleport" position="-3.7 0.011 9.7" rotation="-90 0 0" teleport></a-image>
+               <!---------------- 5 ----------------->
+               <a-image src="#footstep" class="teleport" position="-5.7 0.011 6.8" rotation="-90 0 0" teleport></a-image>
+               <!---------------- 6 ----------------->
+               <a-image src="#footstep" class="teleport" position="-7.7 0.011 3.9" rotation="-90 0 0" teleport></a-image>
+               <!---------------- 7 ----------------->
+               <a-image src="#footstep" class="teleport" position="-9.7 0.011 1" rotation="-90 0 0" teleport></a-image>
+               <!---------------- 8 ----------------->
+               <a-image src="#footstep" class="teleport" position="-10.5 0.011 -1.9" rotation="-90 0 0" teleport></a-image>
+               <!---------------- 9 ----------------->
+               <a-image src="#footstep" class="teleport" position="-10.5 0.011 -5.5" rotation="-90 0 0" teleport></a-image>
+               <!---------------- 10 ----------------->
+               <a-image src="#footstep" class="teleport" position="-10.5 0.011 -9.1" rotation="-90 0 0" teleport></a-image>
+               <!---------------- 11 ----------------->
+               <a-image src="#footstep" class="teleport" position="-9.5 0.011 -12.7" rotation="-90 0 0" teleport></a-image>
+               <!---------------- 13 ----------------->
+               <a-image src="#footstep" class="teleport" position="-6 0.011 -12.7" rotation="-90 0 0" teleport></a-image>
+               <!---------------- 14 ----------------->
+               <a-image src="#footstep" class="teleport" position="-2 0.011 -12.7" rotation="-90 0 0" teleport></a-image>
+               <!---------------- 15 ----------------->
+               <a-image src="#footstep" class="teleport" position="2 0.011 -12.7" rotation="-90 0 0" teleport></a-image>
+               <!---------------- 16 ----------------->
+               <a-image src="#footstep" class="teleport" position=" 6 0.011 -12.7" rotation="-90 0 0" teleport></a-image>
+               <!---------------- 18 ----------------->
+               <a-image src="#footstep" class="teleport" position="9.5 0.011 -1.9" rotation="-90 0 0" teleport></a-image>
+               <!---------------- 19 ----------------->
+               <a-image src="#footstep" class="teleport" position="10.5 0.011 -5.5" rotation="-90 0 0" teleport></a-image>
+               <!---------------- 20 ----------------->
+               <a-image src="#footstep" class="teleport" position="10.5 0.011 -9.1" rotation="-90 0 0" teleport></a-image>
+               <!---------------- 21 ----------------->
+               <a-image src="#footstep" class="teleport" position="10.5 0.011 -12.7" rotation="-90 0 0" teleport></a-image>
+               <!---------------- 22 ----------------->
+               <a-image src="#footstep" class="teleport" position="1.7 0.011 12.6" rotation="-90 0 0" teleport></a-image>
+               <!---------------- 23 ----------------->
+               <a-image src="#footstep" class="teleport" position="3.7 0.011 9.7" rotation="-90 0 0" teleport></a-image>
+               <!---------------- 24 ----------------->
+               <a-image src="#footstep" class="teleport" position="5.7 0.011 6.8" rotation="-90 0 0" teleport></a-image>
+               <!---------------- 25 ----------------->
+               <a-image src="#footstep" class="teleport" position="7.7 0.011 3.9" rotation="-90 0 0" teleport></a-image>
+               <!---------------- 26 ----------------->
+               <a-image src="#footstep" class="teleport" position="9.7 0.011 1" rotation="-90 0 0" teleport></a-image>
+
+               <!---------------- 27 ----------------->
+               <a-image src="#footstep" class="teleport" position="-2.7 0.011 6.8" rotation="-90 0 0" teleport></a-image>
+               <!---------------- 28 ----------------->
+               <a-image src="#footstep" class="teleport" position="2.7 0.011 6.8" rotation="-90 0 0" teleport></a-image>
+               q
           </a-entity>
 
      </a-scene>
