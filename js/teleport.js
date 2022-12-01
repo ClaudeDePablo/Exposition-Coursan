@@ -40,34 +40,10 @@ AFRAME.registerComponent('teleport', {
                 posX = points[i].object3D.position.x;
                 posZ = points[i].object3D.position.z;
                 posY = points[i].object3D.position.y;
-
-                posParentX = points[i].object3D.parent.position.x;
-                posParentZ = points[i].object3D.parent.position.z;
-                posParentY = points[i].object3D.parent.position.y;
-
-                posGrandParentX = points[i].object3D.parent.parent.position.x;
-                posGrandParentZ = points[i].object3D.parent.parent.position.z;
-                posGrandParentY = points[i].object3D.parent.parent.position.y;
-
-                posTargetX = posGrandParentX - posParentX - posX
-                posTargetZ = posGrandParentY - posParentY - posY
-                posTargetY = posGrandParentZ - posParentZ - posZ
-
-                rotX = points[i].object3D.rotation.x;
-                rotZ = points[i].object3D.rotation.z;
-                rotY = points[i].object3D.rotation.y;
-
-                console.log(posX, posParentX, posGrandParentX);
-                console.log(points[i].object3D.parent.rotation.x,points[i].object3D.parent.parent.rotation.y);
                 camera.setAttribute('position', {
-                    x:posTargetX,
-                    y:posTargetY,
-                    z:posTargetZ
-                })
-                camera.setAttribute('rotation', {
-                    x:rotTargetX,
-                    y:rotTargetZ,
-                    z:rotTargetY
+                    x:posX,
+                    y:posY,
+                    z:posZ
                 })
 
             })

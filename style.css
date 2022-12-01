@@ -1,0 +1,28 @@
+/**********GENERAL**********/
+* { margin: 0;padding: 0;}
+body { box-sizing: content-box; }
+H1 { text-align: center;font-family: 'Times New Roman', Times, serif;line-height: 53px;padding: 20px;}
+p {font-family:Verdana, Geneva, Tahoma, sans-serif;width: 90%;margin:auto;}
+/**********PREMIERE PAGE**********/
+.carte_postale { 
+    width: 99vw;
+    height: 97vh;
+    background-image: url("assets/images/premiere_page/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.partie_droite {
+    width: 48%;
+    height: 92.5%;
+    float: right;
+    margin: 25px;
+    overflow-y: auto;
+    border: dotted 2px black;
+    border-radius: 5px;
+    padding: 10px 5px;
+}
+
+.header { display:flex;flex-direction:row;justify-content: space-around; }
+#logo { width:300px;height:160px; }
+.footer { bottom: 0;height: 50px;text-align: center;line-height: 40px;margin: 5px 0px; }
