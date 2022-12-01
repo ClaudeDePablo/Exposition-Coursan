@@ -8,7 +8,7 @@ toutesLesPhotos.forEach ((element) => {
 
 
     element.addEventListener ('mouseenter', ()=> {
-        element.setAttribute('color', "aqua");
+        element.setAttribute('color', "#c6ab91");
     });
 
     element.addEventListener ('mouseleave', ()=> {
@@ -17,7 +17,7 @@ toutesLesPhotos.forEach ((element) => {
 
     element.addEventListener('click', () => {
         
-console.log(leftController.object3D);
+        console.log(leftController.object3D);
 
         let elementClone = element.cloneNode();
         elementClone.setAttribute('scale', {x:0.5,y:0.5,z:0.5});

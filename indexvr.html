@@ -227,6 +227,7 @@
 
           </a-assets>
 
+
           <!---------------------LUMIERE-------------------->
           <a-light type="ambient" intensity="0.5"></a-light>
           <a-light type="point" position="0 10.8 0" intensity="0.3"></a-light>
@@ -235,7 +236,10 @@
           <a-entity id="cam-rig" position="0 0.6 27" rotation="0 0 0" progressive-controls position-cam>
 			
 			<a-camera id="cam">
-                <a-cursor id="curseur" color="#FFFFFF"></a-cursor>
+                    <a-entity id="casque" rotation="0 180 0">
+                         <a-plane position="0 0 -0.2" color="black" visible="true" rotation="0 0 0"></a-plane>
+                    </a-entity>
+                <a-cursor id="curseur" color="red"></a-cursor>
 			</a-camera>
                <!--------------------CONTROLERS-------------------->
                <a-entity>
@@ -1864,15 +1868,15 @@
                <!---------------- 15 ----------------->
                <a-image src="#footstep" class="teleport" position="2 0.011 -12.7" rotation="-90 0 0" teleport></a-image>
                <!---------------- 16 ----------------->
-               <a-image src="#footstep" class="teleport" position=" 6 0.011 -12.7" rotation="-90 0 0" teleport></a-image>
+               <a-image src="#footstep" class="teleport" position="6 0.011 -12.7" rotation="-90 0 0" teleport></a-image>
                <!---------------- 18 ----------------->
-               <a-image src="#footstep" class="teleport" position="9.5 0.011 -1.9" rotation="-90 0 0" teleport></a-image>
+               <a-image src="#footstep" class="teleport" position="10.5 0.011 -1.9" rotation="-90 0 0" teleport></a-image>
                <!---------------- 19 ----------------->
                <a-image src="#footstep" class="teleport" position="10.5 0.011 -5.5" rotation="-90 0 0" teleport></a-image>
                <!---------------- 20 ----------------->
                <a-image src="#footstep" class="teleport" position="10.5 0.011 -9.1" rotation="-90 0 0" teleport></a-image>
                <!---------------- 21 ----------------->
-               <a-image src="#footstep" class="teleport" position="10.5 0.011 -12.7" rotation="-90 0 0" teleport></a-image>
+               <a-image src="#footstep" class="teleport" position="9.5 0.011 -12.7" rotation="-90 0 0" teleport></a-image>
                <!---------------- 22 ----------------->
                <a-image src="#footstep" class="teleport" position="1.7 0.011 12.6" rotation="-90 0 0" teleport></a-image>
                <!---------------- 23 ----------------->
@@ -1888,7 +1892,7 @@
                <a-image src="#footstep" class="teleport" position="-2.7 0.011 6.8" rotation="-90 0 0" teleport></a-image>
                <!---------------- 28 ----------------->
                <a-image src="#footstep" class="teleport" position="2.7 0.011 6.8" rotation="-90 0 0" teleport></a-image>
-               q
+               
           </a-entity>
 
      </a-scene>

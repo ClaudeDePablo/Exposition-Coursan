@@ -37,7 +37,6 @@ p {
     border: dotted 2px black;
     border-radius: 5px;
     padding: 10px 5px;
-    background-color:bisque;
 }
 
 .header { display:flex;flex-direction:row;justify-content: space-around; }
