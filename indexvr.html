@@ -8,7 +8,7 @@
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
 </head>
 <body>
-     <a-scene renderer="antialias: true"  fog="type: exponential; density: 0.05; color: white; near:25; far:50" stats>
+     <a-scene renderer="antialias: true"  fog="type: exponential; density: 0.05; color: white; near:25; far:50" >
 
           <a-assets>
             <!---------------------TEXTURE SOL-------------------->
@@ -223,7 +223,7 @@
             <!------------------------------------------------------------------>
             <!---------------------PANNEAU SENS DE LA VISITE-------------------->
             <!------------------------------------------------------------------>
-            <img id="panneau_visite" src="assets/images/entree_expo/titre_visite.png">
+            <img id="panneau_sens" src="assets/images/titre_visite.png">
 
           </a-assets>
 
@@ -244,7 +244,7 @@
           <a-light type="point" position="0 10.8 0" intensity="0.3"></a-light>
 
           <!---------------------CAMERA-------------------->     
-          <a-entity id="cam-rig"  position="0 0.6 16" rotation="0 0 0" progressive-controls position-cam>
+          <a-entity id="cam-rig" position="0 0.6 27" rotation="0 0 0" progressive-controls position-cam>
 			
 			<a-camera id="cam">
                 <a-cursor id="curseur" color="#FFFFFF"></a-cursor>
@@ -253,7 +253,7 @@
             <a-entity>
                     <a-entity super-hands laser-controls="hand: left" id="left-hand"
                               raycaster="objects: .clickable, .teleport; far: 10" >
-                              <a-entity id="left-hand-screen" position="0.2 0.2 0" rotation="-45 0 0"></a-entity>
+                              <a-entity id="left-hand-screen" position="0.3 -0.1 0" rotation="-45 0 0"></a-entity>
                     </a-entity>
                     <a-entity super-hands laser-controls="hand: right" id="right-hand"
                               raycaster="objects: .clickable, .teleport; far: 10">
@@ -261,6 +261,9 @@
             </a-entity>
 			
           </a-entity>
+
+          <!-- <a-entity scale="10 10 10" fbx-model="src: url(assets/obj/Monsterra_Deliciosa_FBX/Monsterra_Deliciosa_FBX/monsterra.fbx);">
+          </a-entity> -->
 
           <!---------------------STRUCTURE BATIMENT-------------------->
           <a-entity>
@@ -1767,15 +1770,13 @@
           </a-entity>          
           
           <!---------------------PANNEAUX 29 30 / GUERRE / VISITE DU PRESIDENT--------------------> 
-          <a-entity position="0 0 5" rotation="0 0 0">
+          <a-entity position="0 0 5" rotation="0 0 0" id="panneau_central">
 
-               <a-img src="#panneau_visite" width="2.70" height="0.33"
-                    position="0 -2 0" rotation="0 0 0" scale="1 1 1">
-
-               </a-img>
+               <a-image src="#panneau_sens" width="2.70" height="0.33"
+                    position="0  3.53 0.24" rotation="0 0 0" scale="2 2 2"></a-image>
 
                <!------------------PANNEAU 29 / VISITE DU PRESIDENT------------------->
-               <a-entity position="-1.9 0 0" rotation="0 180 0">
+               <a-entity position="-1.8 0 0" rotation="0 160 0">
                     <!----------------------structure------------------------>
                     <a-entity>
                          <a-box src="#wood" position="0 0 0"
@@ -1812,7 +1813,7 @@
                </a-entity>
 
                <!------------------PANNEAU 30 / DUERRE 39 45------------------->
-               <a-entity position="1.9 0 0" rotation="0 180 0">
+               <a-entity position="1.8 0 0" rotation="0 200 0">
                     <!----------------------structure------------------------>
                     <a-entity>
                          <a-box src="#wood" position="0 0 0"
@@ -1865,8 +1866,8 @@
 
      </a-scene>
     
-    <!-- <script src="js/main.js"></script>
+    <script src="js/main.js"></script>
     <script src="js/accessibility.js"></script>
-    <script src="js/teleport.js"></script> -->
+    <script src="js/teleport.js"></script>
 </body>
 </html>
