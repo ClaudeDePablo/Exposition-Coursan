@@ -1,8 +1,4 @@
-
-
 let toutesLesPhotos = document.querySelectorAll('.photo-expo');
-
-
 
 toutesLesPhotos.forEach ((element) => {
 
@@ -17,10 +13,8 @@ toutesLesPhotos.forEach ((element) => {
 
     element.addEventListener('click', () => {
         
-        console.log(leftController.object3D);
-
         let elementClone = element.cloneNode();
-        elementClone.setAttribute('scale', {x:0.5,y:0.5,z:0.5});
+        elementClone.setAttribute('scale', {x:0.2,y:0.2,z:0.2});
         elementClone.setAttribute('color', "white");
         elementClone.setAttribute('position', {
             x:0,

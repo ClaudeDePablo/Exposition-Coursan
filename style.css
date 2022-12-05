@@ -1,11 +1,20 @@
+/**********SITE VR CREE PAR EKLEIPSI MEDIAS**********/
+/**********JONATHAN JOLY*****************************/
+/**********https://ekleipsi-medias.fr****************/
+/**********contact@ekleipsi-medias.fr****************/
+
 /**********GENERAL**********/
-* { margin: 0;padding: 0;}
-body { box-sizing: content-box; }
+* { 
+    margin: 0;
+    padding: 0;
+}
+body { 
+    box-sizing: border-box;
+}
 H1 { 
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
     font-size: 2rem;
-    line-height: 53px;
     padding: 20px;
 }
 H2 {
@@ -27,7 +36,6 @@ p {
     background-size: cover;
     background-repeat: no-repeat;
 }
-
 .partie_droite {
     width: 48%;
     height: 92.5%;
@@ -38,14 +46,39 @@ p {
     border-radius: 5px;
     padding: 10px 5px;
 }
-
-.header { display:flex;flex-direction:row;justify-content: space-around; }
-#logo { width:300px;height:160px; }
-.footer { bottom: 0;height: 50px;text-align: center;line-height: 40px;margin: 5px 0px; }
-.gif { width: 80%; margin: 50px auto;text-align: center; }
-.gif h2 { text-align: center; margin-bottom: 30px; }
-.gif img { width: 640px; max-width: 90%; }
-.buttonVR {text-align: center; }
+.header { 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 141px;
+}
+#logo { 
+    width:300px;
+    height:141px;
+}
+.footer { 
+    bottom: 0;
+    height: 50px;
+    text-align: center;
+    line-height: 40px;
+    margin: 5px 0px;
+}
+.gif { 
+    width: 80%;
+    margin: 50px auto;
+    text-align: center;
+}
+.gif h2 { 
+    text-align: center;
+    margin-bottom: 30px;
+}
+.gif img { 
+    width: 640px;
+    width: 90%;
+}
+.buttonVR {
+    text-align: center;
+}
 #bouton-vr {
     padding: 20px 30px;
     background-color: aqua;
@@ -59,4 +92,69 @@ p {
     background-color: blue;
     color: white;
     font-weight: bold;
+}
+/******************NOTEBOOK 14 POUCES********************/
+@media all and (min-width: 721px) and (max-width: 1024px) {  
+
+    .carte_postale { 
+        width: 100vw;
+        height: 100vh;
+        background-image: url('assets/images/premiere_page/back_smart.jpg');
+        background-size: cover;
+    }
+    .partie_droite {
+        border: none;
+        background-color: rgba(255,255,255,0.9);
+        width: 90%;
+        height: 100%;
+        margin: auto;
+        padding: 0px;
+        float: none;
+    }
+    .header {
+        height: auto;
+        padding: 20px;
+    }
+    #logo {
+
+    }
+}
+
+/******************SUR SMARTPHONE ET TABLETTE********************/
+@media all and (min-width: 320px) and (max-width: 720px) {
+
+    .carte_postale { 
+        background-size: contain;
+    }
+    .partie_droite { 
+        width: 95%;
+        height: 100%;
+        background-color: rgba(255,255,255,0.9);
+        margin: 10px auto;
+        padding: 0px;
+        float: none;
+    }
+    .header { 
+        flex-direction: column-reverse;
+        height: auto;
+    }
+    #logo { 
+        margin: 2em auto;
+        max-width: 90%;
+        height: auto;
+    }
+    h1 { 
+        font-size: 1.5rem;
+    }
+    p {
+        font-size: 1.2rem;
+    }
+    .gif img {
+        max-width: 100%;
+    }
+    .footer p { 
+        text-align: center;
+        line-height:1.5em;
+    }
+
 }

@@ -9,8 +9,3 @@ let leftController = document.getElementById('left-hand');
 let leftControllerScreen = document.querySelector('#left-hand-screen');
 
 
-
-
-document.onkeydown = function(e) {
-    console.log(e);
-}
