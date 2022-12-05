@@ -35,8 +35,13 @@
             <img id="wood-NRM" src="assets/textures/dark_fine_wood/dark_fine_wood_pbr_18_26_normal.jpg">
             <img id="wood-AO" src="assets/textures/dark_fine_wood/dark_fine_wood_pbr_18_26_ao.jpg">
             <img id="wood-ROUGH" src="assets/textures/dark_fine_wood/dark_fine_wood_pbr_18_26_roughness.jpg">
+
             <!--------------------- icone teleportation-------------------->
             <img id="footstep" src="assets/icones/foot.png">
+            <!---------------------------------------------->
+            <!--------------------- OBJ -------------------->
+            <!---------------------------------------------->
+
             
             <!----------------------------------------------------------->
             <!---------------------PHOTOS ENTREE EXPO-------------------->
@@ -225,26 +230,21 @@
             <img id="panneau_sens" src="assets/images/titre_visite.png">
 
           </a-assets>
-
-
           <!---------------------LUMIERE-------------------->
-          <a-light type="ambient" intensity="0.5"></a-light>
-          <a-light type="point" position="0 10.8 0" intensity="0.3"></a-light>
+          <a-light type="ambient" intensity="0.9"></a-light>
+          <a-light type="point" position="0 10.8 0" intensity="0.6"></a-light>
 
           <!---------------------CAMERA-------------------->     
           <a-entity id="cam-rig" position="0 0.6 27" rotation="0 0 0" progressive-controls position-cam>
 			
 			<a-camera id="cam">
-                    <a-entity id="casque" rotation="0 180 0">
-                         <a-plane position="0 0 -0.2" color="black" visible="true" rotation="0 0 0"></a-plane>
-                    </a-entity>
                 <a-cursor id="curseur" color="red"></a-cursor>
 			</a-camera>
                <!--------------------CONTROLERS-------------------->
                <a-entity>
                     <a-entity super-hands laser-controls="hand: left" id="left-hand"
                               raycaster="objects: .clickable, .teleport; far: 10" >
-                              <a-entity id="left-hand-screen" position="0.3 -0.1 0" rotation="-45 0 0"></a-entity>
+                              <a-entity id="left-hand-screen" position="0.22 0 0" rotation="-45 0 0"></a-entity>
                     </a-entity>
                     <a-entity super-hands laser-controls="hand: right" id="right-hand"
                               raycaster="objects: .clickable, .teleport; far: 10">
@@ -257,162 +257,164 @@
           <a-entity>
                <!---------------------SOL-------------------->
                <a-plane src="#floor" repeat="20 20" position="0 0 0" rotation="-90 0 0" 
-          width="60" height="60" 
-          normal-map="#floor-NRM" normal-texture-repeat="12 12" normal-scale="1 -1" 
-          displacement-map="#floor-HEIGHT" displacement-scale="0" displacement-bias="0"
-          displacement-texture-repeat="20 20" displacement-texture-offset="1 1"
-          ambient-occlusion-map="#floor-AO" ambient-occusion-map-intensity="0.2"
-          ambient-occlusion-texture-repeat="20 20" ambient-occlusion-texture-offset="1 -1"
-          spherical-env-map="#floor-ROUGH" roughness="0.4" metalness="0.1"
+                    width="60" height="60" 
+                    normal-map="#floor-NRM" normal-texture-repeat="12 12" normal-scale="1 -1" 
+                    displacement-map="#floor-HEIGHT" displacement-scale="0" displacement-bias="0"
+                    displacement-texture-repeat="20 20" displacement-texture-offset="1 1"
+                    ambient-occlusion-map="#floor-AO" ambient-occusion-map-intensity="0.2"
+                    ambient-occlusion-texture-repeat="20 20" ambient-occlusion-texture-offset="1 -1"
+                    spherical-env-map="#floor-ROUGH" roughness="0.4" metalness="0.1"
                ></a-plane>
                <!---------------------PLAFOND-------------------->
                <a-plane src="#ceiling" repeat="3 3" position="0 12 0" rotation="90 0 0" 
-           width="60" height="60" 
-           normal-map="#ceiling-NRM" normal-texture-repeat="3 3" normal-scale="1 -1" 
-           displacement-map="#ceiling-HEIGHT" displacement-scale="0" displacement-bias="0"
-           displacement-texture-repeat="3 3" displacement-texture-offset="1 1"
-           ambient-occlusion-map="#ceiling-AO" ambient-occusion-map-intensity="0.2"
-           ambient-occlusion-texture-repeat="3 3" ambient-occlusion-texture-offset="1 -1">
+                    width="60" height="60" 
+                    normal-map="#ceiling-NRM" normal-texture-repeat="3 3" normal-scale="1 -1" 
+                    displacement-map="#ceiling-HEIGHT" displacement-scale="0" displacement-bias="0"
+                    displacement-texture-repeat="3 3" displacement-texture-offset="1 1"
+                    ambient-occlusion-map="#ceiling-AO" ambient-occusion-map-intensity="0.2"
+                    ambient-occlusion-texture-repeat="3 3" ambient-occlusion-texture-offset="1 -1">
                </a-plane>
                <!---------------------POUTRES-------------------->
                <a-entity position="0 6 0" id="wood">
-               <a-box src="#wood" width="59.8" height="0.6" depth="0.6"
-                    position="-22.5 0 0" rotation="0 90 0" repeat="20 1"
-                    normal-map="#wood-NRM" normal-texture-repeat="20 1" normal-scale="1 -1" 
-                    displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
-                    displacement-texture-repeat="20 1" displacement-texture-offset="1 1"
-                    ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
-                    ambient-occlusion-texture-repeat="20 1" ambient-occlusion-texture-offset="1 -1"></a-box>
-               <a-box src="#wood" width="59.8" height="0.6" depth="0.6"
-                    position="-15 0 0" rotation="0 90 0" repeat="20 1"
-                    normal-map="#wood-NRM" normal-texture-repeat="20 1" normal-scale="1 -1" 
-                    displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
-                    displacement-texture-repeat="20 1" displacement-texture-offset="1 1"
-                    ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
-                    ambient-occlusion-texture-repeat="20 1" ambient-occlusion-texture-offset="1 -1"></a-box>
-               <a-box src="#wood" width="59.8" height="0.6" depth="0.6"
-                    position="-7.5 0 0" rotation="0 90 0" repeat="20 1"
-                    normal-map="#wood-NRM" normal-texture-repeat="20 1" normal-scale="1 -1" 
-                    displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
-                    displacement-texture-repeat="20 1" displacement-texture-offset="1 1"
-                    ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
-                    ambient-occlusion-texture-repeat="20 1" ambient-occlusion-texture-offset="1 -1"></a-box>
-               <a-box src="#wood" width="59.8" height="0.6" depth="0.6" 
-                    position="0 0 0" rotation="0 90 0" repeat="20 1"
-                    normal-map="#wood-NRM" normal-texture-repeat="20 1" normal-scale="1 -1" 
-                    displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
-                    displacement-texture-repeat="20 1" displacement-texture-offset="1 1"
-                    ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
-                    ambient-occlusion-texture-repeat="20 1" ambient-occlusion-texture-offset="1 -1"></a-box>
-               <a-box src="#wood" width="59.8" height="0.6" depth="0.6" 
-                    position="7.5 0 0" rotation="0 90 0" repeat="20 1"
-                    normal-map="#wood-NRM" normal-texture-repeat="20 1" normal-scale="1 -1" 
-                    displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
-                    displacement-texture-repeat="20 1" displacement-texture-offset="1 1"
-                    ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
-                    ambient-occlusion-texture-repeat="20 1" ambient-occlusion-texture-offset="1 -1"></a-box>
-               <a-box src="#wood" width="59.8" height="0.6" depth="0.6" 
-                    position="15 0 0" rotation="0 90 0" repeat="20 1"
-                    normal-map="#wood-NRM" normal-texture-repeat="20 1" normal-scale="1 -1" 
-                    displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
-                    displacement-texture-repeat="20 1" displacement-texture-offset="1 1"
-                    ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
-                    ambient-occlusion-texture-repeat="20 1" ambient-occlusion-texture-offset="1 -1"></a-box>
-               <a-box src="#wood" width="59.8" height="0.6" depth="0.6"
-                    position="22.5 0 0" rotation="0 90 0" repeat="20 1"
-                    normal-map="#wood-NRM" normal-texture-repeat="20 1" normal-scale="1 -1" 
-                    displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
-                    displacement-texture-repeat="20 1" displacement-texture-offset="1 1"
-                    ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
-                    ambient-occlusion-texture-repeat="20 1" ambient-occlusion-texture-offset="1 -1"></a-box>
+                    <a-box src="#wood" width="59.8" height="0.6" depth="0.6"
+                         position="-22.5 0 0" rotation="0 90 0" repeat="20 1"
+                         normal-map="#wood-NRM" normal-texture-repeat="20 1" normal-scale="1 -1" 
+                         displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
+                         displacement-texture-repeat="20 1" displacement-texture-offset="1 1"
+                         ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
+                         ambient-occlusion-texture-repeat="20 1" ambient-occlusion-texture-offset="1 -1"></a-box>
+                    <a-box src="#wood" width="59.8" height="0.6" depth="0.6"
+                         position="-15 0 0" rotation="0 90 0" repeat="20 1"
+                         normal-map="#wood-NRM" normal-texture-repeat="20 1" normal-scale="1 -1" 
+                         displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
+                         displacement-texture-repeat="20 1" displacement-texture-offset="1 1"
+                         ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
+                         ambient-occlusion-texture-repeat="20 1" ambient-occlusion-texture-offset="1 -1"></a-box>
+                    <a-box src="#wood" width="59.8" height="0.6" depth="0.6"
+                         position="-7.5 0 0" rotation="0 90 0" repeat="20 1"
+                         normal-map="#wood-NRM" normal-texture-repeat="20 1" normal-scale="1 -1" 
+                         displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
+                         displacement-texture-repeat="20 1" displacement-texture-offset="1 1"
+                         ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
+                         ambient-occlusion-texture-repeat="20 1" ambient-occlusion-texture-offset="1 -1"></a-box>
+                    <a-box src="#wood" width="59.8" height="0.6" depth="0.6" 
+                         position="0 0 0" rotation="0 90 0" repeat="20 1"
+                         normal-map="#wood-NRM" normal-texture-repeat="20 1" normal-scale="1 -1" 
+                         displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
+                         displacement-texture-repeat="20 1" displacement-texture-offset="1 1"
+                         ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
+                         ambient-occlusion-texture-repeat="20 1" ambient-occlusion-texture-offset="1 -1"></a-box>
+                    <a-box src="#wood" width="59.8" height="0.6" depth="0.6" 
+                         position="7.5 0 0" rotation="0 90 0" repeat="20 1"
+                         normal-map="#wood-NRM" normal-texture-repeat="20 1" normal-scale="1 -1" 
+                         displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
+                         displacement-texture-repeat="20 1" displacement-texture-offset="1 1"
+                         ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
+                         ambient-occlusion-texture-repeat="20 1" ambient-occlusion-texture-offset="1 -1"></a-box>
+                    <a-box src="#wood" width="59.8" height="0.6" depth="0.6" 
+                         position="15 0 0" rotation="0 90 0" repeat="20 1"
+                         normal-map="#wood-NRM" normal-texture-repeat="20 1" normal-scale="1 -1" 
+                         displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
+                         displacement-texture-repeat="20 1" displacement-texture-offset="1 1"
+                         ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
+                         ambient-occlusion-texture-repeat="20 1" ambient-occlusion-texture-offset="1 -1"></a-box>
+                    <a-box src="#wood" width="59.8" height="0.6" depth="0.6"
+                         position="22.5 0 0" rotation="0 90 0" repeat="20 1"
+                         normal-map="#wood-NRM" normal-texture-repeat="20 1" normal-scale="1 -1" 
+                         displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
+                         displacement-texture-repeat="20 1" displacement-texture-offset="1 1"
+                         ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
+                         ambient-occlusion-texture-repeat="20 1" ambient-occlusion-texture-offset="1 -1"></a-box>
 
-               <a-box src="#wood" width="59.8" height="0.6" depth="0.6"
-                    position="0 0.612 -22.5" repeat="20 1"
-                    normal-map="#wood-NRM" normal-texture-repeat="20 1" normal-scale="1 -1" 
-                    displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
-                    displacement-texture-repeat="20 1" displacement-texture-offset="1 1"
-                    ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
-                    ambient-occlusion-texture-repeat="20 1" ambient-occlusion-texture-offset="1 -1"></a-box>
-               <a-box src="#wood" width="59.8" height="0.6" depth="0.6"
-                    position="0 0.612 -15" repeat="20 1"
-                    normal-map="#wood-NRM" normal-texture-repeat="20 1" normal-scale="1 -1" 
-                    displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
-                    displacement-texture-repeat="20 1" displacement-texture-offset="1 1"
-                    ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
-                    ambient-occlusion-texture-repeat="20 1" ambient-occlusion-texture-offset="1 -1"></a-box>
-               <a-box src="#wood" width="59.8" height="0.6" depth="0.6"
-                    position="0 0.612 -7.5" repeat="20 1"
-                    normal-map="#wood-NRM" normal-texture-repeat="20 1" normal-scale="1 -1" 
-                    displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
-                    displacement-texture-repeat="20 1" displacement-texture-offset="1 1"
-                    ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
-                    ambient-occlusion-texture-repeat="20 1" ambient-occlusion-texture-offset="1 -1"></a-box>
-               <a-box src="#wood" width="59.8" height="0.6" depth="0.6" 
-                    position="0 0.62 0" repeat="20 1"
-                    normal-map="#wood-NRM" normal-texture-repeat="20 1" normal-scale="1 -1" 
-                    displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
-                    displacement-texture-repeat="20 1" displacement-texture-offset="1 1"
-                    ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
-                    ambient-occlusion-texture-repeat="20 1" ambient-occlusion-texture-offset="1 -1"></a-box>
-               <a-box src="#wood" width="59.8" height="0.6" depth="0.6" 
-                    position="0 0.62 7.5" repeat="20 1"
-                    normal-map="#wood-NRM" normal-texture-repeat="20 1" normal-scale="1 -1" 
-                    displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
-                    displacement-texture-repeat="20 1" displacement-texture-offset="1 1"
-                    ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
-                    ambient-occlusion-texture-repeat="20 1" ambient-occlusion-texture-offset="1 -1"></a-box>
-               <a-box src="#wood" width="59.8" height="0.6" depth="0.6" 
-                    position="0 0.62 15" repeat="20 1"
-                    normal-map="#wood-NRM" normal-texture-repeat="20 1" normal-scale="1 -1" 
-                    displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
-                    displacement-texture-repeat="20 1" displacement-texture-offset="1 1"
-                    ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
-                    ambient-occlusion-texture-repeat="20 1" ambient-occlusion-texture-offset="1 -1"></a-box>
-               <a-box src="#wood" width="59.8" height="0.6" depth="0.6"
-                    position="0 0.62 22.5" repeat="20 1"
-                    normal-map="#wood-NRM" normal-texture-repeat="20 1" normal-scale="1 -1" 
-                    displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
-                    displacement-texture-repeat="20 1" displacement-texture-offset="1 1"
-                    ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
-                    ambient-occlusion-texture-repeat="20 1" ambient-occlusion-texture-offset="1 -1"></a-box>
+                    <a-box src="#wood" width="59.8" height="0.6" depth="0.6"
+                         position="0 0.612 -22.5" repeat="20 1"
+                         normal-map="#wood-NRM" normal-texture-repeat="20 1" normal-scale="1 -1" 
+                         displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
+                         displacement-texture-repeat="20 1" displacement-texture-offset="1 1"
+                         ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
+                         ambient-occlusion-texture-repeat="20 1" ambient-occlusion-texture-offset="1 -1"></a-box>
+                    <a-box src="#wood" width="59.8" height="0.6" depth="0.6"
+                         position="0 0.612 -15" repeat="20 1"
+                         normal-map="#wood-NRM" normal-texture-repeat="20 1" normal-scale="1 -1" 
+                         displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
+                         displacement-texture-repeat="20 1" displacement-texture-offset="1 1"
+                         ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
+                         ambient-occlusion-texture-repeat="20 1" ambient-occlusion-texture-offset="1 -1"></a-box>
+                    <a-box src="#wood" width="59.8" height="0.6" depth="0.6"
+                         position="0 0.612 -7.5" repeat="20 1"
+                         normal-map="#wood-NRM" normal-texture-repeat="20 1" normal-scale="1 -1" 
+                         displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
+                         displacement-texture-repeat="20 1" displacement-texture-offset="1 1"
+                         ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
+                         ambient-occlusion-texture-repeat="20 1" ambient-occlusion-texture-offset="1 -1"></a-box>
+                    <a-box src="#wood" width="59.8" height="0.6" depth="0.6" 
+                         position="0 0.62 0" repeat="20 1"
+                         normal-map="#wood-NRM" normal-texture-repeat="20 1" normal-scale="1 -1" 
+                         displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
+                         displacement-texture-repeat="20 1" displacement-texture-offset="1 1"
+                         ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
+                         ambient-occlusion-texture-repeat="20 1" ambient-occlusion-texture-offset="1 -1"></a-box>
+                    <a-box src="#wood" width="59.8" height="0.6" depth="0.6" 
+                         position="0 0.62 7.5" repeat="20 1"
+                         normal-map="#wood-NRM" normal-texture-repeat="20 1" normal-scale="1 -1" 
+                         displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
+                         displacement-texture-repeat="20 1" displacement-texture-offset="1 1"
+                         ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
+                         ambient-occlusion-texture-repeat="20 1" ambient-occlusion-texture-offset="1 -1"></a-box>
+                    <a-box src="#wood" width="59.8" height="0.6" depth="0.6" 
+                         position="0 0.62 15" repeat="20 1"
+                         normal-map="#wood-NRM" normal-texture-repeat="20 1" normal-scale="1 -1" 
+                         displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
+                         displacement-texture-repeat="20 1" displacement-texture-offset="1 1"
+                         ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
+                         ambient-occlusion-texture-repeat="20 1" ambient-occlusion-texture-offset="1 -1"></a-box>
+                    <a-box src="#wood" width="59.8" height="0.6" depth="0.6"
+                         position="0 0.62 22.5" repeat="20 1"
+                         normal-map="#wood-NRM" normal-texture-repeat="20 1" normal-scale="1 -1" 
+                         displacement-map="#wood-HEIGHT" displacement-scale="0" displacement-bias="0"
+                         displacement-texture-repeat="20 1" displacement-texture-offset="1 1"
+                         ambient-occlusion-map="#wood-AO" ambient-occusion-map-intensity="0.2"
+                         ambient-occlusion-texture-repeat="20 1" ambient-occlusion-texture-offset="1 -1"></a-box>
                </a-entity>     
                <!---------------------MUR GAUCHE-------------------->        
                <a-plane src="#wall" repeat="20 4" position="-30.472 6 0" rotation="0 90 0" 
-               width="60" height="12"
-               normal-map="#wall-NRM" normal-texture-repeat="20 4" normal-scale="1 -1" 
-               displacement-map="#wall-HEIGHT" displacement-scale="1" displacement-bias="0" 
-               displacement-texture-repeat="20 4" displacement-texture-offset="1 1"
-               ambient-occlusion-map="#wall-AO" ambient-occusion-map-intensity="0.2">
+                    width="60" height="12"
+                    normal-map="#wall-NRM" normal-texture-repeat="20 4" normal-scale="1 -1" 
+                    displacement-map="#wall-HEIGHT" displacement-scale="1" displacement-bias="0" 
+                    displacement-texture-repeat="20 4" displacement-texture-offset="1 1"
+                    ambient-occlusion-map="#wall-AO" ambient-occusion-map-intensity="0.2">
                </a-plane>
                <!---------------------MUR DROITE-------------------->     
                <a-plane src="#wall" repeat="20 4" position="30.472 6 0" rotation="0 -90 0" 
-               width="60" height="12"
-               normal-map="#wall-NRM" normal-texture-repeat="20 4" normal-scale="1 1" 
-               displacement-map="#wall-HEIGHT" displacement-scale="1" displacement-bias="0" 
-               displacement-texture-repeat="20 4" displacement-texture-offset="1 1"
-               ambient-occlusion-map="#wall-AO" ambient-occusion-map-intensity="0.2"
-               ambient-occlusion-texture-repeat="20 4" ambient-occlusion-texture-offset="1 -1">
+                    width="60" height="12"
+                    normal-map="#wall-NRM" normal-texture-repeat="20 4" normal-scale="1 1" 
+                    displacement-map="#wall-HEIGHT" displacement-scale="1" displacement-bias="0" 
+                    displacement-texture-repeat="20 4" displacement-texture-offset="1 1"
+                    ambient-occlusion-map="#wall-AO" ambient-occusion-map-intensity="0.2"
+                    ambient-occlusion-texture-repeat="20 4" ambient-occlusion-texture-offset="1 -1">
                </a-plane>      
                <!---------------------MUR DEVANT-------------------->     
                <a-plane src="#wall" repeat="20 4" position="0 6 -30.472"
-               width="60" height="12"
-               normal-map="#wall-NRM" normal-texture-repeat="20 4" normal-scale="1 1" 
-               displacement-map="#wall-HEIGHT" displacement-scale="1" displacement-bias="0" 
-               displacement-texture-repeat="20 4" displacement-texture-offset="1 1"
-               ambient-occlusion-map="#wall-AO" ambient-occusion-map-intensity="0.2"
-               ambient-occlusion-texture-repeat="20 4" ambient-occlusion-texture-offset="1 -1">
+                    width="60" height="12"
+                    normal-map="#wall-NRM" normal-texture-repeat="20 4" normal-scale="1 1" 
+                    displacement-map="#wall-HEIGHT" displacement-scale="1" displacement-bias="0" 
+                    displacement-texture-repeat="20 4" displacement-texture-offset="1 1"
+                    ambient-occlusion-map="#wall-AO" ambient-occusion-map-intensity="0.2"
+                    ambient-occlusion-texture-repeat="20 4" ambient-occlusion-texture-offset="1 -1">
                </a-plane>      
                <!---------------------MUR DERRIERE-------------------->      
                <a-plane src="#wall" repeat="20 4" position="0 6 30.472" rotation="0 180 0" 
-               width="60" height="12"
-               normal-map="#wall-NRM" normal-texture-repeat="20 4" normal-scale="1 1" 
-               displacement-map="#wall-HEIGHT" displacement-scale="1" displacement-bias="0" 
-               displacement-texture-repeat="20 4" displacement-texture-offset="1 1"
-               ambient-occlusion-map="#wall-AO" ambient-occusion-map-intensity="0.2"
-               ambient-occlusion-texture-repeat="20 4" ambient-occlusion-texture-offset="1 -1">
-               </a-plane>     
+                    width="60" height="12"
+                    normal-map="#wall-NRM" normal-texture-repeat="20 4" normal-scale="1 1" 
+                    displacement-map="#wall-HEIGHT" displacement-scale="1" displacement-bias="0" 
+                    displacement-texture-repeat="20 4" displacement-texture-offset="1 1"
+                    ambient-occlusion-map="#wall-AO" ambient-occusion-map-intensity="0.2"
+                    ambient-occlusion-texture-repeat="20 4" ambient-occlusion-texture-offset="1 -1">
+               </a-plane>
+
           </a-entity>
             
+
           <!---------------------ENTREE EXPO--------------------> 
           <a-entity position="0 0 23">          
                <!---------------------PANNEAU TITRE DE L'EXPO--------------------> 
@@ -1836,6 +1838,8 @@
 
           <!---------------------TELEPORTATION -------------------->
           <a-entity>
+               <!---------------- entree centre ----------------->
+               <a-image src="#footstep" class="teleport" position="0 0.011 24" rotation="-90 0 0" teleport></a-image>
                <!---------------- entree partie gauche ----------------->
                <a-image src="#footstep" class="teleport" position="-3.5 0.011 24" rotation="-90 0 0" teleport></a-image>
                <!---------------- entree partie droite ----------------->
