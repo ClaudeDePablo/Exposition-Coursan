@@ -7,6 +7,7 @@ Lien pour tester l'exposition' depuis votre smartphone, ordinateur ou casque de 
  https://claudedepablo.github.io/Exposition-Coursan/
 
 ![](https://claudedepablo.github.io/Exposition-Coursan/assets/images/screenshots/screen1.png)
+
 ![](https://claudedepablo.github.io/Exposition-Coursan/assets/images/screenshots/screen2.png)
 
 </br>
