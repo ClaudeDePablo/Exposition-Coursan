@@ -14,7 +14,7 @@ toutesLesPhotos.forEach ((element) => {
     element.addEventListener('click', () => {
         
         let elementClone = element.cloneNode();
-        elementClone.setAttribute('scale', {x:0.2,y:0.2,z:0.2});
+        elementClone.setAttribute('scale', {x:0.3,y:0.3,z:0.3});
         elementClone.setAttribute('color', "white");
         elementClone.setAttribute('position', {
             x:0,
