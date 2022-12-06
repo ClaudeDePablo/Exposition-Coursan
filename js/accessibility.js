@@ -17,7 +17,7 @@ toutesLesPhotos.forEach ((element) => {
         elementClone.setAttribute('scale', {x:0.3,y:0.3,z:0.3});
         elementClone.setAttribute('color', "white");
         elementClone.setAttribute('position', {
-            x:0,
+            x:0 + elementClone.getAttribute('width') / 10,
             y:0,
             z:0.011
         });
