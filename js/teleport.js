@@ -19,6 +19,7 @@ AFRAME.registerComponent('teleport', {
         // on instancie les points de téléportation
         let points = document.querySelectorAll('.teleport');
         let rotate = false;
+        let soundOfTeleportation = document.querySelector('#teleportation_son');
         // animation de la cible de téléportation
         function rotativeCible (el) {
             let rotationInterval = setInterval(() => {
@@ -55,7 +56,9 @@ AFRAME.registerComponent('teleport', {
                     x:posX,
                     y:posY,
                     z:posZ+0.2
-                })
+                });
+                soundOfTeleportation.volume="0.2";
+                soundOfTeleportation.play();
             })
         };
 
