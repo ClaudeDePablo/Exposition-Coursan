@@ -116,22 +116,7 @@ AFRAME.registerComponent('teleport', {
             })
         };
 
-    },
-
-    update: function() {       
-
-
-    },
-
-
-    tick: function() {
-
-
-
-        
-    },
-
-   
+    }   
 
 
 
