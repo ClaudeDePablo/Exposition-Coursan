@@ -2,7 +2,6 @@ let toutesLesPhotos = document.querySelectorAll('.photo-expo');
 
 toutesLesPhotos.forEach ((element) => {
 
-
     element.addEventListener ('mouseenter', ()=> {
         element.setAttribute('color', "#c6ab91");
     });
@@ -25,8 +24,8 @@ toutesLesPhotos.forEach ((element) => {
         if (leftControllerScreen.hasChildNodes()) {
             leftControllerScreen.removeChild(leftControllerScreen.firstChild);
             leftControllerScreen.append(elementClone);
-
         }
+        
         leftControllerScreen.append(elementClone);
 
     })
