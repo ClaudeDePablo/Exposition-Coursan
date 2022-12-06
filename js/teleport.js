@@ -9,70 +9,13 @@ let valX = 0;
 let valZ = 0;
 
 let rotate = false;
-// AFRAME.registerComponent('teleport', {
+let camera = document.querySelector('#cam-rig');
 
-
-//     init: function () {
-        
-//         let points = document.querySelectorAll('.teleport');
-
-//         for (let i=0; i<points.length; i++) {
-            
-//             points[i].addEventListener('mouseenter', function() {
-//                 points[i].setAttribute('color', 'aqua');
-//             })
-
-//             points[i].addEventListener('mouseleave', function() {
-//                 points[i].setAttribute('color', 'white');
-//             })          
-              
-//             points[i].addEventListener('click', function() {
-//                 posX = points[i].object3D.position.x;
-//                 posZ = points[i].object3D.position.z;
-//                 posY = points[i].object3D.position.y;
-//                 camera.setAttribute('position', {
-//                     x:posX,
-//                     y:posY,
-//                     z:posZ
-//                 })
-
-//             })
-//         };
-
-//     },
-
-//     update: function() {       
-
-//             let posCameraX = camera.object3D.position.x;
-//             let posCameraZ = camera.object3D.position.z;
-
-//             let dx = posTargetX - posCameraX;
-//             let dz = posTargetZ - posCameraZ;
-
-//             let targetX = dx * ease;
-//             let targetZ = dz * ease;
-            
-//         camera.object3D.position.x -= targetX;
-//         camera.object3D.position.z -= targetZ;
-
-//     },
-
-
-//     tick: function() {
-
-
-
-        
-//     }
-
-
-
-// })
 
 AFRAME.registerComponent('teleport', {
 
     init: function () {
-        let cam= document.getElementById('#cam');
+        let cam = document.getElementById('#cam');
         // on instancie les points de téléportation
         let points = document.querySelectorAll('.teleport');
         let rotate = false;
@@ -111,7 +54,7 @@ AFRAME.registerComponent('teleport', {
                 camera.setAttribute('position', {
                     x:posX,
                     y:posY,
-                    z:posZ
+                    z:posZ+0.2
                 })
             })
         };
